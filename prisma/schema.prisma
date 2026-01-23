@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Lead {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  createdAt DateTime  @default(now())
+  projects  Project[]
+}
+
+model Project {
+  id        String   @id @default(cuid())
+  token     String   @unique // Access token for the client panel
+  status    ProjectStatus @default(DRAFT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  leadId    String
+  lead      Lead     @relation(fields: [leadId], references: [id])
+
+  answers   Answer[]
+  sections  Section[]
+  files     File[]
+}
+
+model Answer {
+  id        String   @id @default(cuid())
+  step      Int      // Wizard step number
+  key       String   // Question identifier
+  value     String   // DB text limit; for JSON use a separate field if needed, but string is usually fine for simple answers
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+model Section {
+  id        String   @id @default(cuid())
+  type      String   // e.g., 'hero', 'about', 'products'
+  content   Json     // Flexible JSON content structure
+  order     Int      @default(0)
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+model File {
+  id        String   @id @default(cuid())
+  name      String
+  path      String   // Local path or S3 key
+  size      Int
+  mimeType  String
+  createdAt DateTime @default(now())
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+enum ProjectStatus {
+  DRAFT
+  SUBMITTED
+  PAID
+  IN_PROGRESS
+  REVIEW
+  COMPLETED
+}
