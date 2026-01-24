@@ -160,71 +160,71 @@ export default function Home() {
                     <p className="text-sm text-slate-400">Limpiamos código innecesario para lograr puntuaciones 90+ en Google PageSpeed.</p>
                   </div>
                 </div>
-
-
-                <div className="flex flex-wrap gap-4 mt-8">
-                  <Link href="/agencias">
-                    <Button variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:text-white transition-colors gap-2">
-                      ¿Eres Agencia? <span className="text-xs bg-purple-500/20 px-2 py-0.5 rounded text-purple-200">Partnership</span>
-                    </Button>
-                  </Link>
-                  <Link href="/iniciar?type=custom">
-                    <Button className="bg-white text-slate-950 hover:bg-slate-200 font-bold">
-                      Quiero personalizar mi plantilla
-                    </Button>
-                  </Link>
-                </div>
               </div>
 
-              <div className="flex-1 w-full relative">
-                {/* Abstract Code Window Visual */}
-                <div className="relative rounded-2xl bg-[#1e1e1e] border border-white/10 shadow-2xl overflow-hidden aspect-square md:aspect-[4/3] group">
-                  <div className="flex items-center gap-2 px-4 py-3 bg-[#252526] border-b border-white/5">
-                    <div className="w-3 h-3 rounded-full bg-red-500" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <div className="w-3 h-3 rounded-full bg-green-500" />
-                    <div className="ml-4 text-xs text-slate-500 font-mono">product-template.liquid</div>
-                  </div>
-                  <div className="p-6 font-mono text-sm overflow-hidden">
-                    <div className="text-slate-400">
-                      <span className="text-purple-400">{"{% if"}</span> <span className="text-blue-300">product.available</span> <span className="text-purple-400">{"%}"}</span>
-                    </div>
-                    <div className="pl-4 text-slate-300">
-                      <span className="text-green-400">{"<div"}</span> <span className="text-yellow-300">class</span>=<span className="text-orange-300">"custom-add-to-cart-wrapper"</span><span className="text-green-400">{">"}</span>
-                    </div>
-                    <div className="pl-8 text-slate-300">
-                      <span className="text-slate-500">{"// Custom animation logic"}</span>
-                    </div>
-                    <div className="pl-8 text-slate-300">
-                      <span className="text-green-400">{"<button"}</span> <span className="text-yellow-300">onclick</span>=<span className="text-orange-300">"triggerConfetti()"</span><span className="text-green-400">{">"}</span>
-                    </div>
-                    <div className="pl-12 text-white">
-                      Añadir al Carrito
-                      <span className="animate-pulse inline-block ml-2">✨</span>
-                    </div>
-                    <div className="pl-8 text-green-400">{"</button>"}</div>
-                    <div className="pl-4 text-green-400">{"</div>"}</div>
-                    <div className="text-purple-400">{"{% endif %}"}</div>
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Link href="/agencias">
+                  <Button variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:text-white transition-colors gap-2">
+                    ¿Eres Agencia? <span className="text-xs bg-purple-500/20 px-2 py-0.5 rounded text-purple-200">Partnership</span>
+                  </Button>
+                </Link>
+                <Link href="/iniciar?type=custom">
+                  <Button className="bg-white text-slate-950 hover:bg-slate-200 font-bold">
+                    Quiero personalizar mi plantilla
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-                    <div className="mt-4 text-slate-500 opacity-50">
-                      {"/* Estilos personalizados para la marca */"}
-                    </div>
-                    <div className="text-blue-300 opacity-50">
-                      .custom-wrapper {"{"} <br />
-                      &nbsp;&nbsp;background: linear-gradient(to right, #6366f1, #a855f7); <br />
-                      &nbsp;&nbsp;padding: 2rem; <br />
-                      {"}"}
-                    </div>
+            <div className="flex-1 w-full relative">
+              {/* Abstract Code Window Visual */}
+              <div className="relative rounded-2xl bg-[#1e1e1e] border border-white/10 shadow-2xl overflow-hidden aspect-square md:aspect-[4/3] group">
+                <div className="flex items-center gap-2 px-4 py-3 bg-[#252526] border-b border-white/5">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
+                  <div className="ml-4 text-xs text-slate-500 font-mono">product-template.liquid</div>
+                </div>
+                <div className="p-6 font-mono text-sm overflow-hidden">
+                  <div className="text-slate-400">
+                    <span className="text-purple-400">{"{% if"}</span> <span className="text-blue-300">product.available</span> <span className="text-purple-400">{"%}"}</span>
                   </div>
+                  <div className="pl-4 text-slate-300">
+                    <span className="text-green-400">{"<div"}</span> <span className="text-yellow-300">class</span>=<span className="text-orange-300">"custom-add-to-cart-wrapper"</span><span className="text-green-400">{">"}</span>
+                  </div>
+                  <div className="pl-8 text-slate-300">
+                    <span className="text-slate-500">{"// Custom animation logic"}</span>
+                  </div>
+                  <div className="pl-8 text-slate-300">
+                    <span className="text-green-400">{"<button"}</span> <span className="text-yellow-300">onclick</span>=<span className="text-orange-300">"triggerConfetti()"</span><span className="text-green-400">{">"}</span>
+                  </div>
+                  <div className="pl-12 text-white">
+                    Añadir al Carrito
+                    <span className="animate-pulse inline-block ml-2">✨</span>
+                  </div>
+                  <div className="pl-8 text-green-400">{"</button>"}</div>
+                  <div className="pl-4 text-green-400">{"</div>"}</div>
+                  <div className="text-purple-400">{"{% endif %}"}</div>
 
-                  {/* Floating Badge */}
-                  <div className="absolute bottom-6 right-6 bg-purple-600 text-white px-4 py-2 rounded-lg shadow-lg text-xs font-bold flex items-center gap-2 animate-bounce">
-                    <CheckCircle2 className="w-4 h-4" /> 100% Custom
+                  <div className="mt-4 text-slate-500 opacity-50">
+                    {"/* Estilos personalizados para la marca */"}
                   </div>
+                  <div className="text-blue-300 opacity-50">
+                    .custom-wrapper {"{"} <br />
+                    &nbsp;&nbsp;background: linear-gradient(to right, #6366f1, #a855f7); <br />
+                    &nbsp;&nbsp;padding: 2rem; <br />
+                    {"}"}
+                  </div>
+                </div>
+
+                {/* Floating Badge */}
+                <div className="absolute bottom-6 right-6 bg-purple-600 text-white px-4 py-2 rounded-lg shadow-lg text-xs font-bold flex items-center gap-2 animate-bounce">
+                  <CheckCircle2 className="w-4 h-4" /> 100% Custom
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       {/* Feature / Method Grid */}
@@ -368,6 +368,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       {/* Testimonials */}
@@ -683,7 +684,7 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Desarrolloshopify.cl. Todos los derechos reservados.</p>
         <p className="mt-2">Santiago, Chile.</p>
       </footer>
-    </main >
+    </main>
   );
 }
 
