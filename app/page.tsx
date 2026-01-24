@@ -218,6 +218,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Security / Management Section - New based on User Request */}
+      <section className="py-32 bg-slate-950 text-white border-t border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="mb-16">
+            <span className="text-[#00dec4] font-medium text-lg tracking-wide">Computadoras y dispositivos móviles</span>
+            <h2 className="text-5xl md:text-6xl font-bold mt-4 tracking-tight">Cuida tu negocio</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
+              <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-end justify-center overflow-hidden">
+                {/* Dashboard representation */}
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                  className="w-[90%] h-auto rounded-t-xl shadow-2xl translate-y-4 group-hover:scale-105 transition-transform duration-500"
+                  alt="Shopify Dashboard"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f21] via-transparent to-transparent opacity-50" />
+              </div>
+              <div className="p-10 mt-auto">
+                <h3 className="text-2xl font-bold mb-4">Gestiona todo en un solo lugar</h3>
+                <p className="text-slate-400 leading-relaxed text-lg">
+                  Desde la oficina administrativa hasta la tienda, siempre tendrás el poder con el <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">panel de control de Shopify</span> totalmente centralizado.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
+              <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-center justify-center overflow-hidden">
+                {/* Mobile App representation */}
+                <img
+                  src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=1000&auto=format&fit=crop"
+                  className="h-[110%] w-auto object-contain shadow-2xl rotate-12 group-hover:rotate-6 transition-transform duration-500"
+                  alt="Shopify Mobile App"
+                />
+              </div>
+              <div className="p-10 mt-auto">
+                <h3 className="text-2xl font-bold mb-4">Gestiona tu tienda desde cualquier lugar</h3>
+                <p className="text-slate-400 leading-relaxed text-lg">
+                  Haz todo desde tu bolsillo con la completa <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">aplicación móvil de Shopify</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
