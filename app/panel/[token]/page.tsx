@@ -6,9 +6,14 @@ import { CheckCircle, Clock, FileText, Download, Briefcase } from "lucide-react"
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
-export default async function PanelPage({ params }: { params: { token: string } }) {
+type Props = {
+    params: Promise<{ token: string }>
+}
+
+export default async function PanelPage({ params }: Props) {
+    const { token } = await params;
     const project = await prisma.project.findUnique({
-        where: { token: params.token },
+        where: { token },
         include: {
             answers: true,
             files: true,
