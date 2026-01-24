@@ -185,35 +185,39 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-green-500" />
                   <div className="ml-4 text-xs text-slate-500 font-mono">product-template.liquid</div>
                 </div>
-                <div className="p-6 font-mono text-sm overflow-hidden">
-                  <div className="text-slate-400">
-                    <span className="text-purple-400">{"{% if"}</span> <span className="text-blue-300">product.available</span> <span className="text-purple-400">{"%}"}</span>
+                <div className="p-6 font-mono text-xs md:text-sm overflow-hidden text-slate-400 space-y-2">
+                  <div className="flex gap-2">
+                    <span className="text-purple-400">if</span>
+                    <span className="text-blue-300">(product.available)</span>
+                    <span className="text-purple-400">{`{`}</span>
                   </div>
-                  <div className="pl-4 text-slate-300">
-                    <span className="text-green-400">{"<div"}</span> <span className="text-yellow-300">class</span>=<span className="text-orange-300">"custom-add-to-cart-wrapper"</span><span className="text-green-400">{">"}</span>
+                  <div className="pl-4">
+                    <span className="text-purple-400">return</span>
+                    <span className="text-green-300"> (</span>
                   </div>
-                  <div className="pl-8 text-slate-300">
-                    <span className="text-slate-500">{"// Custom animation logic"}</span>
-                  </div>
-                  <div className="pl-8 text-slate-300">
-                    <span className="text-green-400">{"<button"}</span> <span className="text-yellow-300">onclick</span>=<span className="text-orange-300">"triggerConfetti()"</span><span className="text-green-400">{">"}</span>
+                  <div className="pl-8 text-green-400">
+                    {`<div className="custom-cart-btn">`}
                   </div>
                   <div className="pl-12 text-white">
-                    Añadir al Carrito
-                    <span className="animate-pulse inline-block ml-2">✨</span>
+                    Añadir al Carrito ✨
                   </div>
-                  <div className="pl-8 text-green-400">{"</button>"}</div>
-                  <div className="pl-4 text-green-400">{"</div>"}</div>
-                  <div className="text-purple-400">{"{% endif %}"}</div>
+                  <div className="pl-8 text-green-400">
+                    {`</div>`}
+                  </div>
+                  <div className="pl-4 text-green-300">
+                    )
+                  </div>
+                  <div className="text-purple-400">
+                    {`}`}
+                  </div>
 
-                  <div className="mt-4 text-slate-500 opacity-50">
-                    {"/* Estilos personalizados para la marca */"}
+                  <div className="mt-4 text-slate-500 italic">
+                      // Estilos personalizados
                   </div>
-                  <div className="text-blue-300 opacity-50">
-                    .custom-wrapper {"{"} <br />
-                    &nbsp;&nbsp;background: linear-gradient(to right, #6366f1, #a855f7); <br />
-                    &nbsp;&nbsp;padding: 2rem; <br />
-                    {"}"}
+                  <div className="text-blue-300 bg-white/5 p-2 rounded">
+                    .custom-btn {`{`} <br />
+                    &nbsp;&nbsp;background: #6366f1; <br />
+                    {`}`}
                   </div>
                 </div>
 
