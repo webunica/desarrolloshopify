@@ -162,262 +162,276 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex-1 w-full relative">
-              {/* Abstract Code Window Visual */}
-              <div className="relative rounded-2xl bg-[#1e1e1e] border border-white/10 shadow-2xl overflow-hidden aspect-square md:aspect-[4/3] group">
-                <div className="flex items-center gap-2 px-4 py-3 bg-[#252526] border-b border-white/5">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                  <div className="w-3 h-3 rounded-full bg-green-500" />
-                  <div className="ml-4 text-xs text-slate-500 font-mono">product-template.liquid</div>
-                </div>
-                <div className="p-6 font-mono text-sm overflow-hidden">
-                  <div className="text-slate-400">
-                    <span className="text-purple-400">{"{% if"}</span> <span className="text-blue-300">product.available</span> <span className="text-purple-400">{"%}"}</span>
-                  </div>
-                  <div className="pl-4 text-slate-300">
-                    <span className="text-green-400">{"<div"}</span> <span className="text-yellow-300">class</span>=<span className="text-orange-300">"custom-add-to-cart-wrapper"</span><span className="text-green-400">{">"}</span>
-                  </div>
-                  <div className="pl-8 text-slate-300">
-                    <span className="text-slate-500">{"// Custom animation logic"}</span>
-                  </div>
-                  <div className="pl-8 text-slate-300">
-                    <span className="text-green-400">{"<button"}</span> <span className="text-yellow-300">onclick</span>=<span className="text-orange-300">"triggerConfetti()"</span><span className="text-green-400">{">"}</span>
-                  </div>
-                  <div className="pl-12 text-white">
-                    Añadir al Carrito
-                    <span className="animate-pulse inline-block ml-2">✨</span>
-                  </div>
-                  <div className="pl-8 text-green-400">{"</button>"}</div>
-                  <div className="pl-4 text-green-400">{"</div>"}</div>
-                  <div className="text-purple-400">{"{% endif %}"}</div>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Link href="/agencias">
+                <Button variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:text-white transition-colors gap-2">
+                  ¿Eres Agencia? <span className="text-xs bg-purple-500/20 px-2 py-0.5 rounded text-purple-200">Partnership</span>
+                </Button>
+              </Link>
+              <Link href="/iniciar?type=custom">
+                <Button className="bg-white text-slate-950 hover:bg-slate-200 font-bold">
+                  Quiero personalizar mi plantilla
+                </Button>
+              </Link>
+            </div>
+          </div>
 
-                  <div className="mt-4 text-slate-500 opacity-50">
-                    {"/* Estilos personalizados para la marca */"}
-                  </div>
-                  <div className="text-blue-300 opacity-50">
-                    .custom-wrapper {"{"} <br />
-                    &nbsp;&nbsp;background: linear-gradient(to right, #6366f1, #a855f7); <br />
-                    &nbsp;&nbsp;padding: 2rem; <br />
-                    {"}"}
-                  </div>
+          <div className="flex-1 w-full relative">
+            {/* Abstract Code Window Visual */}
+            <div className="relative rounded-2xl bg-[#1e1e1e] border border-white/10 shadow-2xl overflow-hidden aspect-square md:aspect-[4/3] group">
+              <div className="flex items-center gap-2 px-4 py-3 bg-[#252526] border-b border-white/5">
+                <div className="w-3 h-3 rounded-full bg-red-500" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+                <div className="ml-4 text-xs text-slate-500 font-mono">product-template.liquid</div>
+              </div>
+              <div className="p-6 font-mono text-sm overflow-hidden">
+                <div className="text-slate-400">
+                  <span className="text-purple-400">{"{% if"}</span> <span className="text-blue-300">product.available</span> <span className="text-purple-400">{"%}"}</span>
                 </div>
+                <div className="pl-4 text-slate-300">
+                  <span className="text-green-400">{"<div"}</span> <span className="text-yellow-300">class</span>=<span className="text-orange-300">"custom-add-to-cart-wrapper"</span><span className="text-green-400">{">"}</span>
+                </div>
+                <div className="pl-8 text-slate-300">
+                  <span className="text-slate-500">{"// Custom animation logic"}</span>
+                </div>
+                <div className="pl-8 text-slate-300">
+                  <span className="text-green-400">{"<button"}</span> <span className="text-yellow-300">onclick</span>=<span className="text-orange-300">"triggerConfetti()"</span><span className="text-green-400">{">"}</span>
+                </div>
+                <div className="pl-12 text-white">
+                  Añadir al Carrito
+                  <span className="animate-pulse inline-block ml-2">✨</span>
+                </div>
+                <div className="pl-8 text-green-400">{"</button>"}</div>
+                <div className="pl-4 text-green-400">{"</div>"}</div>
+                <div className="text-purple-400">{"{% endif %}"}</div>
 
-                {/* Floating Badge */}
-                <div className="absolute bottom-6 right-6 bg-purple-600 text-white px-4 py-2 rounded-lg shadow-lg text-xs font-bold flex items-center gap-2 animate-bounce">
-                  <CheckCircle2 className="w-4 h-4" /> 100% Custom
+                <div className="mt-4 text-slate-500 opacity-50">
+                  {"/* Estilos personalizados para la marca */"}
                 </div>
+                <div className="text-blue-300 opacity-50">
+                  .custom-wrapper {"{"} <br />
+                  &nbsp;&nbsp;background: linear-gradient(to right, #6366f1, #a855f7); <br />
+                  &nbsp;&nbsp;padding: 2rem; <br />
+                  {"}"}
+                </div>
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute bottom-6 right-6 bg-purple-600 text-white px-4 py-2 rounded-lg shadow-lg text-xs font-bold flex items-center gap-2 animate-bounce">
+                <CheckCircle2 className="w-4 h-4" /> 100% Custom
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Feature / Method Grid */}
-      <section id="metodo" className="py-24 bg-slate-900/30 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-indigo-900/20 to-transparent pointer-events-none" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="mb-16">
-            <span className="text-purple-400 font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Método de 3 Pasos</h2>
-            <p className="text-slate-400 max-w-2xl text-lg">
-              Simplificamos lo complejo para que tú solo te preocupes de vender.
+      {/* Feature / Method Grid */ }
+  <section id="metodo" className="py-24 bg-slate-900/30 relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-indigo-900/20 to-transparent pointer-events-none" />
+    <div className="container mx-auto px-6 relative z-10">
+      <div className="mb-16">
+        <span className="text-purple-400 font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso</span>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Método de 3 Pasos</h2>
+        <p className="text-slate-400 max-w-2xl text-lg">
+          Simplificamos lo complejo para que tú solo te preocupes de vender.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        <FeatureCard
+          number="01"
+          title="Estrategia & Diseño"
+          desc="Analizamos tu marca y creamos un diseño único que te diferencie de la competencia."
+        />
+        <FeatureCard
+          number="02"
+          title="Desarrollo Shopify"
+          desc="Construimos tu tienda con código limpio, apps esenciales y configuraciones pro."
+        />
+        <FeatureCard
+          number="03"
+          title="Lanzamiento & Escala"
+          desc="Te entregamos la llave y te acompañamos en tus primeras ventas."
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Portfolio Mockup - Redesign based on user reference */ }
+  <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
+    <div className="container mx-auto px-6">
+      <div className="mb-16 max-w-5xl">
+        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-tight">
+          La plataforma de comercio <br />
+          <span className="text-slate-500">detrás de todo.</span>
+        </h2>
+        <p className="text-2xl md:text-3xl text-slate-400 font-medium leading-snug max-w-4xl">
+          <span className="text-white">Vende online y en persona.</span> Vende a nivel local y mundial.
+          Vende de forma directa y mayorista. Diseñamos para que tu marca brille en computadoras y dispositivos móviles.
+        </p>
+      </div>
+
+      {/* Scrolling Cards Container */}
+      <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:px-0 md:overflow-visible">
+
+        {/* Project Card 1 */}
+        <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
+            alt="Fashion Store"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+          <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 className="text-4xl font-bold text-white mb-2">Glossier Vibes</h3>
+            <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Beauty & Skincare</p>
+          </div>
+        </div>
+
+        {/* Project Card 2 */}
+        <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
+          <img
+            src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1000&auto=format&fit=crop"
+            alt="Tech Store"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+          <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 className="text-4xl font-bold text-white mb-2">Simply Organic</h3>
+            <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Lifestyle & Home</p>
+          </div>
+        </div>
+
+        {/* Project Card 3 */}
+        <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop"
+            alt="Sneaker Store"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+          <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <h3 className="text-4xl font-bold text-white mb-2">Nike Redesign</h3>
+            <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Sportswear & Shoes</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {/* Security / Management Section - New based on User Request */ }
+  <section className="py-32 bg-slate-950 text-white border-t border-white/5">
+    <div className="container mx-auto px-6">
+      <div className="mb-16">
+        <span className="text-[#00dec4] font-medium text-lg tracking-wide">Computadoras y dispositivos móviles</span>
+        <h2 className="text-5xl md:text-6xl font-bold mt-4 tracking-tight">Cuida tu negocio</h2>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Card 1 */}
+        <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
+          <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-end justify-center overflow-hidden">
+            {/* Dashboard representation */}
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+              className="w-[90%] h-auto rounded-t-xl shadow-2xl translate-y-4 group-hover:scale-105 transition-transform duration-500"
+              alt="Shopify Dashboard"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f21] via-transparent to-transparent opacity-50" />
+          </div>
+          <div className="p-10 mt-auto">
+            <h3 className="text-2xl font-bold mb-4">Gestiona todo en un solo lugar</h3>
+            <p className="text-slate-400 leading-relaxed text-lg">
+              Desde la oficina administrativa hasta la tienda, siempre tendrás el poder con el <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">panel de control de Shopify</span> totalmente centralizado.
             </p>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard
-              number="01"
-              title="Estrategia & Diseño"
-              desc="Analizamos tu marca y creamos un diseño único que te diferencie de la competencia."
-            />
-            <FeatureCard
-              number="02"
-              title="Desarrollo Shopify"
-              desc="Construimos tu tienda con código limpio, apps esenciales y configuraciones pro."
-            />
-            <FeatureCard
-              number="03"
-              title="Lanzamiento & Escala"
-              desc="Te entregamos la llave y te acompañamos en tus primeras ventas."
+        {/* Card 2 */}
+        <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
+          <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-center justify-center overflow-hidden">
+            {/* Mobile App representation */}
+            <img
+              src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=1000&auto=format&fit=crop"
+              className="h-[110%] w-auto object-contain shadow-2xl rotate-12 group-hover:rotate-6 transition-transform duration-500"
+              alt="Shopify Mobile App"
             />
           </div>
-        </div>
-      </section>
-
-      {/* Portfolio Mockup - Redesign based on user reference */}
-      <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="mb-16 max-w-5xl">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-tight">
-              La plataforma de comercio <br />
-              <span className="text-slate-500">detrás de todo.</span>
-            </h2>
-            <p className="text-2xl md:text-3xl text-slate-400 font-medium leading-snug max-w-4xl">
-              <span className="text-white">Vende online y en persona.</span> Vende a nivel local y mundial.
-              Vende de forma directa y mayorista. Diseñamos para que tu marca brille en computadoras y dispositivos móviles.
+          <div className="p-10 mt-auto">
+            <h3 className="text-2xl font-bold mb-4">Gestiona tu tienda desde cualquier lugar</h3>
+            <p className="text-slate-400 leading-relaxed text-lg">
+              Haz todo desde tu bolsillo con la completa <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">aplicación móvil de Shopify</span>.
             </p>
           </div>
-
-          {/* Scrolling Cards Container */}
-          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:px-0 md:overflow-visible">
-
-            {/* Project Card 1 */}
-            <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-              <img
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
-                alt="Fashion Store"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-4xl font-bold text-white mb-2">Glossier Vibes</h3>
-                <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Beauty & Skincare</p>
-              </div>
-            </div>
-
-            {/* Project Card 2 */}
-            <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-              <img
-                src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1000&auto=format&fit=crop"
-                alt="Tech Store"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-4xl font-bold text-white mb-2">Simply Organic</h3>
-                <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Lifestyle & Home</p>
-              </div>
-            </div>
-
-            {/* Project Card 3 */}
-            <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop"
-                alt="Sneaker Store"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-4xl font-bold text-white mb-2">Nike Redesign</h3>
-                <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Sportswear & Shoes</p>
-              </div>
-            </div>
-
-          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      {/* Security / Management Section - New based on User Request */}
-      <section className="py-32 bg-slate-950 text-white border-t border-white/5">
-        <div className="container mx-auto px-6">
-          <div className="mb-16">
-            <span className="text-[#00dec4] font-medium text-lg tracking-wide">Computadoras y dispositivos móviles</span>
-            <h2 className="text-5xl md:text-6xl font-bold mt-4 tracking-tight">Cuida tu negocio</h2>
-          </div>
+  {/* Testimonials */ }
+  <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div className="container mx-auto px-6 relative z-10">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">Lo que dicen nuestros clientes</h2>
+      </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <TestimonialCard
+          quote="Increíble trabajo. Nuestra tasa de conversión se duplicó en el primer mes de lanzamiento."
+          author="Carlos M."
+          role="CEO, FashionShoes"
+        />
+        <TestimonialCard
+          quote="Entendieron perfectamente la estética que buscábamos. Soporte 10/10."
+          author="Andrea R."
+          role="Marketing, OrganicFood"
+        />
+        <TestimonialCard
+          quote="La migración de WooCommerce a Shopify fue transparente y sin perder datos. Un alivio."
+          author="Felipe S."
+          role="Fundador, TechGear"
+        />
+      </div>
+    </div>
+  </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Card 1 */}
-            <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
-              <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-end justify-center overflow-hidden">
-                {/* Dashboard representation */}
-                <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
-                  className="w-[90%] h-auto rounded-t-xl shadow-2xl translate-y-4 group-hover:scale-105 transition-transform duration-500"
-                  alt="Shopify Dashboard"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f21] via-transparent to-transparent opacity-50" />
-              </div>
-              <div className="p-10 mt-auto">
-                <h3 className="text-2xl font-bold mb-4">Gestiona todo en un solo lugar</h3>
-                <p className="text-slate-400 leading-relaxed text-lg">
-                  Desde la oficina administrativa hasta la tienda, siempre tendrás el poder con el <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">panel de control de Shopify</span> totalmente centralizado.
-                </p>
-              </div>
-            </div>
+  {/* FAQ Section */ }
+  <section id="faq" className="py-24 bg-slate-950">
+    <div className="container mx-auto px-6 max-w-3xl">
+      <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-white">Preguntas Frecuentes</h2>
+      <div className="space-y-4">
+        <FaqItem question="¿Cuánto tiempo toma desarrollar una tienda?" answer="Normalmente entre 2 a 4 semanas dependiendo de la complejidad y cantidad de productos." />
+        <FaqItem question="¿Incluye dominio y hosting?" answer="Shopify incluye hosting de clase mundial. Nosotros te asesoramos en la compra y conexión de tu dominio .cl o .com." />
+        <FaqItem question="¿Es autoadministrable?" answer="Totalmente. Una de las ventajas de Shopify es su panel amigable. Te entregamos videos tutoriales para que manejes tu stock y pedidos." />
+        <FaqItem question="¿Qué pasarelas de pago configuran?" answer="Configuramos MercadoPago, Webpay Plus (Transbank), Fintoc, entre otras opciones disponibles en Chile." />
+      </div>
+    </div>
+  </section>
 
-            {/* Card 2 */}
-            <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
-              <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-center justify-center overflow-hidden">
-                {/* Mobile App representation */}
-                <img
-                  src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=1000&auto=format&fit=crop"
-                  className="h-[110%] w-auto object-contain shadow-2xl rotate-12 group-hover:rotate-6 transition-transform duration-500"
-                  alt="Shopify Mobile App"
-                />
-              </div>
-              <div className="p-10 mt-auto">
-                <h3 className="text-2xl font-bold mb-4">Gestiona tu tienda desde cualquier lugar</h3>
-                <p className="text-slate-400 leading-relaxed text-lg">
-                  Haz todo desde tu bolsillo con la completa <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">aplicación móvil de Shopify</span>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* CTA Footer */ }
+  <section className="py-32 relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 pointer-events-none" />
+    {/* Pattern overlay */}
+    <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Lo que dicen nuestros clientes</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TestimonialCard
-              quote="Increíble trabajo. Nuestra tasa de conversión se duplicó en el primer mes de lanzamiento."
-              author="Carlos M."
-              role="CEO, FashionShoes"
-            />
-            <TestimonialCard
-              quote="Entendieron perfectamente la estética que buscábamos. Soporte 10/10."
-              author="Andrea R."
-              role="Marketing, OrganicFood"
-            />
-            <TestimonialCard
-              quote="La migración de WooCommerce a Shopify fue transparente y sin perder datos. Un alivio."
-              author="Felipe S."
-              role="Fundador, TechGear"
-            />
-          </div>
-        </div>
-      </section>
+    <div className="container mx-auto px-6 text-center relative z-10 text-white">
+      <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
+        ¿Listo para vender más?
+      </h2>
+      <p className="text-xl text-purple-200 mb-10 max-w-2xl mx-auto font-medium">
+        Agenda una llamada de descubrimiento o inicia tu proyecto hoy mismo con nuestro wizard interactivo.
+      </p>
+      <Link href="/iniciar">
+        <Button size="lg" className="h-16 px-10 text-xl font-bold bg-white text-slate-950 hover:bg-slate-200 shadow-2xl transition-all hover:scale-105 border-0">
+          Iniciar Mi Proyecto
+        </Button>
+      </Link>
+    </div>
+  </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-slate-950">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-white">Preguntas Frecuentes</h2>
-          <div className="space-y-4">
-            <FaqItem question="¿Cuánto tiempo toma desarrollar una tienda?" answer="Normalmente entre 2 a 4 semanas dependiendo de la complejidad y cantidad de productos." />
-            <FaqItem question="¿Incluye dominio y hosting?" answer="Shopify incluye hosting de clase mundial. Nosotros te asesoramos en la compra y conexión de tu dominio .cl o .com." />
-            <FaqItem question="¿Es autoadministrable?" answer="Totalmente. Una de las ventajas de Shopify es su panel amigable. Te entregamos videos tutoriales para que manejes tu stock y pedidos." />
-            <FaqItem question="¿Qué pasarelas de pago configuran?" answer="Configuramos MercadoPago, Webpay Plus (Transbank), Fintoc, entre otras opciones disponibles en Chile." />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Footer */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 pointer-events-none" />
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-
-        <div className="container mx-auto px-6 text-center relative z-10 text-white">
-          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
-            ¿Listo para vender más?
-          </h2>
-          <p className="text-xl text-purple-200 mb-10 max-w-2xl mx-auto font-medium">
-            Agenda una llamada de descubrimiento o inicia tu proyecto hoy mismo con nuestro wizard interactivo.
-          </p>
-          <Link href="/iniciar">
-            <Button size="lg" className="h-16 px-10 text-xl font-bold bg-white text-slate-950 hover:bg-slate-200 shadow-2xl transition-all hover:scale-105 border-0">
-              Iniciar Mi Proyecto
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-      {/* SEO Content Block (Hidden / Structured) - Kept from previous step */}
+  {/* SEO Content Block (Hidden / Structured) - Kept from previous step */ }
       <section className="bg-slate-950 text-slate-400">
         <div className="wtn-wrap">
           <div className="wtn-container">
@@ -670,7 +684,7 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Desarrolloshopify.cl. Todos los derechos reservados.</p>
         <p className="mt-2">Santiago, Chile.</p>
       </footer>
-    </main>
+    </main >
   );
 }
 
