@@ -52,7 +52,7 @@ export default function Home() {
               <CheckCircle2 className="w-4 h-4 text-green-400" /> Autoadministrable 100%
             </div>
             <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10 shadow-sm hover:border-purple-500/50 transition-colors">
-              <CheckCircle2 className="w-4 h-4 text-green-400" /> Facturación Automática (SII)
+              <CheckCircle2 className="w-4 h-4 text-green-400" /> Personalización de Diseño Única
             </div>
           </div>
 
@@ -119,6 +119,96 @@ export default function Home() {
               title="Diseño UX/UI"
               desc="No usamos plantillas básicas; adaptamos la experiencia visual para generar confianza."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Code / Customization Section - New based on User Request */}
+      <section className="py-24 bg-slate-950 border-t border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent z-0 pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1">
+              <div className="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-sm font-semibold text-purple-300 mb-6">
+                <span className="mr-2">⚡</span> Código Liquid a Medida
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                Más allá de las plantillas. <br />
+                <span className="gradient-text">Personalización total.</span>
+              </h2>
+              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                No nos limitamos a lo que ofrece el tema por defecto. Escribimos código <strong>Liquid, HTML, CSS y JS</strong> personalizado para crear funcionalidades únicas que tu competencia no tiene.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition-colors">
+                  <div className="bg-purple-500/20 p-2 rounded-lg text-purple-400">
+                    <LayoutTemplate className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold mb-1">Secciones Exclusivas</h4>
+                    <p className="text-sm text-slate-400">Creamos bloques y secciones modulares que se adaptan 100% a tu identidad de marca.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-purple-500/30 transition-colors">
+                  <div className="bg-blue-500/20 p-2 rounded-lg text-blue-400">
+                    <Rocket className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold mb-1">Optimización de Velocidad</h4>
+                    <p className="text-sm text-slate-400">Limpiamos código innecesario para lograr puntuaciones 90+ en Google PageSpeed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-1 w-full relative">
+              {/* Abstract Code Window Visual */}
+              <div className="relative rounded-2xl bg-[#1e1e1e] border border-white/10 shadow-2xl overflow-hidden aspect-square md:aspect-[4/3] group">
+                <div className="flex items-center gap-2 px-4 py-3 bg-[#252526] border-b border-white/5">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
+                  <div className="ml-4 text-xs text-slate-500 font-mono">product-template.liquid</div>
+                </div>
+                <div className="p-6 font-mono text-sm overflow-hidden">
+                  <div className="text-slate-400">
+                    <span className="text-purple-400">{"{% if"}</span> <span className="text-blue-300">product.available</span> <span className="text-purple-400">{"%}"}</span>
+                  </div>
+                  <div className="pl-4 text-slate-300">
+                    <span className="text-green-400">{"<div"}</span> <span className="text-yellow-300">class</span>=<span className="text-orange-300">"custom-add-to-cart-wrapper"</span><span className="text-green-400">{">"}</span>
+                  </div>
+                  <div className="pl-8 text-slate-300">
+                    <span className="text-slate-500">{"// Custom animation logic"}</span>
+                  </div>
+                  <div className="pl-8 text-slate-300">
+                    <span className="text-green-400">{"<button"}</span> <span className="text-yellow-300">onclick</span>=<span className="text-orange-300">"triggerConfetti()"</span><span className="text-green-400">{">"}</span>
+                  </div>
+                  <div className="pl-12 text-white">
+                    Añadir al Carrito
+                    <span className="animate-pulse inline-block ml-2">✨</span>
+                  </div>
+                  <div className="pl-8 text-green-400">{"</button>"}</div>
+                  <div className="pl-4 text-green-400">{"</div>"}</div>
+                  <div className="text-purple-400">{"{% endif %}"}</div>
+
+                  <div className="mt-4 text-slate-500 opacity-50">
+                    {"/* Estilos personalizados para la marca */"}
+                  </div>
+                  <div className="text-blue-300 opacity-50">
+                    .custom-wrapper {"{"} <br />
+                    &nbsp;&nbsp;background: linear-gradient(to right, #6366f1, #a855f7); <br />
+                    &nbsp;&nbsp;padding: 2rem; <br />
+                    {"}"}
+                  </div>
+                </div>
+
+                {/* Floating Badge */}
+                <div className="absolute bottom-6 right-6 bg-purple-600 text-white px-4 py-2 rounded-lg shadow-lg text-xs font-bold flex items-center gap-2 animate-bounce">
+                  <CheckCircle2 className="w-4 h-4" /> 100% Custom
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
