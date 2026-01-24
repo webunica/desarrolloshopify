@@ -32,78 +32,86 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-sm font-medium text-purple-800 mb-8 backdrop-blur-sm">
-            <span className="flex h-2 w-2 rounded-full bg-purple-600 mr-2"></span>
-            Agencia Certificada en Chile
+            <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+            Partner Certificado Shopify en Chile
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 text-slate-900">
-            Tu Tienda
-            <span className="block gradient-text">Shopify de Alto Nivel</span>
+            Tu Tienda Shopify,
+            <span className="block gradient-text">Lista para Vender en Chile</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-            Diseñamos experiencias de e-commerce que enamoran a primera vista y convierten visitantes en clientes leales.
+          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-6 leading-relaxed font-light">
+            Diseñamos e-commerces de alto rendimiento integrados con Webpay, envíos locales y todo lo que tu Pyme necesita para escalar.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm font-medium text-slate-500">
+            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /> Integración Transbank & MercadoPago</div>
+            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /> Autoadministrable 100%</div>
+            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /> Facturación Automática (SII)</div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/iniciar">
-              <Button size="lg" className="h-14 px-8 text-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:opacity-90 transition-opacity text-white rounded-full shadow-xl shadow-purple-200">
-                Comenzar Ahora
+              <Button size="lg" className="h-14 px-8 text-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:opacity-90 transition-opacity text-white rounded-full shadow-xl shadow-purple-200 font-bold">
+                Cotizar mi Tienda (Gratis)
               </Button>
             </Link>
             <a href="#portfolio">
               <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-slate-200 bg-white hover:bg-slate-50 text-slate-700 rounded-full shadow-sm">
-                Ver Casos de Éxito
+                Ver Tiendas Realizadas
               </Button>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Stats / Social Proof */}
-      <section className="py-12 border-y border-slate-100 bg-white">
+      {/* Stats / Social Proof - Trust Bar */}
+      <section className="py-10 border-y border-slate-100 bg-white">
         <div className="container mx-auto px-6">
-          <p className="text-center text-sm font-medium text-slate-400 uppercase tracking-widest mb-8">
-            Confían en nosotros
+          <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+            Tecnologías & Partners Integrados
           </p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Placeholder Logos text-slate-900 font-bold text-xl */}
-            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><ShoppingBag className="w-6 h-6" /> ShopMaster</div>
-            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><Rocket className="w-6 h-6" /> GrowthLabs</div>
-            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><Star className="w-6 h-6" /> PremiumBrand</div>
-            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><LayoutTemplate className="w-6 h-6" /> EcomStudio</div>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 filter text-slate-500 font-semibold">
+            {/* Replaced generic placeholders with localized relevant tech text names for now (logos would be images in real assets) */}
+            <span className="flex items-center gap-2 text-xl hover:text-[#95BF47] transition-colors"><ShoppingBag className="w-5 h-5" /> Shopify Partner</span>
+            <span className="flex items-center gap-2 text-xl hover:text-[#d3002d] transition-colors">Webpay Plus</span>
+            <span className="flex items-center gap-2 text-xl hover:text-[#009ee3] transition-colors">MercadoPago</span>
+            <span className="flex items-center gap-2 text-xl hover:text-[#f26522] transition-colors">Starken/Blue</span>
+            <span className="flex items-center gap-2 text-xl hover:text-[#005c96] transition-colors">Google Ads</span>
           </div>
         </div>
       </section>
 
-      {/* Services / New Sections */}
+      {/* Services / Benefits (Problema/Solución) */}
       <section id="servicios" className="py-24 bg-white relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">Soluciones Integrales</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">¿Por qué elegirnos?</h2>
             <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-              No solo hacemos webs, construimos negocios digitales escalables.
+              Entendemos el mercado chileno. No te entregamos solo una web, te entregamos un canal de ventas operativo.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard
-              icon={<LayoutTemplate className="w-6 h-6 text-blue-500" />}
-              title="Diseño UI/UX"
-              desc="Interfaces intuitivas y atractivas diseñadas para retener usuarios."
+              icon={<CreditCard className="w-6 h-6 text-green-600" />}
+              title="Vende en Pesos"
+              desc="Pasarelas locales listas (Webpay, Fintoc) para que el dinero llegue directo a tu cuenta bancaria."
             />
             <ServiceCard
-              icon={<Smartphone className="w-6 h-6 text-purple-500" />}
-              title="Mobile First"
-              desc="Experiencias perfectas en cualquier dispositivo móvil."
+              icon={<Rocket className="w-6 h-6 text-purple-600" />}
+              title="Envíos Automáticos"
+              desc="Conecta con Starken, Chilexpress o BlueExpress y olvida las planillas y etiquetas manuales."
             />
             <ServiceCard
-              icon={<CreditCard className="w-6 h-6 text-green-500" />}
-              title="Pagos Locales"
-              desc="Integración con Transbank, MercadoPago y pasarelas chilenas."
+              icon={<CheckCircle2 className="w-6 h-6 text-blue-600" />}
+              title="Facturación SII"
+              desc="Integraciones sugeridas para emitir boletas y facturas electrónicas automáticamente."
             />
             <ServiceCard
-              icon={<BarChart3 className="w-6 h-6 text-orange-500" />}
-              title="Growth & SEO"
-              desc="Estructuras optimizadas para aparecer primero en Google."
+              icon={<BarChart3 className="w-6 h-6 text-orange-600" />}
+              title="Diseño UX/UI"
+              desc="No usamos plantillas básicas; adaptamos la experiencia visual para generar confianza."
             />
           </div>
         </div>
