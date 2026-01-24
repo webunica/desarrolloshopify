@@ -35,23 +35,28 @@ function WizardContent() {
     // We need projectID for uploads. Ideally we fetch it by token first.
 
     useEffect(() => {
-        // Quick fetch to validate token and get Project ID for uploads
-        // In a real app, we'd load previous answers here too.
         if (!token) return;
 
-        // Simulating finding project ID from a "verify" endpoint or just using token for upload 
-        // (but upload API wrote to expect projectId... let's simplify and make upload accept token too next time, 
-        // but for now let's assume we can save answers without projectId, and uploads need it).
-        // Actually, let's fetch the project ID properly.
-        // Since I didn't make a "get project" endpoint, I'll rely on the save endpoint logic 
-        // but the upload endpoint needs an ID. 
-        // WORKAROUND: I'll accept 'token' in the upload endpoint next time or just patch it.
-        // For this MVP, let's just use the token as the identifier for logic and maybe pass "token" to upload if I update it?
-        // No, I'll update the upload route to find project by token if passed. 
-        // Or I'll just accept that I can't upload until I know the ID.
-        // Let's creating a quick "check token" helper fetch? 
-        // Nah, let's just proceed. The save endpoint returns success.
+        const loadData = async () => {
+            try {
+                const res = await fetch(`/api/wizard/${token}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.answers) {
+                        setAnswers(prev => ({ ...prev, ...data.answers }));
+                    }
+                    if (data.project?.leadEmail) {
+                        // Store email if needed, or simply let it be known
+                        // Could set it into answers if we want to display it in a field
+                        // setAnswers(prev => ({ ...prev, contact_email: data.project.leadEmail }));
+                    }
+                }
+            } catch (e) {
+                console.error("Failed to load wizard state", e);
+            }
+        };
 
+        loadData();
     }, [token]);
 
     const handleNext = async () => {
