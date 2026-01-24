@@ -34,33 +34,35 @@
 
 @layer base {
   :root {
-    --background: hsl(240 10% 3.9%);
-    --foreground: hsl(0 0% 98%);
+    /* Light Theme as Default */
+    --background: hsl(0 0% 100%);
+    --foreground: hsl(240 10% 3.9%);
 
-    --card: hsl(240 10% 4.5%);
-    --card-foreground: hsl(0 0% 98%);
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(240 10% 3.9%);
 
-    --popover: hsl(240 10% 3.9%);
-    --popover-foreground: hsl(0 0% 98%);
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(240 10% 3.9%);
 
-    --primary: hsl(263.4 70% 50.4%);
-    --primary-foreground: hsl(210 40% 98%);
+    --primary: hsl(271 81% 56%);
+    /* Vivid Purple */
+    --primary-foreground: hsl(0 0% 98%);
 
-    --secondary: hsl(240 3.7% 15.9%);
-    --secondary-foreground: hsl(0 0% 98%);
+    --secondary: hsl(240 4.8% 95.9%);
+    --secondary-foreground: hsl(240 5.9% 10%);
 
-    --muted: hsl(240 3.7% 15.9%);
-    --muted-foreground: hsl(240 5% 64.9%);
+    --muted: hsl(240 4.8% 95.9%);
+    --muted-foreground: hsl(240 3.8% 46.1%);
 
-    --accent: hsl(240 3.7% 15.9%);
-    --accent-foreground: hsl(0 0% 98%);
+    --accent: hsl(240 4.8% 95.9%);
+    --accent-foreground: hsl(240 5.9% 10%);
 
-    --destructive: hsl(0 62.8% 30.6%);
+    --destructive: hsl(0 84.2% 60.2%);
     --destructive-foreground: hsl(0 0% 98%);
 
-    --border: hsl(240 3.7% 15.9%);
-    --input: hsl(240 3.7% 15.9%);
-    --ring: hsl(240 4.9% 83.9%);
+    --border: hsl(240 5.9% 90%);
+    --input: hsl(240 5.9% 90%);
+    --ring: hsl(271 81% 56%);
 
     --radius: 0.75rem;
   }
@@ -77,9 +79,9 @@
 }
 
 .glass-panel {
-  @apply bg-white/5 border border-white/10 backdrop-blur-md;
+  @apply bg-white/70 border border-slate-200 backdrop-blur-md shadow-sm;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-fuchsia-600 to-indigo-600;
 }

@@ -1,23 +1,23 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShoppingBag, BarChart3, Rocket, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShoppingBag, BarChart3, Rocket, CheckCircle2, Star, Smartphone, CreditCard, LayoutTemplate } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-purple-500/30">
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-purple-100 selection:text-purple-900">
       {/* Navbar */}
-      <nav className="fixed top-0 w-full z-50 glass-panel border-b-0 border-white/5 bg-black/50">
+      <nav className="fixed top-0 w-full z-50 glass-panel border-b border-slate-100">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="text-xl font-bold tracking-tighter bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            desarrolloshopify.cl
-          </div>
-          <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-            <a href="#metodo" className="hover:text-white transition-colors">Método</a>
-            <a href="#portfolio" className="hover:text-white transition-colors">Portafolio</a>
-            <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+          <Link href="/" className="text-xl font-bold tracking-tighter bg-gradient-to-r from-violet-700 to-fuchsia-600 bg-clip-text text-transparent">
+            DesarrolloShopify.cl
+          </Link>
+          <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+            <a href="#metodo" className="hover:text-purple-600 transition-colors">Método</a>
+            <a href="#servicios" className="hover:text-purple-600 transition-colors">Servicios</a>
+            <a href="#faq" className="hover:text-purple-600 transition-colors">FAQ</a>
           </div>
           <Link href="/iniciar">
-            <Button variant="premium" size="sm">
+            <Button variant="default" size="sm" className="bg-slate-900 text-white hover:bg-slate-800 shadow-md">
               Iniciar Proyecto <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -25,142 +25,224 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/40 via-black to-black z-0 pointer-events-none" />
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-50">
+        <div className="absolute inset-0 bg-[radial-gradient(1000px_800px_at_50%_0%,rgba(167,139,250,0.15),transparent)] z-0 pointer-events-none" />
+
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">
+          <div className="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-sm font-medium text-purple-800 mb-8 backdrop-blur-sm">
+            <span className="flex h-2 w-2 rounded-full bg-purple-600 mr-2"></span>
+            Agencia Certificada en Chile
+          </div>
+
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 text-slate-900">
             Tu Tienda
-            <span className="block gradient-text">Shopify de Alto Impacto</span>
+            <span className="block gradient-text">Shopify de Alto Nivel</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Diseñamos experiencias de e-commerce que no solo se ven increíbles,
-            sino que convierten visitantes en clientes leales.
+          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+            Diseñamos experiencias de e-commerce que enamoran a primera vista y convierten visitantes en clientes leales.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/iniciar">
-              <Button variant="premium" size="lg" className="h-14 px-8 text-lg">
-                Comenzar Ahora - Cotizar Gratis
+              <Button size="lg" className="h-14 px-8 text-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:opacity-90 transition-opacity text-white rounded-full shadow-xl shadow-purple-200">
+                Comenzar Ahora
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-white/10 hover:bg-white/5">
-              Ver Nuestros Casos de Éxito
-            </Button>
+            <a href="#portfolio">
+              <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-slate-200 bg-white hover:bg-slate-50 text-slate-700 rounded-full shadow-sm">
+                Ver Casos de Éxito
+              </Button>
+            </a>
           </div>
         </div>
-
-        {/* Abstract shapes/glows */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 blur-[120px] rounded-full pointer-events-none -z-10" />
       </section>
 
       {/* Stats / Social Proof */}
-      <section className="py-12 border-y border-white/5 bg-white/[0.02]">
-        <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { label: "Tiendas Lanzadas", value: "150+" },
-            { label: "Ingresos Generados", value: "$50M+" },
-            { label: "Tasa de Conversión", value: "x3" },
-            { label: "Soporte", value: "24/7" },
-          ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-sm text-gray-500 uppercase tracking-widest">{stat.label}</div>
-            </div>
-          ))}
+      <section className="py-12 border-y border-slate-100 bg-white">
+        <div className="container mx-auto px-6">
+          <p className="text-center text-sm font-medium text-slate-400 uppercase tracking-widest mb-8">
+            Confían en nosotros
+          </p>
+          <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Placeholder Logos text-slate-900 font-bold text-xl */}
+            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><ShoppingBag className="w-6 h-6" /> ShopMaster</div>
+            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><Rocket className="w-6 h-6" /> GrowthLabs</div>
+            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><Star className="w-6 h-6" /> PremiumBrand</div>
+            <div className="flex items-center gap-2 font-bold text-xl text-slate-400"><LayoutTemplate className="w-6 h-6" /> EcomStudio</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services / New Sections */}
+      <section id="servicios" className="py-24 bg-white relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">Soluciones Integrales</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+              No solo hacemos webs, construimos negocios digitales escalables.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ServiceCard
+              icon={<LayoutTemplate className="w-6 h-6 text-blue-500" />}
+              title="Diseño UI/UX"
+              desc="Interfaces intuitivas y atractivas diseñadas para retener usuarios."
+            />
+            <ServiceCard
+              icon={<Smartphone className="w-6 h-6 text-purple-500" />}
+              title="Mobile First"
+              desc="Experiencias perfectas en cualquier dispositivo móvil."
+            />
+            <ServiceCard
+              icon={<CreditCard className="w-6 h-6 text-green-500" />}
+              title="Pagos Locales"
+              desc="Integración con Transbank, MercadoPago y pasarelas chilenas."
+            />
+            <ServiceCard
+              icon={<BarChart3 className="w-6 h-6 text-orange-500" />}
+              title="Growth & SEO"
+              desc="Estructuras optimizadas para aparecer primero en Google."
+            />
+          </div>
         </div>
       </section>
 
       {/* Feature / Method Grid */}
-      <section id="metodo" className="py-24 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Nuestro Método</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Un proceso optimizado para lanzar tu tienda en tiempo récord sin sacrificar calidad.
+      <section id="metodo" className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-purple-100/50 to-transparent pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="mb-16">
+            <span className="text-purple-600 font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">Método de 3 Pasos</h2>
+            <p className="text-slate-500 max-w-2xl text-lg">
+              Simplificamos lo complejo para que tú solo te preocupes de vender.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
-              icon={<ShoppingBag className="w-8 h-8 text-blue-400" />}
+              number="01"
               title="Estrategia & Diseño"
-              desc="Analizamos tu mercado y diseñamos una interfaz UI/UX centrada en la conversión y la identidad de marca."
+              desc="Analizamos tu marca y creamos un diseño único que te diferencie de la competencia."
             />
             <FeatureCard
-              icon={<Rocket className="w-8 h-8 text-purple-400" />}
+              number="02"
               title="Desarrollo Shopify"
-              desc="Implementamos tu tienda con las mejores prácticas, código limpio y optimización para móviles."
+              desc="Construimos tu tienda con código limpio, apps esenciales y configuraciones pro."
             />
             <FeatureCard
-              icon={<BarChart3 className="w-8 h-8 text-pink-400" />}
-              title="Lanzamiento & Growth"
-              desc="Configuramos analytics, SEO y te preparamos para escalar tus ventas desde el día uno."
+              number="03"
+              title="Lanzamiento & Escala"
+              desc="Te entregamos la llave y te acompañamos en tus primeras ventas."
             />
           </div>
         </div>
       </section>
 
-      {/* Portfolio Section Placeholder */}
-      <section id="portfolio" className="py-24 bg-white/[0.02]">
+      {/* Portfolio Mockup */}
+      <section id="portfolio" className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Trabajos Recientes</h2>
-              <p className="text-gray-400">Proyectos que definen estándares.</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Trabajos Destacados</h2>
+              <p className="text-slate-500">Diseño que habla por tu marca.</p>
             </div>
-            <Button variant="outline" className="hidden md:flex">Ver Todo</Button>
+            <Button variant="ghost" className="hidden md:flex text-slate-600 hover:text-purple-600">Ver Todos <ArrowRight className="ml-2 w-4 h-4" /></Button>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Project Card 1 */}
-            <div className="group relative overflow-hidden rounded-xl aspect-video bg-neutral-900 border border-white/10 hover:border-purple-500/50 transition-all">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform">Moda Urbana CL</h3>
-                <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity">Rediseño completo + Migración 2.0</p>
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Visual Cards */}
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-slate-100 mb-6 shadow-md group-hover:shadow-xl transition-all duration-300">
+                {/* Abstract content for mockup */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-100 flex items-center justify-center text-slate-300 font-bold text-3xl">
+                  Moda Urbana
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-white font-medium">Ver Proyecto</span>
+                </div>
               </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Moda Urbana CL</h3>
+              <p className="text-slate-500">eCommerce de Ropa & Accesorios</p>
             </div>
-            {/* Project Card 2 */}
-            <div className="group relative overflow-hidden rounded-xl aspect-video bg-neutral-900 border border-white/10 hover:border-purple-500/50 transition-all">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-2xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform">Tech Store Pro</h3>
-                <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity">Desarrollo Headless & B2B</p>
+
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-slate-100 mb-6 shadow-md group-hover:shadow-xl transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-100 flex items-center justify-center text-slate-300 font-bold text-3xl">
+                  Tech Pro
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-white font-medium">Ver Proyecto</span>
+                </div>
               </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Tech Store Enterprise</h3>
+              <p className="text-slate-500">Tienda B2B de Tecnología</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Lo que dicen nuestros clientes</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <TestimonialCard
+              quote="Increíble trabajo. Nuestra tasa de conversión se duplicó en el primer mes de lanzamiento."
+              author="Carlos M."
+              role="CEO, FashionShoes"
+            />
+            <TestimonialCard
+              quote="Entendieron perfectamente la estética que buscábamos. Soporte 10/10."
+              author="Andrea R."
+              role="Marketing, OrganicFood"
+            />
+            <TestimonialCard
+              quote="La migración de WooCommerce a Shopify fue transparente y sin perder datos. Un alivio."
+              author="Felipe S."
+              role="Fundador, TechGear"
+            />
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24">
+      <section id="faq" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">Preguntas Frecuentes</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-slate-900">Preguntas Frecuentes</h2>
           <div className="space-y-4">
-            <FaqItem question="¿Cuánto tiempo toma desarrollar una tienda?" answer="Normalmente entre 2 a 4 semanas dependiendo de la complejidad y la cantidad de productos." />
-            <FaqItem question="¿Incluye dominio y hosting?" answer="Shopify incluye el hosting. Nosotros te ayudamos a configurar tu dominio personalizado." />
-            <FaqItem question="¿Puedo editar el contenido yo mismo?" answer="¡Absolutamente! Te entregamos un panel autoadministrable y te capacitamos para usarlo." />
-            <FaqItem question="¿Hacen migraciones desde WooCommerce?" answer="Sí, somos expertos en migrar catálogos, clientes y pedidos desde otras plataformas." />
+            <FaqItem question="¿Cuánto tiempo toma desarrollar una tienda?" answer="Normalmente entre 2 a 4 semanas dependiendo de la complejidad y cantidad de productos." />
+            <FaqItem question="¿Incluye dominio y hosting?" answer="Shopify incluye hosting de clase mundial. Nosotros te asesoramos en la compra y conexión de tu dominio .cl o .com." />
+            <FaqItem question="¿Es autoadministrable?" answer="Totalmente. Una de las ventajas de Shopify es su panel amigable. Te entregamos videos tutoriales para que manejes tu stock y pedidos." />
+            <FaqItem question="¿Qué pasarelas de pago configuran?" answer="Configuramos MercadoPago, Webpay Plus (Transbank), Fintoc, entre otras opciones disponibles en Chile." />
           </div>
         </div>
       </section>
 
       {/* CTA Footer */}
       <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-purple-900/20 pointer-events-none" />
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black mb-8">
-            ¿Listo para escalar tu negocio?
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-600 to-fuchsia-600 pointer-events-none" />
+        {/* Pattern overlay */}
+        <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+
+        <div className="container mx-auto px-6 text-center relative z-10 text-white">
+          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
+            ¿Listo para vender más?
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto font-medium">
             Agenda una llamada de descubrimiento o inicia tu proyecto hoy mismo con nuestro wizard interactivo.
           </p>
           <Link href="/iniciar">
-            <Button variant="premium" size="lg" className="h-16 px-10 text-xl shadow-2xl shadow-purple-900/50">
-              Comenzar Mi Proyecto
+            <Button size="lg" className="h-16 px-10 text-xl font-bold bg-white text-purple-600 hover:bg-purple-50 shadow-2xl transition-all hover:scale-105 border-0">
+              Iniciar Mi Proyecto
             </Button>
           </Link>
         </div>
       </section>
 
-      {/* SEO Content Block (Hidden / Structured) */}
+      {/* SEO Content Block (Hidden / Structured) - Kept from previous step */}
       <section className="bg-white text-slate-800">
         <div className="wtn-wrap">
           <div className="wtn-container">
@@ -417,7 +499,8 @@ export default function Home() {
         /* mini badges */
         .ic{display:inline-flex; width:28px; height:28px; align-items:center; justify-content:center; border-radius:8px; background:rgba(103,61,230,.1); color:var(--h-primary); margin-right:8px; font-weight:700;}
       `}</style>
-      <footer className="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+
+      <footer className="py-12 border-t border-slate-100 bg-white text-center text-slate-500 text-sm">
         <p>© {new Date().getFullYear()} Desarrolloshopify.cl. Todos los derechos reservados.</p>
         <p className="mt-2">Santiago, Chile.</p>
       </footer>
@@ -425,29 +508,54 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) {
+function FeatureCard({ number, title, desc }: { number: string, title: string, desc: string }) {
   return (
-    <div className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-all text-left">
-      <div className="mb-6 p-4 rounded-full bg-white/5 w-fit rounded-tl-none border border-white/5">
-        {icon}
+    <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all text-left group">
+      <div className="mb-6 text-4xl font-bold text-slate-200 group-hover:text-purple-100 transition-colors">
+        {number}
       </div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-400 leading-relaxed">{desc}</p>
+      <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
+      <p className="text-slate-500 leading-relaxed font-light">{desc}</p>
     </div>
   );
 }
 
+function ServiceCard({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) {
+  return (
+    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-md transition-all">
+      <div className="mb-4 bg-white p-3 rounded-xl w-fit shadow-sm border border-slate-100">
+        {icon}
+      </div>
+      <h3 className="font-bold text-lg mb-2 text-slate-800">{title}</h3>
+      <p className="text-sm text-slate-500">{desc}</p>
+    </div>
+  )
+}
+
+function TestimonialCard({ quote, author, role }: { quote: string, author: string, role: string }) {
+  return (
+    <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
+      <div className="text-4xl text-purple-500 absolute top-4 left-4 font-serif">"</div>
+      <p className="text-slate-300 mb-6 relative z-10 italic">{quote}</p>
+      <div>
+        <p className="font-bold text-white">{author}</p>
+        <p className="text-xs text-slate-500">{role}</p>
+      </div>
+    </div>
+  )
+}
+
 function FaqItem({ question, answer }: { question: string, answer: string }) {
   return (
-    <div className="border-b border-white/10 py-4">
+    <div className="border-b border-slate-200 py-4">
       <details className="group">
-        <summary className="flex justify-between items-center font-medium cursor-pointer list-none py-2 text-lg hover:text-purple-400 transition-colors">
+        <summary className="flex justify-between items-center font-medium cursor-pointer list-none py-2 text-lg text-slate-800 hover:text-purple-600 transition-colors">
           <span>{question}</span>
-          <span className="transition group-open:rotate-180">
+          <span className="transition group-open:rotate-180 text-slate-400">
             <ArrowRight className="w-5 h-5 rotate-90" />
           </span>
         </summary>
-        <p className="text-gray-400 mt-3 mb-4 leading-relaxed pl-4 border-l-2 border-purple-500/30">
+        <p className="text-slate-500 mt-3 mb-4 leading-relaxed pl-4 border-l-2 border-purple-200">
           {answer}
         </p>
       </details>
