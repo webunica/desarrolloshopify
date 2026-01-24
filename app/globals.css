@@ -34,9 +34,10 @@
 
 @layer base {
   :root {
-    /* Light Theme as Default */
+    /* Refined Light Theme - Zinc based for more premium feel */
     --background: hsl(0 0% 100%);
     --foreground: hsl(240 10% 3.9%);
+    /* Extremely dark for high contrast */
 
     --card: hsl(0 0% 100%);
     --card-foreground: hsl(240 10% 3.9%);
@@ -44,11 +45,11 @@
     --popover: hsl(0 0% 100%);
     --popover-foreground: hsl(240 10% 3.9%);
 
-    --primary: hsl(271 81% 56%);
-    /* Vivid Purple */
+    /* Brand Color: Intensely Deep Violet/Indigo */
+    --primary: hsl(262 83% 58%);
     --primary-foreground: hsl(0 0% 98%);
 
-    --secondary: hsl(240 4.8% 95.9%);
+    --secondary: hsl(240 5% 96%);
     --secondary-foreground: hsl(240 5.9% 10%);
 
     --muted: hsl(240 4.8% 95.9%);
@@ -62,7 +63,7 @@
 
     --border: hsl(240 5.9% 90%);
     --input: hsl(240 5.9% 90%);
-    --ring: hsl(271 81% 56%);
+    --ring: hsl(262 83% 58%);
 
     --radius: 0.75rem;
   }
@@ -74,14 +75,31 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight text-slate-900;
   }
 }
 
 .glass-panel {
-  @apply bg-white/70 border border-slate-200 backdrop-blur-md shadow-sm;
+  @apply bg-white/80 border-b border-white/20 backdrop-blur-xl shadow-sm;
 }
 
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-fuchsia-600 to-indigo-600;
+}
+
+/* Subtle background pattern for hero */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
 }

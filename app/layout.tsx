@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Desarrollo Tienda Shopify | Expertos en E-commerce Chile",
@@ -24,10 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
-      <body className={inter.className}>
+    <html lang="es" className="scroll-smooth">
+      <body className={`${fontSans.className} antialiased`}>
         {children}
-        <Toaster position="top-center" theme="dark" />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );

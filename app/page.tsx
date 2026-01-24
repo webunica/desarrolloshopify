@@ -27,37 +27,43 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-50">
-        <div className="absolute inset-0 bg-[radial-gradient(1000px_800px_at_50%_0%,rgba(167,139,250,0.15),transparent)] z-0 pointer-events-none" />
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-50 bg-grid-pattern">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-100/40 via-transparent to-transparent z-0 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-sm font-medium text-purple-800 mb-8 backdrop-blur-sm">
-            <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+          <div className="inline-flex items-center rounded-full border border-purple-200 bg-white/60 px-4 py-1.5 text-sm font-semibold text-purple-900 mb-8 backdrop-blur-md shadow-sm">
+            <span className="flex h-2.5 w-2.5 rounded-full bg-green-500 mr-2 animate-pulse"></span>
             Partner Certificado Shopify en Chile
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 text-slate-900">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 text-slate-900 drop-shadow-sm">
             Tu Tienda Shopify,
-            <span className="block gradient-text">Lista para Vender en Chile</span>
+            <span className="block gradient-text pb-2">Lista para Vender en Chile</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-6 leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
             Diseñamos e-commerces de alto rendimiento integrados con Webpay, envíos locales y todo lo que tu Pyme necesita para escalar.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm font-medium text-slate-500">
-            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /> Integración Transbank & MercadoPago</div>
-            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /> Autoadministrable 100%</div>
-            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /> Facturación Automática (SII)</div>
+          <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm font-semibold text-slate-700">
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm hover:border-purple-200 transition-colors">
+              <CheckCircle2 className="w-4 h-4 text-green-600" /> Integración Transbank & MercadoPago
+            </div>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm hover:border-purple-200 transition-colors">
+              <CheckCircle2 className="w-4 h-4 text-green-600" /> Autoadministrable 100%
+            </div>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm hover:border-purple-200 transition-colors">
+              <CheckCircle2 className="w-4 h-4 text-green-600" /> Facturación Automática (SII)
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <Link href="/iniciar">
-              <Button size="lg" className="h-14 px-8 text-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:opacity-90 transition-opacity text-white rounded-full shadow-xl shadow-purple-200 font-bold">
+              <Button size="lg" className="h-14 px-8 text-lg bg-slate-900 hover:bg-slate-800 text-white rounded-full shadow-lg shadow-slate-200 hover:shadow-xl hover:-translate-y-0.5 transition-all font-bold">
                 Cotizar mi Tienda (Gratis)
               </Button>
             </Link>
             <a href="#portfolio">
-              <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-slate-200 bg-white hover:bg-slate-50 text-slate-700 rounded-full shadow-sm">
+              <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-2 border-slate-200 bg-white hover:border-purple-200 hover:bg-purple-50 text-slate-700 rounded-full shadow-sm font-semibold transition-all">
                 Ver Tiendas Realizadas
               </Button>
             </a>
@@ -520,36 +526,44 @@ export default function Home() {
 
 function FeatureCard({ number, title, desc }: { number: string, title: string, desc: string }) {
   return (
-    <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all text-left group">
-      <div className="mb-6 text-4xl font-bold text-slate-200 group-hover:text-purple-100 transition-colors">
+    <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all text-left group relative overflow-hidden">
+      <div className="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl text-slate-300 group-hover:text-purple-500 transition-colors pointer-events-none select-none">
         {number}
       </div>
-      <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
-      <p className="text-slate-500 leading-relaxed font-light">{desc}</p>
+      <div className="mb-6 text-4xl font-bold text-slate-200 group-hover:text-purple-600 transition-colors relative z-10">
+        {number}
+      </div>
+      <h3 className="text-xl font-bold mb-3 text-slate-900 relative z-10">{title}</h3>
+      <p className="text-slate-600 leading-relaxed font-medium relative z-10">{desc}</p>
     </div>
   );
 }
 
 function ServiceCard({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) {
   return (
-    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-md transition-all">
-      <div className="mb-4 bg-white p-3 rounded-xl w-fit shadow-sm border border-slate-100">
+    <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-lg hover:border-purple-100 transition-all group">
+      <div className="mb-4 bg-slate-50 p-3 rounded-xl w-fit shadow-sm border border-slate-100 group-hover:bg-purple-50 group-hover:scale-110 transition-all duration-300">
         {icon}
       </div>
       <h3 className="font-bold text-lg mb-2 text-slate-800">{title}</h3>
-      <p className="text-sm text-slate-500">{desc}</p>
+      <p className="text-sm text-slate-600 font-medium leading-relaxed">{desc}</p>
     </div>
   )
 }
 
 function TestimonialCard({ quote, author, role }: { quote: string, author: string, role: string }) {
   return (
-    <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
-      <div className="text-4xl text-purple-500 absolute top-4 left-4 font-serif">"</div>
-      <p className="text-slate-300 mb-6 relative z-10 italic">{quote}</p>
-      <div>
-        <p className="font-bold text-white">{author}</p>
-        <p className="text-xs text-slate-500">{role}</p>
+    <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 relative shadow-2xl shadow-black/20">
+      <div className="text-5xl text-purple-500/30 absolute top-4 right-6 font-serif select-none">"</div>
+      <p className="text-slate-200 mb-6 relative z-10 italic font-medium leading-relaxed">"{quote}"</p>
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">
+          {author.charAt(0)}
+        </div>
+        <div>
+          <p className="font-bold text-white text-sm">{author}</p>
+          <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">{role}</p>
+        </div>
       </div>
     </div>
   )
@@ -557,15 +571,15 @@ function TestimonialCard({ quote, author, role }: { quote: string, author: strin
 
 function FaqItem({ question, answer }: { question: string, answer: string }) {
   return (
-    <div className="border-b border-slate-200 py-4">
+    <div className="border-b border-slate-200 py-5">
       <details className="group">
-        <summary className="flex justify-between items-center font-medium cursor-pointer list-none py-2 text-lg text-slate-800 hover:text-purple-600 transition-colors">
+        <summary className="flex justify-between items-center font-semibold cursor-pointer list-none text-lg text-slate-800 hover:text-purple-700 transition-colors select-none">
           <span>{question}</span>
-          <span className="transition group-open:rotate-180 text-slate-400">
+          <span className="transition-transform duration-300 group-open:rotate-180 text-slate-400 group-open:text-purple-600">
             <ArrowRight className="w-5 h-5 rotate-90" />
           </span>
         </summary>
-        <p className="text-slate-500 mt-3 mb-4 leading-relaxed pl-4 border-l-2 border-purple-200">
+        <p className="text-slate-600 mt-4 mb-2 leading-relaxed pl-4 border-l-2 border-purple-200">
           {answer}
         </p>
       </details>
