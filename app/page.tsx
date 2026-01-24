@@ -16,6 +16,7 @@ export default function Home() {
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
             <a href="#metodo" className="hover:text-purple-400 transition-colors">Método</a>
             <a href="#servicios" className="hover:text-purple-400 transition-colors">Servicios</a>
+            <Link href="/agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
             <a href="#faq" className="hover:text-purple-400 transition-colors">FAQ</a>
           </div>
           <Link href="/iniciar">
