@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { ArrowRight, ArrowLeft, Upload, CheckCircle, Save, Loader2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, Upload, CheckCircle, Save, Loader2, Sparkles } from "lucide-react";
 
 // Wizard Steps Configuration
 const STEPS = [
@@ -136,11 +136,11 @@ function WizardContent() {
                             <div
                                 key={step.id}
                                 className={`flex items-center gap-3 text-sm ${step.id === currentStep ? "text-purple-400 font-bold" :
-                                        step.id < currentStep ? "text-green-400" : "text-gray-500"
+                                    step.id < currentStep ? "text-green-400" : "text-gray-500"
                                     }`}
                             >
                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center border ${step.id === currentStep ? "border-purple-400 bg-purple-400/10" :
-                                        step.id < currentStep ? "border-green-400 bg-green-400/10" : "border-gray-700"
+                                    step.id < currentStep ? "border-green-400 bg-green-400/10" : "border-gray-700"
                                     }`}>
                                     {step.id < currentStep ? <CheckCircle className="w-4 h-4" /> : step.id}
                                 </div>
@@ -194,8 +194,8 @@ function WizardContent() {
                                         key={opt}
                                         onClick={() => setAnswers({ ...answers, scope_type: opt })}
                                         className={`p-4 rounded-xl border cursor-pointer transition-all ${answers.scope_type === opt
-                                                ? "border-purple-500 bg-purple-500/10"
-                                                : "border-white/10 hover:border-white/30 bg-neutral-800"
+                                            ? "border-purple-500 bg-purple-500/10"
+                                            : "border-white/10 hover:border-white/30 bg-neutral-800"
                                             }`}
                                     >
                                         {opt}
