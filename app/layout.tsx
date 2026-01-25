@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 };
 
-import WhatsAppFloating from "@/components/WhatsAppFloating";
+import WhatsAppFloating from "./components/WhatsAppFloating";
 
 export default function RootLayout({
   children,
