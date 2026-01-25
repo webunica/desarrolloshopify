@@ -52,15 +52,14 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 mb-8 backdrop-blur-md shadow-sm">
                             <span className="flex h-2.5 w-2.5 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-                            Partner Certificado Shopify en Chile
+                            Agencia Shopify Expert Parteners
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 text-white drop-shadow-sm">
-                            Tu Tienda Shopify,
-                            <span className="block gradient-text pb-2">Lista para Vender en Chile</span>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-white drop-shadow-sm max-w-5xl mx-auto leading-tight">
+                            Agencia Experta en <span className="gradient-text">Desarrollo y Diseño</span> de Tiendas Shopify en Chile
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-                            Diseñamos e-commerces de alto rendimiento integrados con Webpay, envíos locales y todo lo que tu Pyme necesita para escalar.
+                        <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
+                            Llevamos tu negocio al siguiente nivel con un E-commerce diseñado para vender. Resultados medibles y tiendas optimizadas.
                         </p>
 
                         <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm font-semibold text-slate-300">
