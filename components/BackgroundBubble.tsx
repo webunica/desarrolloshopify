@@ -18,11 +18,12 @@ const Bubble = ({ x, size, duration, delay, mouseX }: { x: number; size: number;
                 left: `${x}%`,
                 width: size,
                 height: size,
+                bottom: -size - 50, // Start just below current viewport
                 x: xOffset, // Apply mouse parallax
             }}
             animate={{
-                y: [0, -800], // Float up (shorter distance since it's just for Hero)
-                opacity: [0, 0.8, 0], // Fade in/out
+                y: [0, -1500], // Go up enough to clear typical screen heights
+                opacity: [0, 0.8, 0],
             }}
             transition={{
                 duration: duration,
