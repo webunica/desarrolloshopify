@@ -13,7 +13,7 @@ const Bubble = ({ x, size, duration, delay, mouseX }: { x: number; size: number;
 
     return (
         <motion.div
-            className="absolute rounded-full border border-white/20 bg-white/10 backdrop-blur-[1px]"
+            className="absolute rounded-full border border-white/40 bg-white/20 backdrop-blur-[1px] shadow-[0_0_10px_rgba(255,255,255,0.2)]"
             style={{
                 left: `${x}%`,
                 width: size,
@@ -64,7 +64,7 @@ export const BackgroundBubble = () => {
     }, []);
 
     return (
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
             {/* Optional: Add a subtle gradient overlay to enhance depth */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/20" />
 
