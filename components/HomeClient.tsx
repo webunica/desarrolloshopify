@@ -31,8 +31,8 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                     <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
                         <Link href="/#inicio" className="hover:text-purple-400 transition-colors">Inicio</Link>
                         <Link href="/#metodo" className="hover:text-purple-400 transition-colors">Método</Link>
-                        <Link href="/#servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
-                        <Link href="/#portfolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
+                        <Link href="/servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
+                        <Link href="/portafolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
                         <Link href="/#agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
                         <Link href="/#info-detallada" className="hover:text-purple-400 transition-colors">Info</Link>
                     </div>
@@ -135,6 +135,15 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                             title="Diseño UX/UI"
                             desc="No usamos plantillas básicas; adaptamos la experiencia visual para generar confianza."
                         />
+                    </div>
+                    </div>
+
+                    <div className="mt-12 text-center">
+                        <Link href="/servicios">
+                            <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold transition-all">
+                                Ver todos los servicios <ArrowRight className="ml-2 w-4 h-4" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -297,6 +306,14 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                             </div>
                         </div>
                     </div>
+
+                    <div className="mt-12 text-center">
+                        <Link href="/portafolio">
+                            <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold transition-all">
+                                Ver todo el portafolio <ArrowRight className="ml-2 w-4 h-4" />
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -364,11 +381,13 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
-            {isEnabled("ShopifyInfoTabs") && (
-                <ShopifyInfoTabs />
-            )}
+            {
+        isEnabled("ShopifyInfoTabs") && (
+            <ShopifyInfoTabs />
+        )
+    }
 
-            {/* Agencias Section (Moved from separate page) */}
+    {/* Agencias Section (Moved from separate page) */ }
             <section id="agencias" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern border-t border-white/10">
                 <CodeLeftRain />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/40 via-transparent to-transparent z-0 pointer-events-none" />
@@ -434,7 +453,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 <p>© {new Date().getFullYear()} Desarrolloshopify.cl. Todos los derechos reservados.</p>
                 <p className="mt-2">Santiago, Chile.</p>
             </footer>
-        </main>
+        </main >
     );
 }
 
