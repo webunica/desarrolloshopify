@@ -64,7 +64,7 @@ export const BackgroundBubble = () => {
     }, []);
 
     return (
-        <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
+        <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden">
             {/* Optional: Add a subtle gradient overlay to enhance depth */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/20" />
 
