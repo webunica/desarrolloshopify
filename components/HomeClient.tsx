@@ -239,29 +239,37 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-indigo-900/20 to-transparent pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="mb-16">
-                        <span className="text-purple-400 font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso</span>
+                        <span className="text-purple-400 font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso Colaborativo</span>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Método de 3 Pasos</h2>
                         <p className="text-slate-400 max-w-2xl text-lg">
-                            Simplificamos lo complejo para que tú solo te preocupes de vender.
+                            Te involucramos en cada etapa. No somos una caja negra; co-creamos tu éxito digital contigo.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-8 mb-16">
                         <FeatureCard
                             number="01"
-                            title="Estrategia & Diseño"
-                            desc="Analizamos tu marca y creamos un diseño único que te diferencie de la competencia."
+                            title="Co-Diseño & Estrategia"
+                            desc="Nos reunimos contigo para definir objetivos. Diseñamos la experiencia (UX/UI) en Figma y validamos cada pantalla contigo antes de programar."
                         />
                         <FeatureCard
                             number="02"
-                            title="Desarrollo Shopify"
-                            desc="Construimos tu tienda con código limpio, apps esenciales y configuraciones pro."
+                            title="Desarrollo Transparente"
+                            desc="Construimos tu tienda dándote acceso al entorno de desarrollo (preview). Podrás ver el avance en tiempo real y aportar feedback directo."
                         />
                         <FeatureCard
                             number="03"
-                            title="Lanzamiento & Escala"
-                            desc="Te entregamos la llave y te acompañamos en tus primeras ventas."
+                            title="Lanzamiento & Capacitación"
+                            desc="No solo te entregamos la tienda; te enseñamos a usarla. Capacitamos a tu equipo y te acompañamos durante el lanzamiento oficial."
                         />
+                    </div>
+
+                    <div className="text-center">
+                        <Link href="https://wa.me/56984410379" target="_blank">
+                            <Button size="lg" className="h-14 px-8 text-lg bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-green-500/20 font-bold transition-all">
+                                Conversar por WhatsApp <span className="ml-2 text-xl">💬</span>
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
