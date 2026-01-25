@@ -136,7 +136,6 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                             desc="No usamos plantillas básicas; adaptamos la experiencia visual para generar confianza."
                         />
                     </div>
-                    </div>
 
                     <div className="mt-12 text-center">
                         <Link href="/servicios">
@@ -382,12 +381,12 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
             </section>
 
             {
-        isEnabled("ShopifyInfoTabs") && (
-            <ShopifyInfoTabs />
-        )
-    }
+                isEnabled("ShopifyInfoTabs") && (
+                    <ShopifyInfoTabs />
+                )
+            }
 
-    {/* Agencias Section (Moved from separate page) */ }
+            {/* Agencias Section (Moved from separate page) */}
             <section id="agencias" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern border-t border-white/10">
                 <CodeLeftRain />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/40 via-transparent to-transparent z-0 pointer-events-none" />
