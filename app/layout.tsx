@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
+import WhatsAppFloating from "@/components/WhatsAppFloating";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +32,7 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${fontSans.className} antialiased`}>
         {children}
+        <WhatsAppFloating />
         <Toaster position="top-center" richColors />
       </body>
     </html>
