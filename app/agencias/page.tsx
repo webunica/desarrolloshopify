@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code2, Users, Zap, ShieldCheck } from "lucide-react";
+import { BackgroundBubble } from "@/components/BackgroundBubble";
 
 export default function AgenciasPage() {
     return (
-        <main className="min-h-screen bg-slate-950 text-white selection:bg-purple-500/30 selection:text-purple-200">
+        <main className="min-h-screen bg-slate-950 text-white selection:bg-purple-500/30 selection:text-purple-200 relative overflow-hidden">
+            <BackgroundBubble />
             {/* Navbar (Simplified for subpage) */}
             <nav className="fixed top-0 w-full z-50 glass-panel border-b border-white/5 bg-slate-950/80 backdrop-blur-md">
                 <div className="container mx-auto px-6 h-16 flex items-center justify-between">
