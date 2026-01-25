@@ -29,6 +29,16 @@ export default async function AdminDashboard() {
                     </Button>
                 </header>
 
+                <div className="grid md:grid-cols-3 gap-6 mb-10">
+                    <div className="bg-neutral-900 border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-colors">
+                        <h2 className="text-xl font-bold mb-2">Editor Web</h2>
+                        <p className="text-gray-400 text-sm mb-4">Gestiona el contenido de las páginas y secciones.</p>
+                        <Button className="w-full" asChild>
+                            <Link href="/admin/cms">Ir al Editor</Link>
+                        </Button>
+                    </div>
+                </div>
+
                 <div className="bg-neutral-900 border border-white/10 rounded-xl overflow-hidden">
                     <table className="w-full text-left text-sm">
                         <thead className="bg-white/5 text-gray-400">

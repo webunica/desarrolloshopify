@@ -79,3 +79,28 @@ enum ProjectStatus {
   REVIEW
   COMPLETED
 }
+
+// --- CMS Models ---
+
+model SitePage {
+  id        String   @id @default(cuid())
+  slug      String   @unique // e.g. "home", "agencias"
+  title     String
+  sections  SiteSection[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSection {
+  id          String   @id @default(cuid())
+  component   String   // React component identifier e.g. "Hero", "ShopifyInfoTabs"
+  name        String   // Display name e.g. "Hero Principal"
+  content     Json     // JSON props
+  order       Int      @default(0)
+  isVisible   Boolean  @default(true)
+  
+  pageId      String
+  page        SitePage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@index([pageId])
+}
