@@ -29,10 +29,12 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                         DesarrolloShopify.cl
                     </Link>
                     <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                        <Link href="/#inicio" className="hover:text-purple-400 transition-colors">Inicio</Link>
                         <Link href="/#metodo" className="hover:text-purple-400 transition-colors">Método</Link>
                         <Link href="/#servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
+                        <Link href="/#portfolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
                         <Link href="/agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
-                        <Link href="/#faq" className="hover:text-purple-400 transition-colors">FAQ</Link>
+                        <Link href="/#info-detallada" className="hover:text-purple-400 transition-colors">Info</Link>
                     </div>
                     <Link href="/iniciar">
                         <Button variant="default" size="sm" className="bg-white text-slate-950 hover:bg-slate-200 shadow-md font-bold">
@@ -43,7 +45,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
             </nav>
 
             {isEnabled("CodeLeftRain") && (
-                <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern">
+                <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern">
                     <CodeLeftRain />
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-transparent to-transparent z-0 pointer-events-none" />
 
@@ -89,7 +91,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </section>
             )}
 
-            <section className="py-10 border-y border-white/5 bg-slate-900/50">
+            <section id="partners" className="py-10 border-y border-white/5 bg-slate-900/50">
                 <div className="container mx-auto px-6">
                     <p className="text-center text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">
                         Tecnologías & Partners Integrados
@@ -138,7 +140,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
-            <section className="py-24 bg-slate-950 border-t border-white/5 relative overflow-hidden">
+            <section id="personalizacion" className="py-24 bg-slate-950 border-t border-white/5 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent z-0 pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col md:flex-row items-center gap-12">
@@ -299,7 +301,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
-            <section className="py-32 bg-slate-950 text-white border-t border-white/5">
+            <section id="gestion" className="py-32 bg-slate-950 text-white border-t border-white/5">
                 <div className="container mx-auto px-6">
                     <div className="mb-16">
                         <span className="text-[#00dec4] font-medium text-lg tracking-wide">Computadoras y dispositivos móviles</span>
@@ -329,7 +331,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+            <section id="testimonios" className="py-24 bg-slate-900 text-white relative overflow-hidden">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">Lo que dicen nuestros clientes</h2>
