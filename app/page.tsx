@@ -3,12 +3,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag, BarChart3, Rocket, CheckCircle2, Star, Smartphone, CreditCard, LayoutTemplate } from "lucide-react";
-import { BackgroundBubble } from "@/components/BackgroundBubble";
+import { CodeLeftRain } from "@/components/CodeLeftRain";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-transparent relative">
-      <BackgroundBubble />
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 glass-panel">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -31,6 +30,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern">
+        <CodeLeftRain />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-transparent to-transparent z-0 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10 text-center">
