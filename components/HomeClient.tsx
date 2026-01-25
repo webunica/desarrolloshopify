@@ -33,7 +33,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                         <Link href="/#metodo" className="hover:text-purple-400 transition-colors">Método</Link>
                         <Link href="/#servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
                         <Link href="/#portfolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
-                        <Link href="/agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
+                        <Link href="/#agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
                         <Link href="/#info-detallada" className="hover:text-purple-400 transition-colors">Info</Link>
                     </div>
                     <Link href="/iniciar">
