@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag, BarChart3, Rocket, CheckCircle2, Star, Smartphone, CreditCard, LayoutTemplate } from "lucide-react";
+import { BackgroundBubble } from "@/components/BackgroundBubble";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-transparent">
+    <main className="min-h-screen bg-transparent relative">
+      <BackgroundBubble />
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 glass-panel">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
