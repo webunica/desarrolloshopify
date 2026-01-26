@@ -20,6 +20,7 @@ export function Navbar() {
                         <Link href="/#inicio" className="hover:text-purple-400 transition-colors">Inicio</Link>
                         <Link href="/#metodo" className="hover:text-purple-400 transition-colors">Método</Link>
                         <Link href="/servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
+                        <Link href="/precios" className="hover:text-purple-400 transition-colors">Precios</Link>
                         <Link href="/portafolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
                         <Link href="/blog" className="hover:text-purple-400 transition-colors">Blog</Link>
                         <Link href="/contacto" className="hover:text-purple-400 transition-colors">Contacto</Link>
