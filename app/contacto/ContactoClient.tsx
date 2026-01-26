@@ -115,8 +115,8 @@ export default function ContactoClient() {
                                 <ContactInfoCard
                                     icon={<Phone className="w-6 h-6" />}
                                     title="WhatsApp"
-                                    content="+56 9 1234 5678"
-                                    href="https://wa.me/56912345678"
+                                    content="+56 9 6619 8752"
+                                    href="https://wa.me/56966198752"
                                 />
 
                                 <ContactInfoCard
@@ -231,7 +231,7 @@ export default function ContactoClient() {
                                                     type="tel"
                                                     {...register('phone')}
                                                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                                                    placeholder="+56 9 1234 5678"
+                                                    placeholder="+56 9 6619 8752"
                                                 />
                                             </div>
 

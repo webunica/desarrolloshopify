@@ -247,7 +247,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                     </div>
 
                     <div className="text-center">
-                        <Link href="https://wa.me/56984410379" target="_blank">
+                        <Link href="https://wa.me/56966198752" target="_blank">
                             <Button size="lg" className="h-14 px-8 text-lg bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-green-500/20 font-bold transition-all">
                                 Conversar por WhatsApp <span className="ml-2 text-xl">💬</span>
                             </Button>
@@ -472,7 +472,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-24">
-                        <Link href="https://wa.me/56984410379" target="_blank">
+                        <Link href="https://wa.me/56966198752" target="_blank">
                             <Button size="lg" className="h-14 px-8 text-lg bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg hover:shadow-purple-500/20 font-bold transition-all">
                                 Agendar Reunión Partner
                             </Button>

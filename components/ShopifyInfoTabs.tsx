@@ -36,7 +36,7 @@ export const ShopifyInfoTabs = () => {
                         con integración de medios de pago locales, envíos nacionales y una experiencia de compra optimizada.
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link href="https://wa.me/56984410379" target="_blank">
+                        <Link href="https://wa.me/56966198752" target="_blank">
                             <Button size="lg" className="bg-white text-slate-950 hover:bg-slate-200 font-bold rounded-full px-8 h-12">
                                 Cotizar tienda Shopify
                             </Button>

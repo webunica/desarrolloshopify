@@ -102,7 +102,7 @@ export default function PortafolioPage() {
                     <section className="mt-20 pt-10 border-t border-white/10 text-center">
                         <p className="text-slate-500 mb-6">¿Quieres ver más detalles o solicitar referencias?</p>
                         <a
-                            href="https://wa.me/56984410379"
+                            href="https://wa.me/56966198752"
                             target="_blank"
                             className="inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-sm font-bold text-slate-950 shadow transition-colors hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950"
                         >
