@@ -4,14 +4,19 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
 const designs = [
-    { id: 1, image: '/uploads/home-1-1.jpg', title: 'Moda Urbana', category: 'Fashion' },
+    { id: 1, image: '/uploads/moda.jpg', title: 'Moda Urbana', category: 'Fashion' },
     { id: 2, image: '/uploads/home-2-1.jpg', title: 'Tecnología Premium', category: 'Electronics' },
     { id: 3, image: '/uploads/home-3-1.jpg', title: 'Estilo de Vida', category: 'Lifestyle' },
     { id: 4, image: '/uploads/home-4.jpg', title: 'Decoración Minimalista', category: 'Home Decor' },
-    { id: 5, image: '/uploads/home-5-2.jpg', title: 'Cuidado Personal', category: 'Beauty' },
-    { id: 6, image: '/uploads/5-2.jpg', title: 'Accesorios & Joyas', category: 'Accessories' },
-    { id: 7, image: '/uploads/demo-01.jpg', title: 'Deportes Extremos', category: 'Sports' },
+    { id: 5, image: '/uploads/cuidado.jpg', title: 'Cuidado Personal', category: 'Beauty' },
+    { id: 6, image: '/uploads/home-5-2.jpg', title: 'Accesorios & Joyas', category: 'Accessories' },
+    { id: 7, image: '/uploads/sport.jpg', title: 'Deportes Extremos', category: 'Sports' },
     { id: 8, image: '/uploads/demo-02.jpg', title: 'Gourmet & Food', category: 'Food' },
+    { id: 9, image: '/uploads/marketplace.jpg', title: 'Supermercado & Retail', category: 'Marketplace' },
+    { id: 10, image: '/uploads/licores.jpg', title: 'Vinos & Licores', category: 'Drinks' },
+    { id: 11, image: '/uploads/moda hombre.jpg', title: 'Moda Masculina', category: 'Fashion' },
+    { id: 12, image: '/uploads/cuidado-2.jpg', title: 'Skincare Premium', category: 'Beauty' },
+    { id: 13, image: '/uploads/sport-2.jpg', title: 'Fitness & Gym', category: 'Sports' }
 ];
 
 export function DesignCarousel() {
