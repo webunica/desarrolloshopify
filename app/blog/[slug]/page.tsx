@@ -172,11 +172,17 @@ const articles = {
 };
 
 type Props = {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 };
 
+export async function generateStaticParams() {
+    return Object.keys(articles).map((slug) => ({
+        slug: slug,
+    }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const slug = params.slug;
+    const { slug } = await params;
     const article = articles[slug as keyof typeof articles];
 
     if (!article) {
@@ -191,8 +197,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function BlogPost({ params }: Props) {
-    const slug = params.slug;
+export default async function BlogPost({ params }: Props) {
+    const { slug } = await params;
     const article = articles[slug as keyof typeof articles];
 
     if (!article) {
