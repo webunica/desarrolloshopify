@@ -7,6 +7,7 @@ import { CodeLeftRain } from "@/components/CodeLeftRain";
 import { ShopifyInfoTabs } from "@/components/ShopifyInfoTabs";
 import { Navbar } from "@/components/Navbar";
 import { TechMarquee } from "@/components/TechMarquee";
+import { DesignCarousel } from "@/components/DesignCarousel";
 
 interface CMSSection {
     id: string;
@@ -247,52 +248,13 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
             </section>
 
             <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
-                <div className="container mx-auto px-6">
-                    <div className="mb-16 max-w-5xl">
-                        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-tight">
-                            La plataforma de comercio <br />
-                            <span className="text-slate-500">detrás de todo.</span>
-                        </h2>
-                        <p className="text-2xl md:text-3xl text-slate-400 font-medium leading-snug max-w-4xl">
-                            <span className="text-white">Vende online y en persona.</span> Vende a nivel local y mundial.
-                            Vende de forma directa y mayorista. Diseñamos para que tu marca brille en computadoras y dispositivos móviles.
-                        </p>
-                    </div>
-
-                    <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:px-0 md:overflow-visible">
-                        <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop" alt="Fashion Store" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                            <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <h3 className="text-4xl font-bold text-white mb-2">Glossier Vibes</h3>
-                                <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Beauty & Skincare</p>
-                            </div>
-                        </div>
-                        <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=1000&auto=format&fit=crop" alt="Tech Store" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                            <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <h3 className="text-4xl font-bold text-white mb-2">Simply Organic</h3>
-                                <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Lifestyle & Home</p>
-                            </div>
-                        </div>
-                        <div className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop" alt="Sneaker Store" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                            <div className="absolute bottom-0 left-0 p-8 md:p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <h3 className="text-4xl font-bold text-white mb-2">Nike Redesign</h3>
-                                <p className="text-slate-300 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Sportswear & Shoes</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mt-12 text-center">
-                        <Link href="/portafolio">
-                            <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold transition-all">
-                                Ver todo el portafolio <ArrowRight className="ml-2 w-4 h-4" />
-                            </Button>
-                        </Link>
-                    </div>
+                <DesignCarousel />
+                <div className="mt-12 text-center">
+                    <Link href="/portafolio">
+                        <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold transition-all">
+                            Ver todo el portafolio <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                    </Link>
                 </div>
             </section>
 
