@@ -11,6 +11,59 @@ export const metadata: Metadata = {
 export default function ServiciosPage() {
     return (
         <div className="min-h-screen bg-slate-950 text-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Desarrollo y Diseño Shopify",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "DesarrolloShopify.cl",
+                            "url": "https://desarrolloweb.cl"
+                        },
+                        "areaServed": {
+                            "@type": "Country",
+                            "name": "Chile"
+                        },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Servicios Shopify",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Desarrollo a Medida"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Migraciones Seguras"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Diseño UX/UI"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Optimización CRO & WPO"
+                                    }
+                                }
+                            ]
+                        }
+                    })
+                }}
+            />
             <Navbar />
 
             <main className="pt-32 pb-20 px-6">

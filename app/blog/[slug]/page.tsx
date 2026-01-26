@@ -207,6 +207,29 @@ export default async function BlogPost({ params }: Props) {
 
     return (
         <main className="bg-slate-950 min-h-screen text-slate-200 font-sans selection:bg-purple-900 selection:text-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": article.title,
+                        "datePublished": article.date, // Note: Ideally retrieve ISO date from CMS
+                        "author": {
+                            "@type": "Organization",
+                            "name": "DesarrolloShopify.cl"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "DesarrolloShopify.cl",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://desarrolloweb.cl/og-image.png"
+                            }
+                        }
+                    })
+                }}
+            />
             <Navbar />
 
             <article className="pt-32 pb-20 px-6">
