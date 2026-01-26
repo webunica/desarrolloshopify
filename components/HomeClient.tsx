@@ -6,6 +6,7 @@ import { ArrowRight, ShoppingBag, BarChart3, Rocket, CheckCircle2, Star, Smartph
 import { CodeLeftRain } from "@/components/CodeLeftRain";
 import { ShopifyInfoTabs } from "@/components/ShopifyInfoTabs";
 import { Navbar } from "@/components/Navbar";
+import { TechMarquee } from "@/components/TechMarquee";
 
 interface CMSSection {
     id: string;
@@ -72,19 +73,8 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </section>
             )}
 
-            <section id="partners" className="py-10 border-y border-white/5 bg-slate-900/50">
-                <div className="container mx-auto px-6">
-                    <p className="text-center text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">
-                        Tecnologías & Partners Integrados
-                    </p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 filter text-slate-400 font-semibold">
-                        <span className="flex items-center gap-2 text-xl hover:text-white transition-colors"><ShoppingBag className="w-5 h-5" /> Shopify Partner</span>
-                        <span className="flex items-center gap-2 text-xl hover:text-white transition-colors">Webpay Plus</span>
-                        <span className="flex items-center gap-2 text-xl hover:text-white transition-colors">MercadoPago</span>
-                        <span className="flex items-center gap-2 text-xl hover:text-white transition-colors">Starken/Blue</span>
-                        <span className="flex items-center gap-2 text-xl hover:text-white transition-colors">Google Ads</span>
-                    </div>
-                </div>
+            <section id="partners" className="border-y border-slate-900 bg-slate-950">
+                <TechMarquee />
             </section>
 
             <section id="servicios" className="py-24 bg-slate-950 relative">
