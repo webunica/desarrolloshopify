@@ -120,6 +120,17 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
+            <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
+                <DesignCarousel />
+                <div className="mt-12 text-center">
+                    <Link href="/portafolio">
+                        <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold transition-all">
+                            Ver todo el portafolio <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                    </Link>
+                </div>
+            </section>
+
             <section id="personalizacion" className="py-24 bg-slate-950 border-t border-white/5 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent z-0 pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
@@ -247,16 +258,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
-            <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
-                <DesignCarousel />
-                <div className="mt-12 text-center">
-                    <Link href="/portafolio">
-                        <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold transition-all">
-                            Ver todo el portafolio <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                    </Link>
-                </div>
-            </section>
+
 
             <section id="gestion" className="py-32 bg-slate-950 text-white border-t border-white/5">
                 <div className="container mx-auto px-6">
