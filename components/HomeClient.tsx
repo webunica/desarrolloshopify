@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag, BarChart3, Rocket, CheckCircle2, Star, Smartphone, CreditCard, LayoutTemplate, Code2, ShieldCheck, Zap } from "lucide-react";
 import { CodeLeftRain } from "@/components/CodeLeftRain";
 import { ShopifyInfoTabs } from "@/components/ShopifyInfoTabs";
+import { Navbar } from "@/components/Navbar";
 
 interface CMSSection {
     id: string;
@@ -23,26 +24,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
 
     return (
         <main className="min-h-screen bg-transparent relative">
-            <nav className="fixed top-0 w-full z-50 glass-panel">
-                <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-                    <Link href="/" className="text-xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity">
-                        DesarrolloShopify.cl
-                    </Link>
-                    <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-                        <Link href="/#inicio" className="hover:text-purple-400 transition-colors">Inicio</Link>
-                        <Link href="/#metodo" className="hover:text-purple-400 transition-colors">Método</Link>
-                        <Link href="/servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
-                        <Link href="/portafolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
-                        <Link href="/#agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
-                        <Link href="/#info-detallada" className="hover:text-purple-400 transition-colors">Info</Link>
-                    </div>
-                    <Link href="/iniciar">
-                        <Button variant="default" size="sm" className="bg-white text-slate-950 hover:bg-slate-200 shadow-md font-bold">
-                            Iniciar Proyecto <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                    </Link>
-                </div>
-            </nav>
+            <Navbar />
 
             {isEnabled("CodeLeftRain") && (
                 <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern">
@@ -52,7 +34,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 mb-8 backdrop-blur-md shadow-sm">
                             <span className="flex h-2.5 w-2.5 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-                            Agencia Shopify Expert Parteners
+                            Agencia Shopify Expert Partners
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-white drop-shadow-sm max-w-5xl mx-auto leading-tight">
@@ -407,7 +389,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                         </Link>
                     </div>
 
-                    <div className="flex overflow-x-auto pb-8 -mx-6 px-6 gap-6 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide snap-x snap-mandatory">
+                    <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:px-0 md:overflow-visible">
                         {[
                             {
                                 title: "Guía Definitiva: Vender con Shopify (2025)",
@@ -434,23 +416,24 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                                 img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
                             }
                         ].map((article, i) => (
-                            <Link href={`/blog/${article.slug}`} key={i} className="min-w-[280px] snap-center group">
-                                <article className="h-full bg-slate-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-300 flex flex-col">
-                                    <div className="aspect-[4/3] bg-slate-800 relative overflow-hidden">
-                                        <img src={article.img} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" />
-                                        <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
-                                            <span className="text-xs font-bold text-white">{article.cat}</span>
-                                        </div>
+                            <Link href={`/blog/${article.slug}`} key={i} className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4] border border-white/5">
+                                <img src={article.img} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+
+                                <div className="absolute top-6 left-6">
+                                    <span className="bg-purple-500/20 text-purple-200 border border-purple-500/20 px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md">
+                                        {article.cat}
+                                    </span>
+                                </div>
+
+                                <div className="absolute bottom-0 left-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-purple-300 transition-colors">
+                                        {article.title}
+                                    </h3>
+                                    <div className="flex items-center text-sm text-slate-300 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                        Leer artículo <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
-                                    <div className="p-6 flex-1 flex flex-col">
-                                        <h3 className="text-lg font-bold text-white mb-auto leading-snug group-hover:text-purple-400 transition-colors">
-                                            {article.title}
-                                        </h3>
-                                        <div className="mt-4 flex items-center text-sm text-slate-400 font-medium group-hover:translate-x-1 transition-transform">
-                                            Leer ahora <ArrowRight className="w-4 h-4 ml-1" />
-                                        </div>
-                                    </div>
-                                </article>
+                                </div>
                             </Link>
                         ))}
                     </div>
@@ -470,7 +453,6 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 )
             }
 
-            {/* Agencias Section (Moved from separate page) */}
             <section id="agencias" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-950 bg-grid-pattern border-t border-white/10">
                 <CodeLeftRain />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/40 via-transparent to-transparent z-0 pointer-events-none" />
@@ -536,7 +518,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 <p>© {new Date().getFullYear()} Desarrolloshopify.cl. Todos los derechos reservados.</p>
                 <p className="mt-2">Santiago, Chile.</p>
             </footer>
-        </main >
+        </main>
     );
 }
 
