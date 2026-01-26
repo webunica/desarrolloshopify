@@ -11,15 +11,53 @@ const articles = {
     "guia-shopify-chile": {
         title: "Guía Definitiva: Vender con Shopify en Chile (2025)",
         content: `
-            <p>Vender por internet en Chile ha crecido exponencialmente...</p>
-            <h2>1. ¿Por qué Shopify?</h2>
-            <p>Shopify se ha consolidado como la plataforma líder...</p>
-            <h2>2. Pasarelas de Pago en Chile</h2>
-            <p>Integrar Webpay, MercadoPago y otras es crucial...</p>
-            <h3>Webpay Plus</h3>
-            <p>La opción más clásica...</p>
-            <h2>3. Logística y Envíos</h2>
-            <p>Conectar con Starken o Chilexpress...</p>
+            <p class="lead text-xl text-slate-300">Si estás buscando lanzar tu tienda online en Chile, probablemente ya sabes que <strong>Shopify</strong> es una de las opciones más robustas del mundo. Pero, ¿cómo funciona en el mercado chileno? ¿Qué pasarelas de pago usar? ¿Cómo conectar boleta electrónica?</p>
+            
+            <p>En esta guía completa, desglosamos todo lo que necesitas para convertirte en un experto del e-commerce local.</p>
+
+            <h2>¿Por qué elegir Shopify en Chile?</h2>
+            <p>A diferencia de plataformas locales como Jumpseller o Bootic, Shopify es un ecosistema global. Esto significa que tienes acceso a miles de aplicaciones, temas de diseño de clase mundial y una estabilidad técnica que no te abandonará en el CyberMonday.</p>
+            <ul>
+                <li><strong>Estabilidad:</strong> No se cae con peaks de tráfico.</li>
+                <li><strong>App Store:</strong> Plugins para todo (marketing, logística, facturación).</li>
+                <li><strong>Omnicanalidad:</strong> Vende en Instagram, Facebook y tu web desde un solo lugar.</li>
+            </ul>
+
+            <h2>1. Configurando los Pagos (Lo más importante)</h2>
+            <p>El cliente chileno confía en marcas conocidas. Para vender, necesitas ofrecer métodos de pago locales. Olvídate de solo PayPal.</p>
+            
+            <h3>MercadoPago</h3>
+            <p>Hoy en día es el estándar de oro. Permite pagar con tarjeta de crédito, débito e incluso saldo de cuenta MercadoPago. La integración es nativa y muy fácil de configurar desde el panel de Shopify.</p>
+            
+            <h3>Webpay Plus (Transbank)</h3>
+            <p>El clásico de Chile. Para usarlo en Shopify, generalmente necesitas un integrador o usar soluciones como <strong>Pago Fácil</strong> o la app oficial si tienes código de comercio propio. Es vital para capturar al público más tradicional.</p>
+
+            <h2>2. Logística y Despachos</h2>
+            <p>Chile es un país largo, y la logística puede ser una pesadilla si no se automatiza. Shopify te permite conectar apps como:</p>
+            <ul>
+                <li><strong>Envíame:</strong> Multi-courier (Chilexpress, Starken, BlueExpress). Cotiza en tiempo real.</li>
+                <li><strong>Shipit:</strong> Otra excelente opción para automatizar etiquetas y seguimiento.</li>
+            </ul>
+            <p>Tip experto: Cobra el envío en el checkout o ofrece "Envío Gratis sobre $50.000" para aumentar tu ticket promedio.</p>
+
+            <h2>3. Boleta Electrónica y el SII</h2>
+            <p>Para estar legal, necesitas emitir boletas. Afortunadamente, no tienes que hacerlo a mano.</p>
+            <p>Existen apps como <strong>LibreDTE</strong>, <strong>Haulmer</strong> o <strong>Bsale</strong> que se sincronizan con Shopify. Cada vez que vendes, la boleta se genera automáticamente y se envía al cliente y al SII.</p>
+
+            <h2>4. ¿Cuánto cuesta realmente?</h2>
+            <p>Debes considerar tres costos mensuales:</p>
+            <ol>
+                <li><strong>Plan Shopify:</strong> Desde $19 USD/mes (Plan Basic).</li>
+                <li><strong>Comisiones por venta:</strong> Shopify cobra un pequeño % (0.5% - 2%) si no usas Shopify Payments (que aún no está full en Chile), más la comisión de tu pasarela de pago (aprox 2.5% + IVA).</li>
+                <li><strong>Apps extras:</strong> Considera unos $20-$50 USD extra para apps de boleta o email marketing.</li>
+            </ol>
+
+            <h2>Conclusión</h2>
+            <p>Shopify es, sin duda, la mejor inversión para negocios que buscan escalar. Si bien el costo inicial puede parecer más alto que una solución 100% gratuita, el ahorro en horas de soporte técnico y la capacidad de conversión lo valen.</p>
+            
+            <p class="bg-slate-900 border-l-4 border-purple-500 p-4 my-8">
+                <strong>¿Necesitas ayuda experta?</strong> En <a href="/">DesarrolloShopify.cl</a> nos especializamos en configurar tiendas que venden desde el día 1. <a href="/contacto">Hablemos de tu proyecto</a>.
+            </p>
         `,
         date: "25 Ene, 2026",
         category: "Guía Completa"
