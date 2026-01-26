@@ -63,25 +63,81 @@ const articles = {
         category: "Guía Completa"
     },
     "pagos-logistica-shopify-chile": {
-        title: "Mejores Pasarelas de Pago y Couriers para Shopify",
+        title: "Mejores Pasarelas de Pago y Couriers para Shopify en Chile",
         content: `
-            <p>Elegir la pasarela correcta puede definir tu conversión...</p>
-            <h2>Comparativa de Comisiones</h2>
-            <p>Analizamos las tarifas de Transbank vs MercadoPago...</p>
+            <p class="lead text-xl text-slate-300">Una tienda bonita no sirve de nada si no puedes cobrar ni entregar. En Chile, la "última milla" y el checkout son los puntos donde más ventas se caen.</p>
+            
+            <h2>Pasarelas de Pago: La Batalla de las Comisiones</h2>
+            <p>Al 2025, las opciones se han consolidado. Aquí el desglose:</p>
+            
+            <h3>1. MercadoPago (El Líder Actual)</h3>
+            <p>Es la opción más fácil de integrar. No requiere contratos complejos ni validaciones técnicas.</p>
+            <ul>
+                <li><strong>Comisión:</strong> Aprox 2.79% + IVA (Liberación en 14 días) o 2.99% + IVA (Al instante).</li>
+                <li><strong>Ventaja:</strong> UX increíble, guarda tarjetas, alta tasa de aprobación.</li>
+            </ul>
+
+            <h3>2. Webpay Plus (Vía Integradores)</h3>
+            <p>Directo con Transbank suele ser engorroso tecnológicamente para Shopify. Lo ideal es usar integradores como <strong>Pago Fácil</strong> o la nueva app nativa si está disponible.</p>
+            <ul>
+                <li><strong>Ventaja:</strong> "Es Webpay", la marca genera confianza inmediata en el comprador chileno mayor de 40 años.</li>
+            </ul>
+
+            <h3>3. Fintoc (Pagos con Transferencia)</h3>
+            <p>La revolución de las transferencias simplificadas. Te ahorras la comisión de tarjeta de crédito.</p>
+            <ul>
+                <li><strong>Comisión:</strong> Mucho más baja (a veces tarifa fija por transacción).</li>
+                <li><strong>Ideal para:</strong> Tickets altos donde la comisión porcentual duele.</li>
+            </ul>
+
+            <h2>Logística: ¿Cómo envío a Arica y Punta Arenas?</h2>
+            
+            <h3>La "Vieja Escuela": Contrato directo</h3>
+            <p>Tener cuenta en Chilexpress o Starken. Te dan mejores tarifas si tienes volumen, pero integrarlos a la web para que calculen el precio al cliente es difícil.</p>
+
+            <h3>La Solución Moderna: Multi-Couriers (Aggregators)</h3>
+            <p>Apps como <strong>Envíame</strong> o <strong>Shipit</strong> son el estándar.</p>
+            <ul>
+                <li>Se conectan a tu Shopify.</li>
+                <li>En el checkout, el cliente pone su dirección y la app le muestra: "Starken: $4.000, BlueExpress: $3.500".</li>
+                <li>Tú imprimes la etiqueta desde un panel único.</li>
+            </ul>
+
+            <p class="bg-slate-900 p-4 border-l-4 border-purple-500 my-6"><strong>Consejo Pro:</strong> Usa <strong>BlueExpress</strong> para cobertura nacional económica y <strong>99Minutos</strong> o apps de última milla para "Same Day Delivery" en Santiago.</p>
         `,
         date: "24 Ene, 2026",
         category: "Pagos y Logística"
     },
     "shopify-vs-woocommerce-jumpseller": {
-        title: "Shopify vs Jumpseller vs WooCommerce",
+        title: "Shopify vs Jumpseller vs WooCommerce: Análisis 2026",
         content: `
-            <p>Muchos emprendedores dudan al iniciar...</p>
-            <h2>Jumpseller: La opción local</h2>
-            <p>Bueno para empezar, pero limitado en escalabilidad...</p>
-            <h2>WooCommerce: Potencia pero mantenimiento</h2>
-            <p>Ideal si tienes equipo técnico...</p>
-            <h2>Shopify: El estándar global</h2>
-            <p>La mejor opción llave en mano...</p>
+            <p class="lead text-xl text-slate-300">La eterna pregunta del emprendedor chileno. ¿Apoyo al software local (Jumpseller), me voy por la libertad total (WooCommerce) o elijo al gigante global (Shopify)?</p>
+
+            <h2>1. Jumpseller (La Opción Local)</h2>
+            <p>Una plataforma chilena/portuguesa muy popular.</p>
+            <ul>
+                <li><strong>Pros:</strong> Integraciones locales nativas impecables (Facturación, couriers). Soporte en español real. Precios en pesos chilenos y accesibles.</li>
+                <li><strong>Contras:</strong> El editor de diseño es más limitado. Menos apps externas. Si quieres crecer globalmente, se queda corto.</li>
+            </ul>
+
+            <h2>2. WooCommerce (Wordpress)</h2>
+            <p>El rey del "hazlo tú mismo". Software libre.</p>
+            <ul>
+                <li><strong>Pros:</strong> "Gratis" (solo pagas hosting). Control total del código.</li>
+                <li><strong>Contras:</strong> <strong>Falso gratis</strong>. Tienes que pagar buen hosting, plugins de seguridad, actualizaciones manuales. Es muy fácil que el sitio se caiga o se infecte si no tienes mantenimiento técnico.</li>
+            </ul>
+
+            <h2>3. Shopify (El Estándar Global)</h2>
+            <p>Software as a Service (SaaS). Pagas arriendo por tecnología de punta.</p>
+            <ul>
+                <li><strong>Pros:</strong> No se cae nunca. Checkout optimizado para vender (el mejor del mundo). Miles de apps.</li>
+                <li><strong>Contras:</strong> Costo mensual en dólares. Comisiones por transacción si no usas su pasarela propia.</li>
+            </ul>
+
+            <h2>Veredicto Final</h2>
+            <p>Si eres un negocio pequeño con presupuesto ajustado y foco 100% Chile: <strong>Jumpseller</strong> es un excelente inicio.</p>
+            <p>Si eres una marca que busca escalar, invertir en marketing y quiere delegar la parte técnica para enfocarse en vender: <strong>Shopify</strong> es el camino indiscutido.</p>
+            <p>Evita <strong>WooCommerce</strong> a menos que tengas un equipo de TI dedicado.</p>
         `,
         date: "22 Ene, 2026",
         category: "Comparativa"
@@ -89,9 +145,26 @@ const articles = {
     "velocidad-shopify-chile": {
         title: "10 Trucos para mejorar la velocidad de tu tienda",
         content: `
-            <p>La velocidad de carga es factor de ranking en Google...</p>
-            <h2>1. Optimiza imágenes</h2>
-            <p>Usa WebP y comprime...</p>
+            <p class="lead text-xl text-slate-300">Amazon descubrió que por cada 100ms de retraso, las ventas caen un 1%. En Shopify, la velocidad es dinero.</p>
+
+            <h2>1. Comprime tus Imágenes (Vital)</h2>
+            <p>El error #1. Subir fotos de producto de 4MB directas de la cámara. Shopify optimiza, pero no hace milagros.</p>
+            <p><strong>Solución:</strong> Pasa todo por TinyPNG o usa apps como <strong>Crush.pics</strong> antes de subir. Intenta que ningún banner pese más de 200KB.</p>
+
+            <h2>2. Cuidado con las Apps</h2>
+            <p>Cada app que instalas agrega código Javascript a tu tienda (` + "`" + `bloat` + "`" + `). Esas apps de "ruleta de descuentos" o "lentejuelas cayendo" están matando tu velocidad.</p>
+            <p><strong>Acción:</strong> Audita tus apps y borra las que no uses. El código a veces queda "sucio" en los archivos del tema, requiere limpieza.</p>
+
+            <h2>3. Usa un Tema 2.0 (Dawn)</h2>
+            <p>Los temas antiguos de Shopify eran lentos. La nueva arquitectura "Online Store 2.0" (como el tema Dawn gratuito) es extremadamente rápida y usa JSON templates.</p>
+
+            <h2>4. Lazy Loading</h2>
+            <p>Técnica donde las imágenes de abajo no cargan hasta que el usuario hace scroll. Los temas modernos lo traen por defecto. Asegúrate de que tu imagen principal (LCP) NO tenga lazy loading, esa debe cargar de inmediato.</p>
+
+            <h2>5. Videos: Siempre hosteados fuera</h2>
+            <p>Nunca subas un video MP4 pesado al banner. Usa la integración nativa de YouTube o Vimeo, o usa GIFs/WebM muy comprimidos de menos de 2MB.</p>
+
+            <p class="my-6"><strong>¿Tu tienda sigue lenta?</strong> A veces el problema es código residual. En <a href="/contacto" class="text-purple-400 font-bold">DesarrolloShopify.cl</a> hacemos auditorías de performance técnica.</p>
         `,
         date: "20 Ene, 2026",
         category: "Optimización"
