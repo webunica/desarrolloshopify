@@ -36,23 +36,24 @@ interface PricingPlan {
 
 const plans: PricingPlan[] = [
     {
-        id: 'prende',
-        name: 'PRENDE',
+        id: 'inicia',
+        name: 'INICIA',
         price: '$580.000',
         priceNumeric: 580000,
         icon: Sparkles,
         badge: 'IDEAL PARA COMENZAR',
         badgeColor: 'from-blue-500 to-cyan-500',
-        description: 'Perfecto para tu primera tienda online',
-        ideal: '🌟 Ideal para emprendedores que inician',
-        productCapacity: 'Hasta 70 productos',
+        description: 'Lanza tu tienda con lo esencial',
+        ideal: '🌟 Ideal para emprendedores que inician su negocio online',
+        productCapacity: 'Hasta 50 productos',
         deliveryTime: 'Hasta 4 semanas',
         highlight: false,
         features: [
             'Configuración completa de tienda Shopify',
             'Conexión de dominio + validación de correo',
             'Instalación de plantilla premium Envato o Shopify',
-            'Capacidad para hasta 70 productos',
+            '⚠️ Sin personalización (solo configuración del theme)',
+            'Capacidad para hasta 50 productos',
             'Migración de productos desde otra plataforma',
             'Certificado SSL incluido',
             'Panel administrador completo',
@@ -71,8 +72,8 @@ const plans: PricingPlan[] = [
         ]
     },
     {
-        id: 'full',
-        name: 'FULL',
+        id: 'mejora',
+        name: 'MEJORA',
         price: '$980.000',
         priceNumeric: 980000,
         icon: Zap,
@@ -80,13 +81,15 @@ const plans: PricingPlan[] = [
         badgeColor: 'from-purple-500 to-pink-500',
         description: 'El favorito de nuestros clientes',
         ideal: '⚙️ Para negocios en crecimiento que necesitan más funcionalidades',
-        productCapacity: 'Hasta 120 productos',
+        productCapacity: 'Hasta 100 productos',
         deliveryTime: 'Hasta 6 semanas',
         highlight: true,
         features: [
-            '✨ Todo lo del Plan PRENDE, más:',
-            'Capacidad para hasta 120 productos',
-            'Diseño personalizado por secciones',
+            '✨ Todo lo del Plan INICIA, más:',
+            'Capacidad para hasta 100 productos',
+            '🎨 Diseño personalizado por secciones',
+            'Personalización de colores, tipografías y estilos',
+            'Ajustes de diseño según tu marca',
             'Integración con Google Analytics y Facebook Pixel',
             'Optimización SEO Avanzada',
             'Ajustes avanzados de estructura y navegación',
@@ -105,28 +108,63 @@ const plans: PricingPlan[] = [
         price: '$1.400.000',
         priceNumeric: 1400000,
         icon: Rocket,
-        badge: 'MÁXIMO RENDIMIENTO',
+        badge: 'DESARROLLO A MEDIDA',
         badgeColor: 'from-amber-500 to-orange-500',
-        description: 'La solución enterprise completa',
-        ideal: '🚀 Para empresas consolidadas y marcas que desean escalar',
-        productCapacity: 'Hasta 300 productos',
+        description: 'Theme personalizado desde cero',
+        ideal: '🚀 Para empresas que necesitan un diseño único y diferenciador',
+        productCapacity: 'Hasta 500 productos',
         deliveryTime: 'Hasta 8 semanas',
         highlight: false,
         features: [
-            '🚀 Todo lo del Plan FULL, más:',
-            'Carga o migración de hasta 300 productos',
+            '🎨 Desarrollo de theme desde cero',
+            'Diseño 100% personalizado a tu marca',
+            'Capacidad para hasta 500 productos',
+            'Migración completa de productos e imágenes',
             'Integración con ERP, Bsale o sistema de inventario',
             'Automatización de marketing con Mailchimp o Klaviyo',
             'Optimización SEO completa y avanzada',
             'Configuración App (Google Ads / Meta Ads)',
             'Configuración completa de Analytics 4',
-            'Plantilla ultra personalizada a medida',
             'Páginas optimizadas para campañas',
+            'Secciones personalizadas ilimitadas',
             'Integración con herramientas externas (Calendly, CRM, Zapier)',
-            'Soporte técnico preferente 12 meses',
+            'Soporte técnico preferente 6 meses',
             'Auditoría final completa',
             'Videos de ayuda para administración',
             'Hasta 10 cambios post-entrega'
+        ]
+    },
+    {
+        id: 'pro2',
+        name: 'PRO 2',
+        price: '$2.200.000',
+        priceNumeric: 2200000,
+        icon: Rocket,
+        badge: 'ENTERPRISE',
+        badgeColor: 'from-violet-500 to-purple-500',
+        description: 'La solución enterprise sin límites',
+        ideal: '💎 Para marcas consolidadas que necesitan una solución completa',
+        productCapacity: 'Productos ilimitados',
+        deliveryTime: 'Hasta 12 semanas',
+        highlight: false,
+        features: [
+            '🚀 Todo lo del Plan PRO, más:',
+            '♾️ Sin límite de productos',
+            'Theme enterprise completamente a medida',
+            'Arquitectura optimizada para alto tráfico',
+            'Funcionalidades avanzadas personalizadas',
+            'Integración completa con sistemas empresariales',
+            'Automatizaciones complejas y workflows',
+            'Multi-idioma y multi-moneda',
+            'Optimización de rendimiento avanzada',
+            'CDN y optimización de imágenes',
+            'Configuración de seguridad avanzada',
+            'Dashboard personalizado de métricas',
+            'Integración con BI y herramientas analytics',
+            'Soporte técnico prioritario 12 meses',
+            'Auditorías trimestrales de rendimiento',
+            'Capacitación completa del equipo',
+            'Hasta 20 cambios post-entrega'
         ]
     }
 ];
@@ -222,7 +260,7 @@ export default function PreciosClient() {
                 {/* Pricing Cards */}
                 <section className="pb-20 relative z-10">
                     <div className="container mx-auto px-4">
-                        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
                             {plans.map((plan, index) => (
                                 <PricingCard
                                     key={plan.id}
@@ -389,8 +427,8 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
             className={`relative ${plan.highlight ? 'lg:-mt-4 lg:mb-4' : ''}`}
         >
             <div className={`glass-panel rounded-2xl p-8 border h-full flex flex-col ${plan.highlight
-                    ? 'border-purple-500/40 shadow-2xl shadow-purple-500/20'
-                    : 'border-purple-500/20'
+                ? 'border-purple-500/40 shadow-2xl shadow-purple-500/20'
+                : 'border-purple-500/20'
                 }`}>
                 {/* Badge */}
                 {plan.badge && (
@@ -426,8 +464,8 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                     <button
                         onClick={() => onContactClick(plan.name)}
                         className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${plan.highlight
-                                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg'
-                                : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                            ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg'
+                            : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                             }`}
                     >
                         Comenzar ahora
