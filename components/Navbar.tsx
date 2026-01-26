@@ -16,6 +16,7 @@ export function Navbar() {
                     <Link href="/#metodo" className="hover:text-purple-400 transition-colors">Método</Link>
                     <Link href="/servicios" className="hover:text-purple-400 transition-colors">Servicios</Link>
                     <Link href="/portafolio" className="hover:text-purple-400 transition-colors">Portafolio</Link>
+                    <Link href="/blog" className="hover:text-purple-400 transition-colors">Blog</Link>
                     <Link href="/#agencias" className="hover:text-purple-400 transition-colors">Agencias</Link>
                     <Link href="/#info-detallada" className="hover:text-purple-400 transition-colors">Info</Link>
                 </div>

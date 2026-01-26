@@ -388,6 +388,82 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
+            {/* Blog Section */}
+            <section className="py-32 bg-slate-950 border-t border-white/5 relative overflow-hidden">
+                <div className="container mx-auto px-6">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                        <div className="max-w-2xl">
+                            <span className="text-purple-400 font-medium tracking-tight mb-4 block">
+                                Recursos 100% Gratuitos
+                            </span>
+                            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+                                Aprende a vender más con nuestro Blog
+                            </h2>
+                        </div>
+                        <Link href="/blog">
+                            <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold hidden md:flex">
+                                Ver todos los artículos <ArrowRight className="ml-2 w-4 h-4" />
+                            </Button>
+                        </Link>
+                    </div>
+
+                    <div className="flex overflow-x-auto pb-8 -mx-6 px-6 gap-6 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide snap-x snap-mandatory">
+                        {[
+                            {
+                                title: "Guía Definitiva: Vender con Shopify (2025)",
+                                cat: "Guía Completa",
+                                slug: "guia-shopify-chile",
+                                img: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
+                            },
+                            {
+                                title: "Mejores Pasarelas de Pago en Chile",
+                                cat: "Pagos y Logística",
+                                slug: "pagos-logistica-shopify-chile",
+                                img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop"
+                            },
+                            {
+                                title: "Shopify vs Jumpseller vs WooCommerce",
+                                cat: "Comparativa",
+                                slug: "shopify-vs-woocommerce-jumpseller",
+                                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                            },
+                            {
+                                title: "10 Trucos de Velocidad y SEO",
+                                cat: "Optimización",
+                                slug: "velocidad-shopify-chile",
+                                img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
+                            }
+                        ].map((article, i) => (
+                            <Link href={`/blog/${article.slug}`} key={i} className="min-w-[280px] snap-center group">
+                                <article className="h-full bg-slate-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-300 flex flex-col">
+                                    <div className="aspect-[4/3] bg-slate-800 relative overflow-hidden">
+                                        <img src={article.img} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" />
+                                        <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                                            <span className="text-xs font-bold text-white">{article.cat}</span>
+                                        </div>
+                                    </div>
+                                    <div className="p-6 flex-1 flex flex-col">
+                                        <h3 className="text-lg font-bold text-white mb-auto leading-snug group-hover:text-purple-400 transition-colors">
+                                            {article.title}
+                                        </h3>
+                                        <div className="mt-4 flex items-center text-sm text-slate-400 font-medium group-hover:translate-x-1 transition-transform">
+                                            Leer ahora <ArrowRight className="w-4 h-4 ml-1" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="mt-8 text-center md:hidden">
+                        <Link href="/blog">
+                            <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 hover:text-purple-400 font-bold w-full">
+                                Ver todos los artículos <ArrowRight className="ml-2 w-4 h-4" />
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {
                 isEnabled("ShopifyInfoTabs") && (
                     <ShopifyInfoTabs />
