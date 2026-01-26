@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { sendContactEmail } from '@/lib/email';
+import { sendContactEmail, sendConfirmationEmail } from '@/lib/email';
 import { z } from 'zod';
 
 const contactSchema = z.object({
@@ -17,8 +17,14 @@ export async function POST(request: Request) {
         // Validar los datos
         const validatedData = contactSchema.parse(body);
 
-        // Enviar el email
+        // Enviar el email de notificación al admin
         await sendContactEmail(validatedData);
+
+        // Enviar el email de confirmación al lead
+        await sendConfirmationEmail({
+            name: validatedData.name,
+            email: validatedData.email,
+        });
 
         return NextResponse.json(
             { success: true, message: 'Mensaje enviado correctamente' },
