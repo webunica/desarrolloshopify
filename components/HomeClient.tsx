@@ -36,11 +36,11 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-300 mb-8 backdrop-blur-md shadow-sm">
                             <span className="flex h-2.5 w-2.5 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-                            Agencia Shopify Expert Partners
+                            Shopify Partners
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-white drop-shadow-sm max-w-5xl mx-auto leading-tight">
-                            Agencia Experta en <span className="gradient-text">Desarrollo y Diseño</span> de Tiendas Shopify en Chile
+                            <span className="gradient-text">Desarrollo y Diseño</span> de Tiendas Shopify en Chile
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
                             Llevamos tu negocio al siguiente nivel con un E-commerce diseñado para vender. Resultados medibles y tiendas optimizadas.
@@ -243,7 +243,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                         <FeatureCard
                             number="01"
                             title="Co-Diseño & Estrategia"
-                            desc="Nos reunimos contigo para definir objetivos. Diseñamos la experiencia (UX/UI) en Figma y validamos cada pantalla contigo antes de programar."
+                            desc="Nos reunimos contigo para definir objetivos. Diseñamos la experiencia (UX/UI) en adobe XD y validamos cada pantalla contigo antes de programar."
                         />
                         <FeatureCard
                             number="02"
@@ -269,35 +269,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
 
 
 
-            <section id="gestion" className="py-32 bg-slate-950 text-white border-t border-white/5">
-                <div className="container mx-auto px-6">
-                    <div className="mb-16">
-                        <span className="text-[#00dec4] font-medium text-lg tracking-wide">Computadoras y dispositivos móviles</span>
-                        <h2 className="text-5xl md:text-6xl font-bold mt-4 tracking-tight">Cuida tu negocio</h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
-                            <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-end justify-center overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" className="w-[90%] h-auto rounded-t-xl shadow-2xl translate-y-4 group-hover:scale-105 transition-transform duration-500" alt="Shopify Dashboard" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f21] via-transparent to-transparent opacity-50" />
-                            </div>
-                            <div className="p-10 mt-auto">
-                                <h3 className="text-2xl font-bold mb-4">Gestiona todo en un solo lugar</h3>
-                                <p className="text-slate-400 leading-relaxed text-lg">Desde la oficina administrativa hasta la tienda, siempre tendrás el poder con el <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">panel de control de Shopify</span> totalmente centralizado.</p>
-                            </div>
-                        </div>
-                        <div className="bg-[#0f1f21] rounded-[32px] overflow-hidden border border-white/5 group hover:border-white/10 transition-all flex flex-col">
-                            <div className="aspect-[16/10] bg-gradient-to-br from-slate-900 to-slate-800 relative p-8 flex items-center justify-center overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=1000&auto=format&fit=crop" className="h-[110%] w-auto object-contain shadow-2xl rotate-12 group-hover:rotate-6 transition-transform duration-500" alt="Shopify Mobile App" />
-                            </div>
-                            <div className="p-10 mt-auto">
-                                <h3 className="text-2xl font-bold mb-4">Gestiona tu tienda desde cualquier lugar</h3>
-                                <p className="text-slate-400 leading-relaxed text-lg">Haz todo desde tu bolsillo con la completa <span className="underline decoration-1 underline-offset-4 decoration-slate-600 text-white">aplicación móvil de Shopify</span>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             <section id="testimonios" className="py-24 bg-slate-900 text-white relative overflow-hidden">
                 <div className="container mx-auto px-6 relative z-10">

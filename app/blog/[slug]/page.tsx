@@ -168,6 +168,46 @@ const articles = {
         `,
         date: "20 Ene, 2026",
         category: "Optimización"
+    },
+    "caso-exito-ecostore": {
+        title: "Caso de Éxito: Cómo EcoStore aumentó sus ventas un 300% migrando a Shopify",
+        content: `
+            <p class="lead text-xl text-slate-300">De un WooCommerce lento y caído a una máquina de ventas automatizada. Analizamos la transición de uno de nuestros clientes.</p>
+
+            <h2>El Problema Inicial</h2>
+            <p>EcoStore (nombre ficticio por privacidad) tenía una tienda en WordPress que se caía cada vez que enviaban un correo masivo. Sus ventas estaban estancadas en $2M mensuales y pasaban 10 horas a la semana arreglando plugins.</p>
+            <ul>
+                <li><strong>Cargas lentas:</strong> 6 segundos en móvil.</li>
+                <li><strong>Checkout complejo:</strong> Tasa de abandono del 80%.</li>
+                <li><strong>Sin sincronización:</strong> Stock manual en Excel.</li>
+            </ul>
+
+            <h2>La Solución: Migración a Shopify</h2>
+            <p>Realizamos una migración completa de datos (clientes, productos, pedidos) en 7 días hábiles. Implementamos un diseño personalizado enfocado en la conversión (CRO).</p>
+
+            <h3>1. Simplificación del Checkout</h3>
+            <p>Implementamos el checkout nativo de Shopify. Resultado: Los clientes ahora compraban en 3 clics en lugar de 6 pasos.</p>
+
+            <h3>2. Automatización de Marketing</h3>
+            <p>Configuramos <strong>Klaviyo</strong> para recuperar carritos abandonados. Esto solo, recuperó un 15% de las ventas perdidas en el primer mes.</p>
+
+            <h3>3. Velocidad Móvil</h3>
+            <p>Optimizamos imágenes y usamos un tema 2.0. El tiempo de carga bajó a 1.2 segundos.</p>
+
+            <h2>Los Resultados (3 Meses Después)</h2>
+            <p>El cambio fue dramático. Al no tener que preocuparse del servidor, el equipo de EcoStore se dedicó 100% a vender.</p>
+            <ul>
+                <li><strong>Ventas:</strong> +300% (De $2M a $8M mensuales).</li>
+                <li><strong>Tasa de Conversión:</strong> Subió de 0.8% a 2.1%.</li>
+                <li><strong>Retorno de Inversión:</strong> Recuperaron el costo del desarrollo en 2 meses.</li>
+            </ul>
+
+            <p class="bg-slate-900 border-l-4 border-green-500 p-4 my-8">
+                <strong>¿Te sientes identificado?</strong> Si tu tienda actual es un freno en lugar de un motor, <a href="/contacto" class="text-green-400 font-bold">agenda una auditoría gratuita con nosotros</a>.
+            </p>
+        `,
+        date: "18 Ene, 2026",
+        category: "Caso de Éxito"
     }
 };
 

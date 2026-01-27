@@ -38,6 +38,13 @@ const articles = [
         category: "Optimización",
         slug: "velocidad-shopify-chile",
         date: "20 Ene, 2026"
+    },
+    {
+        title: "Caso de Éxito: Cómo EcoStore aumentó sus ventas un 300%",
+        excerpt: "De 2 millones a 8 millones mensuales. Analizamos la estrategia de migración y optimización CRO.",
+        category: "Caso de Éxito",
+        slug: "caso-exito-ecostore",
+        date: "18 Ene, 2026"
     }
 ];
 

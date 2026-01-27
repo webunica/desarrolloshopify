@@ -25,7 +25,7 @@ export function DesignCarousel() {
             <div className="container mx-auto px-6 mb-12 text-center">
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Diseños que Venden</h2>
                 <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                    Explora nuestras plantillas y personalizaciones de alto impacto visual.
+                    Explora diferntes plantillas y personalizaciones de alto impacto visual.
                 </p>
             </div>
 
