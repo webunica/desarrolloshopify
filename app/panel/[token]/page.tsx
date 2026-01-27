@@ -60,8 +60,8 @@ export default async function PanelPage({ params }: Props) {
                 <div className="container mx-auto px-6 h-16 flex items-center justify-between">
                     <div className="font-bold text-lg">Panel de Cliente</div>
                     <div className="flex items-center gap-4">
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold ${statusColors[project.status] || "bg-gray-500"}`}>
-                            {statusLabel[project.status] || project.status}
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold ${statusColors[project.status as keyof typeof statusColors] || "bg-gray-500"}`}>
+                            {statusLabel[project.status as keyof typeof statusLabel] || project.status}
                         </span>
                         <div className="text-sm text-gray-400">{project.lead.email}</div>
                     </div>
