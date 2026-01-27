@@ -340,7 +340,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                                 cat: "Pagos y Logística",
                                 slug: "pagos-logistica-shopify-chile",
                                 date: "24 Ene, 2026",
-                                img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop"
+                                img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop"
                             },
                             {
                                 title: "Shopify vs Jumpseller vs WooCommerce",
