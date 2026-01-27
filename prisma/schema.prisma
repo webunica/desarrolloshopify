@@ -22,16 +22,25 @@ model Lead {
 }
 
 model Project {
-  id        String    @id @default(cuid())
-  token     String    @unique
-  status    String    @default("DRAFT")
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id        String        @id @default(cuid())
+  token     String        @unique
+  status    ProjectStatus @default(DRAFT)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
   leadId    String
   answers   Answer[]
   files     File[]
-  lead      Lead      @relation(fields: [leadId], references: [id])
+  lead      Lead          @relation(fields: [leadId], references: [id])
   sections  Section[]
+}
+
+enum ProjectStatus {
+  DRAFT
+  SUBMITTED
+  PAID
+  IN_PROGRESS
+  REVIEW
+  COMPLETED
 }
 
 model Answer {
