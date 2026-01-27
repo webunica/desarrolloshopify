@@ -326,104 +326,40 @@ export default function HomeClient({ sections = [], latestArticles = [] }: { sec
                     </div>
 
                     <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:px-0 md:overflow-visible">
-                        {latestArticles.length > 0 ? (
-                            latestArticles.map((article: any) => (
-                                <Link href={`/blog/${article.slug}`} key={article.id} className="min-w-[300px] md:min-w-0 snap-center group flex flex-col h-full">
-                                    <article className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 h-full hover:bg-slate-900 hover:border-purple-500/30 transition-all duration-300 flex flex-col">
-                                        <div className="mb-6 aspect-video rounded-xl overflow-hidden relative">
-                                            <img
-                                                src={article.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"}
-                                                alt={article.title}
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            />
-                                            <div className="absolute top-3 left-3 bg-slate-950/80 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm border border-white/10">
-                                                {article.category}
-                                            </div>
+                        {latestArticles.map((article: any) => (
+                            <Link href={`/blog/${article.slug}`} key={article.id} className="min-w-[300px] md:min-w-0 snap-center group flex flex-col h-full">
+                                <article className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 h-full hover:bg-slate-900 hover:border-purple-500/30 transition-all duration-300 flex flex-col">
+                                    <div className="mb-6 aspect-video rounded-xl overflow-hidden relative">
+                                        <img
+                                            src={article.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"}
+                                            alt={article.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        <div className="absolute top-3 left-3 bg-slate-950/80 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm border border-white/10">
+                                            {article.category}
                                         </div>
+                                    </div>
 
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-3 text-slate-500 text-sm mb-3">
-                                                <span>{new Date(article.publishedAt || article.createdAt).toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}</span>
-                                                <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
-                                                <span>5 min</span>
-                                            </div>
-                                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                                                {article.title}
-                                            </h3>
-                                            <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
-                                                {article.excerpt || "Haga clic para leer el artículo completo..."}
-                                            </p>
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-3 text-slate-500 text-sm mb-3">
+                                            <span>{new Date(article.publishedAt || article.createdAt).toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}</span>
+                                            <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
+                                            <span>5 min</span>
                                         </div>
+                                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                                            {article.title}
+                                        </h3>
+                                        <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                                            {article.excerpt || "Haga clic para leer el artículo completo..."}
+                                        </p>
+                                    </div>
 
-                                        <div className="flex items-center text-purple-400 text-sm font-medium mt-auto group-hover:translate-x-1 transition-transform">
-                                            Leer artículo <ArrowRight className="w-4 h-4 ml-2" />
-                                        </div>
-                                    </article>
-                                </Link>
-                            ))
-                        ) : (
-                            [
-                                {
-                                    title: "Guía Definitiva: Vender con Shopify (2025)",
-                                    excerpt: "Todo lo que necesitas saber sobre impuestos, envíos y pagos.",
-                                    cat: "Guía Completa",
-                                    slug: "guia-shopify-2025",
-                                    date: "25 Ene, 2026",
-                                    img: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=800&auto=format&fit=crop"
-                                },
-                                {
-                                    title: "10 Trucos de Velocidad y SEO",
-                                    excerpt: "Optimiza imágenes, scripts y apps para mejorar tu SEO.",
-                                    cat: "Optimización",
-                                    slug: "velocidad-shopify-chile",
-                                    date: "20 Ene, 2026",
-                                    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
-                                },
-                                {
-                                    title: "Mejores Pasarelas de Pago en Chile",
-                                    excerpt: "Comparativa de Webpay, MercadoPago, Starken y BlueExpress.",
-                                    cat: "Pagos y Logística",
-                                    slug: "pagos-logistica-shopify-chile",
-                                    date: "24 Ene, 2026",
-                                    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop"
-                                },
-                                {
-                                    title: "Shopify vs Jumpseller vs WooCommerce",
-                                    excerpt: "Análisis honesto de pros y contras para emprendedores chilenos.",
-                                    cat: "Comparativa",
-                                    slug: "shopify-vs-woocommerce-jumpseller",
-                                    date: "22 Ene, 2026",
-                                    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
-                                }
-                            ].map((article, i) => (
-                                <Link href={`/blog/${article.slug}`} key={i} className="min-w-[300px] md:min-w-0 snap-center group flex flex-col h-full">
-                                    <article className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 h-full hover:bg-slate-900 hover:border-purple-500/30 transition-all duration-300 flex flex-col">
-                                        <div className="mb-6 aspect-video rounded-xl overflow-hidden relative">
-                                            <img src={article.img} alt={article.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                            <div className="absolute top-3 left-3 bg-slate-950/80 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm border border-white/10">
-                                                {article.cat}
-                                            </div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-3 text-slate-500 text-sm mb-3">
-                                                <span>{article.date}</span>
-                                                <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
-                                                <span>5 min</span>
-                                            </div>
-                                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                                                {article.title}
-                                            </h3>
-                                            <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
-                                                {article.excerpt}
-                                            </p>
-                                        </div>
-                                        <div className="flex items-center text-purple-400 text-sm font-medium mt-auto group-hover:translate-x-1 transition-transform">
-                                            Leer artículo <ArrowRight className="w-4 h-4 ml-2" />
-                                        </div>
-                                    </article>
-                                </Link>
-                            ))
-                        )}
+                                    <div className="flex items-center text-purple-400 text-sm font-medium mt-auto group-hover:translate-x-1 transition-transform">
+                                        Leer artículo <ArrowRight className="w-4 h-4 ml-2" />
+                                    </div>
+                                </article>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </section>

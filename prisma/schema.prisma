@@ -24,10 +24,12 @@ model Lead {
 model Project {
   id        String        @id @default(cuid())
   token     String        @unique
-  status    ProjectStatus @default(DRAFT)
+  // status    ProjectStatus @default(DRAFT)
+  statusString String @default("DRAFT") @map("status")
   createdAt DateTime      @default(now())
   updatedAt DateTime      @updatedAt
   leadId    String
+  // Relation fields
   answers   Answer[]
   files     File[]
   lead      Lead          @relation(fields: [leadId], references: [id])
@@ -36,14 +38,14 @@ model Project {
   @@map("projects")
 }
 
-enum ProjectStatus {
-  DRAFT
-  SUBMITTED
-  PAID
-  IN_PROGRESS
-  REVIEW
-  COMPLETED
-}
+// enum ProjectStatus {
+//   DRAFT
+//   SUBMITTED
+//   PAID
+//   IN_PROGRESS
+//   REVIEW
+//   COMPLETED
+// }
 
 model Answer {
   id        String  @id @default(cuid())
