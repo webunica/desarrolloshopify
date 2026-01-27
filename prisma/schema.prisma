@@ -22,38 +22,36 @@ model Lead {
 }
 
 model Project {
-  id        String   @id @default(cuid())
-  token     String   @unique // Access token for the client panel
-  status    String   @default("DRAFT") // SQLite does not support Enums
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
+  id        String    @id @default(cuid())
+  token     String    @unique
+  status    String    @default("DRAFT")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
   leadId    String
-  lead      Lead     @relation(fields: [leadId], references: [id])
-
   answers   Answer[]
-  sections  Section[]
   files     File[]
+  lead      Lead      @relation(fields: [leadId], references: [id])
+  sections  Section[]
 }
 
 model Answer {
-  id        String   @id @default(cuid())
-  step      Int      // Wizard step number
-  key       String   // Question identifier
-  value     String   // DB text limit; for JSON use a separate field if needed, but string is usually fine for simple answers
+  id        String  @id @default(cuid())
+  step      Int
+  key       String
+  value     String
   projectId String
-  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
 
   @@index([projectId])
 }
 
 model Section {
-  id        String   @id @default(cuid())
-  type      String   // e.g., 'hero', 'about', 'products'
-  content   String   // JSON content stored as String
-  order     Int      @default(0)
+  id        String  @id @default(cuid())
+  type      String
+  content   String
+  order     Int     @default(0)
   projectId String
-  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
 
   @@index([projectId])
 }
@@ -61,7 +59,7 @@ model Section {
 model File {
   id        String   @id @default(cuid())
   name      String
-  path      String   // Local path or S3 key
+  path      String
   size      Int
   mimeType  String
   createdAt DateTime @default(now())
@@ -71,46 +69,39 @@ model File {
   @@index([projectId])
 }
 
-// --- CMS Models ---
-
 model SitePage {
-  id        String   @id @default(cuid())
-  slug      String   @unique // e.g. "home", "agencias"
+  id        String        @id @default(cuid())
+  slug      String        @unique
   title     String
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
   sections  SiteSection[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
 
 model SiteSection {
-  id          String   @id @default(cuid())
-  component   String   // React component identifier e.g. "Hero", "ShopifyInfoTabs"
-  name        String   // Display name e.g. "Hero Principal"
-  content     String   // JSON stored as String
-  order       Int      @default(0)
-  isVisible   Boolean  @default(true)
-  
-  pageId      String
-  page        SitePage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  id        String   @id @default(cuid())
+  component String
+  name      String
+  content   String
+  order     Int      @default(0)
+  isVisible Boolean  @default(true)
+  pageId    String
+  page      SitePage @relation(fields: [pageId], references: [id], onDelete: Cascade)
 
   @@index([pageId])
 }
 
 model BlogArticle {
-  id          String   @id @default(cuid())
-  slug        String   @unique
+  id          String    @id @default(cuid())
+  slug        String    @unique
   title       String
   excerpt     String?
-  content     String   // HTML rich text
+  content     String
   category    String
   imageUrl    String?
-  author      String?  @default("DesarrolloShopify.cl")
-  
-  published   Boolean  @default(false)
+  author      String?   @default("DesarrolloShopify.cl")
+  published   Boolean   @default(false)
   publishedAt DateTime?
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
-
-
