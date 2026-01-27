@@ -21,17 +21,16 @@ export async function POST() {
                     pageId: homePage.id,
                     component: "CodeLeftRain",
                     name: "Hero Animation (Code Rain)",
-                    content: { enabled: true },
+                    content: JSON.stringify({ enabled: true }),
                     order: 0
                 },
                 {
                     pageId: homePage.id,
                     component: "ShopifyInfoTabs",
                     name: "Tabs de Información (Servicios)",
-                    content: {
-                        // Default content matching current hardcoded values could go here
+                    content: JSON.stringify({
                         title: "Desarrollo de Tiendas Shopify en Chile"
-                    },
+                    }),
                     order: 1
                 }
             ],
@@ -54,7 +53,7 @@ export async function POST() {
                     pageId: agenciasPage.id,
                     component: "CodeLeftRain", // Reusing this as requested
                     name: "Hero Animation",
-                    content: { enabled: true },
+                    content: JSON.stringify({ enabled: true }),
                     order: 0
                 }
             ],
