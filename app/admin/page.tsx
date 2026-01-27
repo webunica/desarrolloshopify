@@ -4,7 +4,8 @@ import { redirect } from "next/navigation";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default async function AdminDashboard() {
     const headersList = await headers();
@@ -33,19 +34,26 @@ export default async function AdminDashboard() {
                     <div className="bg-neutral-900 border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-colors">
                         <h2 className="text-xl font-bold mb-2">Editor Web</h2>
                         <p className="text-gray-400 text-sm mb-4">Gestiona el contenido de las páginas y secciones.</p>
-                        <Button className="w-full" asChild>
-                            <Link href="/admin/cms">Ir al Editor</Link>
-                        </Button>
+                        <Link
+                            href="/admin/cms"
+                            className={cn(buttonVariants({ variant: "default" }), "w-full")}
+                        >
+                            Ir al Editor
+                        </Link>
                     </div>
 
                     <div className="bg-neutral-900 border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-colors">
                         <h2 className="text-xl font-bold mb-2">Gestor de Blog</h2>
                         <p className="text-gray-400 text-sm mb-4">Crea y edita artículos, guías y noticias.</p>
-                        <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white" asChild>
-                            <Link href="/admin/blog">Gestionar Artículos</Link>
-                        </Button>
+                        <Link
+                            href="/admin/blog"
+                            className={cn(buttonVariants({ variant: "default" }), "w-full bg-purple-600 hover:bg-purple-700 text-white")}
+                        >
+                            Gestionar Artículos
+                        </Link>
                     </div>
                 </div>
+
 
                 <div className="bg-neutral-900 border border-white/10 rounded-xl overflow-hidden">
                     <table className="w-full text-left text-sm">

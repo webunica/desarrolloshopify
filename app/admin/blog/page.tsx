@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { Pencil, Plus, Trash2, Eye } from "lucide-react";
@@ -20,11 +21,9 @@ export default async function AdminBlogList() {
                         <Link href="/admin" className="text-sm text-gray-500 hover:text-white mb-2 block">← Volver al Dashboard</Link>
                         <h1 className="text-3xl font-bold">Artículos del Blog</h1>
                     </div>
-                    <Button asChild size="lg" className="bg-purple-600 hover:bg-purple-700">
-                        <Link href="/admin/blog/new">
-                            <Plus className="w-4 h-4 mr-2" /> Nuevo Artículo
-                        </Link>
-                    </Button>
+                    <Link href="/admin/blog/new" className={cn(buttonVariants({ size: "lg" }), "bg-purple-600 hover:bg-purple-700 text-white")}>
+                        <Plus className="w-4 h-4 mr-2" /> Nuevo Artículo
+                    </Link>
                 </header>
 
                 <div className="bg-neutral-900 border border-white/10 rounded-xl overflow-hidden">
@@ -77,16 +76,19 @@ export default async function AdminBlogList() {
                                         {format(article.updatedAt, "d MMM yyyy", { locale: es })}
                                     </td>
                                     <td className="p-4 text-right flex justify-end gap-2">
-                                        <Button size="icon" variant="ghost" className="h-8 w-8 hover:bg-white/10 text-gray-400 hover:text-white" asChild>
-                                            <Link href={`/blog/${article.slug}`} target="_blank">
-                                                <Eye className="w-4 h-4" />
-                                            </Link>
-                                        </Button>
-                                        <Button size="icon" variant="ghost" className="h-8 w-8 hover:bg-blue-500/20 text-blue-400" asChild>
-                                            <Link href={`/admin/blog/${article.id}`}>
-                                                <Pencil className="w-4 h-4" />
-                                            </Link>
-                                        </Button>
+                                        <Link
+                                            href={`/blog/${article.slug}`}
+                                            target="_blank"
+                                            className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "h-8 w-8 hover:bg-white/10 text-gray-400 hover:text-white")}
+                                        >
+                                            <Eye className="w-4 h-4" />
+                                        </Link>
+                                        <Link
+                                            href={`/admin/blog/${article.id}`}
+                                            className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "h-8 w-8 hover:bg-blue-500/20 text-blue-400")}
+                                        >
+                                            <Pencil className="w-4 h-4" />
+                                        </Link>
                                         {/* Delete button would go here */}
                                     </td>
                                 </tr>

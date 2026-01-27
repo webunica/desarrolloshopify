@@ -14,8 +14,8 @@ export default function AdminLogin() {
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
         if (password === "admin123") { // Hardcoded for MVP as requested
-            document.cookie = "admin_token=secret; path=/";
-            router.push("/admin");
+            document.cookie = "admin_token=secret; path=/; max-age=86400; samesite=lax";
+            window.location.href = "/admin";
         } else {
             toast.error("Contraseña incorrecta");
         }
