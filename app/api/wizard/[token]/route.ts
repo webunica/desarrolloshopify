@@ -51,7 +51,7 @@ export async function GET(
         return NextResponse.json({
             project: {
                 id: project.id,
-                status: project.status,
+                status: project.statusString,
                 leadEmail: project.lead.email,
             },
             answers: answersRecord,
