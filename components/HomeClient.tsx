@@ -314,7 +314,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                                 Recursos 100% Gratuitos
                             </span>
                             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-                                Aprende a vender más con nuestro Blog
+                                Blog de E-commerce
                             </h2>
                         </div>
                         <Link href="/blog">
@@ -330,7 +330,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                                 title: "Guía Definitiva: Vender con Shopify (2025)",
                                 cat: "Guía Completa",
                                 slug: "guia-shopify-chile",
-                                img: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
+                                img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop"
                             },
                             {
                                 title: "Mejores Pasarelas de Pago en Chile",
