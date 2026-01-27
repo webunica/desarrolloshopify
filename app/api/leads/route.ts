@@ -29,7 +29,7 @@ export async function POST(req: Request) {
             data: {
                 leadId: lead.id,
                 token: token,
-                status: 'DRAFT',
+                statusString: 'DRAFT',
             },
         });
 
