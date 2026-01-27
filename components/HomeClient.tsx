@@ -78,8 +78,17 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 <TechMarquee />
             </section>
 
-            <section id="servicios" className="py-24 bg-slate-950 relative">
-                <div className="container mx-auto px-6">
+            <section id="servicios" className="py-24 relative overflow-hidden">
+                {/* Background Parallax */}
+                <div
+                    className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
+                    style={{ backgroundImage: "url('/uploads/graphic-designers-meeting-2.webp')" }}
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950" />
+
+                <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-20">
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">¿Por qué elegirnos?</h2>
                         <p className="text-slate-400 max-w-2xl mx-auto text-lg">
