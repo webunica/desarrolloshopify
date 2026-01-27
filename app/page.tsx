@@ -48,6 +48,17 @@ export default async function Home() {
     // Fallback to empty sections (default static mode)
   }
 
+  let latestArticles = [];
+  try {
+    latestArticles = await prisma.blogArticle.findMany({
+      where: { published: true },
+      orderBy: { publishedAt: "desc" },
+      take: 4
+    });
+  } catch (e) {
+    console.error("Blog Fetch Error:", e);
+  }
+
   return (
     <>
       <script
@@ -71,7 +82,7 @@ export default async function Home() {
           })
         }}
       />
-      <HomeClient sections={sections} />
+      <HomeClient sections={sections} latestArticles={latestArticles} />
     </>
   );
 }
