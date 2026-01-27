@@ -328,47 +328,64 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                         {[
                             {
                                 title: "Guía Definitiva: Vender con Shopify (2025)",
+                                excerpt: "Todo lo que necesitas saber sobre impuestos, envíos y pagos.",
                                 cat: "Guía Completa",
                                 slug: "guia-shopify-chile",
+                                date: "25 Ene, 2026",
                                 img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop"
                             },
                             {
                                 title: "Mejores Pasarelas de Pago en Chile",
+                                excerpt: "Comparativa de Webpay, MercadoPago, Starken y BlueExpress.",
                                 cat: "Pagos y Logística",
                                 slug: "pagos-logistica-shopify-chile",
+                                date: "24 Ene, 2026",
                                 img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop"
                             },
                             {
                                 title: "Shopify vs Jumpseller vs WooCommerce",
+                                excerpt: "Análisis honesto de pros y contras para emprendedores chilenos.",
                                 cat: "Comparativa",
                                 slug: "shopify-vs-woocommerce-jumpseller",
+                                date: "22 Ene, 2026",
                                 img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
                             },
                             {
                                 title: "10 Trucos de Velocidad y SEO",
+                                excerpt: "Optimiza imágenes, scripts y apps para mejorar tu SEO.",
                                 cat: "Optimización",
                                 slug: "velocidad-shopify-chile",
+                                date: "20 Ene, 2026",
                                 img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
                             }
                         ].map((article, i) => (
-                            <Link href={`/blog/${article.slug}`} key={i} className="min-w-[85vw] md:min-w-0 snap-center group cursor-pointer relative rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-[3/4] border border-white/5">
-                                <img src={article.img} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+                            <Link href={`/blog/${article.slug}`} key={i} className="min-w-[300px] md:min-w-0 snap-center group flex flex-col h-full">
+                                <article className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 h-full hover:bg-slate-900 hover:border-purple-500/30 transition-all duration-300 flex flex-col">
+                                    <div className="mb-6 aspect-video rounded-xl overflow-hidden relative">
+                                        <img src={article.img} alt={article.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <div className="absolute top-3 left-3 bg-slate-950/80 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm border border-white/10">
+                                            {article.cat}
+                                        </div>
+                                    </div>
 
-                                <div className="absolute top-6 left-6">
-                                    <span className="bg-purple-500/20 text-purple-200 border border-purple-500/20 px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md">
-                                        {article.cat}
-                                    </span>
-                                </div>
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-3 text-slate-500 text-sm mb-3">
+                                            <span>{article.date}</span>
+                                            <span className="w-1 h-1 bg-slate-700 rounded-full"></span>
+                                            <span>5 min</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                                            {article.title}
+                                        </h3>
+                                        <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                                            {article.excerpt}
+                                        </p>
+                                    </div>
 
-                                <div className="absolute bottom-0 left-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-purple-300 transition-colors">
-                                        {article.title}
-                                    </h3>
-                                    <div className="flex items-center text-sm text-slate-300 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                    <div className="flex items-center text-purple-400 text-sm font-medium mt-auto group-hover:translate-x-1 transition-transform">
                                         Leer artículo <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
-                                </div>
+                                </article>
                             </Link>
                         ))}
                     </div>
