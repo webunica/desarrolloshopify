@@ -332,7 +332,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                                 cat: "Guía Completa",
                                 slug: "guia-shopify-chile",
                                 date: "25 Ene, 2026",
-                                img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop"
+                                img: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
                             },
                             {
                                 title: "Mejores Pasarelas de Pago en Chile",
