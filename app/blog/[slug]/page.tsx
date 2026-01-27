@@ -60,7 +60,8 @@ const articles = {
             </p>
         `,
         date: "25 Ene, 2026",
-        category: "Guía Completa"
+        category: "Guía Completa",
+        img: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
     },
     "pagos-logistica-shopify-chile": {
         title: "Mejores Pasarelas de Pago y Couriers para Shopify en Chile",
@@ -106,7 +107,8 @@ const articles = {
             <p class="bg-slate-900 p-4 border-l-4 border-purple-500 my-6"><strong>Consejo Pro:</strong> Usa <strong>BlueExpress</strong> para cobertura nacional económica y <strong>99Minutos</strong> o apps de última milla para "Same Day Delivery" en Santiago.</p>
         `,
         date: "24 Ene, 2026",
-        category: "Pagos y Logística"
+        category: "Pagos y Logística",
+        img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop"
     },
     "shopify-vs-woocommerce-jumpseller": {
         title: "Shopify vs Jumpseller vs WooCommerce: Análisis 2026",
@@ -140,7 +142,8 @@ const articles = {
             <p>Evita <strong>WooCommerce</strong> a menos que tengas un equipo de TI dedicado.</p>
         `,
         date: "22 Ene, 2026",
-        category: "Comparativa"
+        category: "Comparativa",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
     },
     "velocidad-shopify-chile": {
         title: "10 Trucos para mejorar la velocidad de tu tienda",
@@ -167,7 +170,8 @@ const articles = {
             <p class="my-6"><strong>¿Tu tienda sigue lenta?</strong> A veces el problema es código residual. En <a href="/contacto" class="text-purple-400 font-bold">DesarrolloShopify.cl</a> hacemos auditorías de performance técnica.</p>
         `,
         date: "20 Ene, 2026",
-        category: "Optimización"
+        category: "Optimización",
+        img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
     },
     "caso-exito-ecostore": {
         title: "Caso de Éxito: Cómo EcoStore aumentó sus ventas un 300% migrando a Shopify",
@@ -207,7 +211,8 @@ const articles = {
             </p>
         `,
         date: "18 Ene, 2026",
-        category: "Caso de Éxito"
+        category: "Caso de Éxito",
+        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
     }
 };
 
@@ -278,17 +283,26 @@ export default async function BlogPost({ params }: Props) {
                         <ArrowLeft className="w-4 h-4 mr-2" /> Volver al Blog
                     </Link>
 
-                    <div className="mb-10">
-                        <div className="flex items-center gap-4 text-sm text-slate-400 mb-4">
-                            <span className="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">{article.category}</span>
-                            <span>{article.date}</span>
+                    <div className="mb-10 text-center">
+                        <div className="flex items-center justify-center gap-4 text-sm text-slate-400 mb-6">
+                            <span className="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20 font-bold tracking-wide uppercase text-xs">{article.category}</span>
+                            <span className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-500"></div> {article.date}</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-8 drop-shadow-lg">
                             {article.title}
                         </h1>
+                        {/* Featured Image */}
+                        <div className="relative w-full aspect-video md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl border border-white/10 mb-12">
+                            <img
+                                src={article.img}
+                                alt={article.title}
+                                className="absolute inset-0 w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent"></div>
+                        </div>
                     </div>
 
-                    <div className="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-slate-300 prose-a:text-purple-400 hover:prose-a:text-purple-300 prose-strong:text-white border-t border-white/10 pt-10">
+                    <div className="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-headings:font-bold prose-p:text-slate-300 prose-p:leading-relaxed prose-a:text-purple-400 hover:prose-a:text-purple-300 prose-strong:text-white prose-li:text-slate-300 prose-ul:my-6 prose-li:my-2">
                         {/* Dangerous HTML rendering for mock content - in real app use a sanitizer or MDX */}
                         <div dangerouslySetInnerHTML={{ __html: article.content }} />
                     </div>

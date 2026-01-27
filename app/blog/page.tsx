@@ -16,35 +16,40 @@ const articles = [
         excerpt: "Todo lo que necesitas saber sobre impuestos, envíos y pagos para montar tu tienda online legal y operativa.",
         category: "Guía Completa",
         slug: "guia-shopify-chile",
-        date: "25 Ene, 2026"
+        date: "25 Ene, 2026",
+        img: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop"
     },
     {
         title: "Mejores Pasarelas de Pago y Couriers",
         excerpt: "Comparativa de Webpay, MercadoPago, Starken y BlueExpress. Comisiones, tiempos de abono y cobertura.",
         category: "Pagos y Logística",
         slug: "pagos-logistica-shopify-chile",
-        date: "24 Ene, 2026"
+        date: "24 Ene, 2026",
+        img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop"
     },
     {
         title: "Shopify vs Jumpseller vs WooCommerce",
         excerpt: "Análisis honesto de pros y contras para emprendedores chilenos. ¿Cuál te conviene más?",
         category: "Comparativa",
         slug: "shopify-vs-woocommerce-jumpseller",
-        date: "22 Ene, 2026"
+        date: "22 Ene, 2026",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
     },
     {
         title: "10 Trucos para mejorar la velocidad de tu tienda",
         excerpt: "Optimiza imágenes, scripts y apps para lograr un Core Web Vitals en verde y mejorar tu SEO.",
         category: "Optimización",
         slug: "velocidad-shopify-chile",
-        date: "20 Ene, 2026"
+        date: "20 Ene, 2026",
+        img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop"
     },
     {
         title: "Caso de Éxito: Cómo EcoStore aumentó sus ventas un 300%",
         excerpt: "De 2 millones a 8 millones mensuales. Analizamos la estrategia de migración y optimización CRO.",
         category: "Caso de Éxito",
         slug: "caso-exito-ecostore",
-        date: "18 Ene, 2026"
+        date: "18 Ene, 2026",
+        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
     }
 ];
 
@@ -72,8 +77,12 @@ export default function BlogPage() {
                             <Link href={`/blog/${article.slug}`} key={i} className="group flex flex-col h-full">
                                 <article className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 h-full hover:bg-slate-900 hover:border-purple-500/30 transition-all duration-300 flex flex-col">
                                     <div className="mb-6 aspect-video bg-slate-800 rounded-xl overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent group-hover:scale-105 transition-transform duration-500"></div>
-                                        {/* Placeholder for future CMS images */}
+                                        <img
+                                            src={article.img}
+                                            alt={article.title}
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60"></div>
                                         <div className="absolute bottom-4 left-4 bg-slate-950/80 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm border border-white/10">
                                             {article.category}
                                         </div>
