@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -24,7 +24,7 @@ model Lead {
 model Project {
   id        String   @id @default(cuid())
   token     String   @unique // Access token for the client panel
-  status    ProjectStatus @default(DRAFT)
+  status    String   @default("DRAFT") // SQLite does not support Enums
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -50,7 +50,7 @@ model Answer {
 model Section {
   id        String   @id @default(cuid())
   type      String   // e.g., 'hero', 'about', 'products'
-  content   Json     // Flexible JSON content structure
+  content   String   // JSON content stored as String
   order     Int      @default(0)
   projectId String
   project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
@@ -71,15 +71,6 @@ model File {
   @@index([projectId])
 }
 
-enum ProjectStatus {
-  DRAFT
-  SUBMITTED
-  PAID
-  IN_PROGRESS
-  REVIEW
-  COMPLETED
-}
-
 // --- CMS Models ---
 
 model SitePage {
@@ -95,7 +86,7 @@ model SiteSection {
   id          String   @id @default(cuid())
   component   String   // React component identifier e.g. "Hero", "ShopifyInfoTabs"
   name        String   // Display name e.g. "Hero Principal"
-  content     Json     // JSON props
+  content     String   // JSON stored as String
   order       Int      @default(0)
   isVisible   Boolean  @default(true)
   
@@ -104,3 +95,22 @@ model SiteSection {
 
   @@index([pageId])
 }
+
+model BlogArticle {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String?
+  content     String   // HTML rich text
+  category    String
+  imageUrl    String?
+  author      String?  @default("DesarrolloShopify.cl")
+  
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+

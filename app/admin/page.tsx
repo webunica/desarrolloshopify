@@ -37,6 +37,14 @@ export default async function AdminDashboard() {
                             <Link href="/admin/cms">Ir al Editor</Link>
                         </Button>
                     </div>
+
+                    <div className="bg-neutral-900 border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-colors">
+                        <h2 className="text-xl font-bold mb-2">Gestor de Blog</h2>
+                        <p className="text-gray-400 text-sm mb-4">Crea y edita artículos, guías y noticias.</p>
+                        <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white" asChild>
+                            <Link href="/admin/blog">Gestionar Artículos</Link>
+                        </Button>
+                    </div>
                 </div>
 
                 <div className="bg-neutral-900 border border-white/10 rounded-xl overflow-hidden">
