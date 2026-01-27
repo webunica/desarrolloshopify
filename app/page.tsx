@@ -48,7 +48,7 @@ export default async function Home() {
     // Fallback to empty sections (default static mode)
   }
 
-  let latestArticles = [];
+  let latestArticles: any[] = [];
   try {
     latestArticles = await prisma.blogArticle.findMany({
       where: { published: true },
