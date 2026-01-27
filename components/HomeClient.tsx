@@ -129,7 +129,7 @@ export default function HomeClient({ sections = [] }: { sections?: CMSSection[] 
                 </div>
             </section>
 
-            <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
+            <section id="portfolio" className="pt-[66px] pb-32 bg-slate-950 text-white overflow-hidden">
                 <DesignCarousel />
                 <div className="mt-12 text-center">
                     <Link href="/portafolio">
