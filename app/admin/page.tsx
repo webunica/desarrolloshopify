@@ -80,7 +80,7 @@ export default async function AdminDashboard() {
                                         TK: {proj.token.slice(0, 6)}...
                                     </td>
                                     <td className="p-4">
-                                        <span className="bg-white/10 px-2 py-1 rounded text-xs">{proj.status}</span>
+                                        <span className="bg-white/10 px-2 py-1 rounded text-xs">{proj.statusString}</span>
                                     </td>
                                     <td className="p-4 text-gray-400">
                                         {format(proj.createdAt, "d MMM HH:mm", { locale: es })}
