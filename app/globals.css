@@ -93,7 +93,7 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-fuchsia-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#95bf47] via-[#5e8e3e] to-[#95bf47];
 }
 
 /* Dark grid pattern */
