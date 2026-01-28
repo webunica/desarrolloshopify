@@ -38,7 +38,7 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="hover:text-purple-400 transition-colors"
+                                className="hover:text-[#95bf47] transition-colors"
                             >
                                 {link.label}
                             </Link>
@@ -51,7 +51,7 @@ export function Navbar() {
                             onClick={() => setIsContactModalOpen(true)}
                             variant="default"
                             size="sm"
-                            className="hidden md:flex bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg font-bold transition-all duration-300 hover:scale-105"
+                            className="hidden md:flex bg-white text-black hover:bg-slate-200 shadow-lg font-bold transition-all duration-300 hover:scale-105"
                         >
                             Comienza Aquí <Sparkles className="ml-2 h-4 w-4" />
                         </Button>
@@ -81,7 +81,7 @@ export function Navbar() {
                                     <Link
                                         key={link.href}
                                         href={link.href}
-                                        className="text-lg font-medium text-slate-300 hover:text-purple-400 hover:pl-2 transition-all"
+                                        className="text-lg font-medium text-slate-300 hover:text-[#95bf47] hover:pl-2 transition-all"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.label}
@@ -93,7 +93,7 @@ export function Navbar() {
                                             setIsMobileMenuOpen(false);
                                             setIsContactModalOpen(true);
                                         }}
-                                        className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-bold py-6"
+                                        className="w-full bg-white text-black hover:bg-slate-200 font-bold py-6"
                                     >
                                         Comienza Aquí <Sparkles className="ml-2 h-4 w-4" />
                                     </Button>
