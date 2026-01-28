@@ -7,7 +7,7 @@ console.log('Available models:', Object.keys(prisma).filter(key => key[0] !== '_
 
 const articles = [
     {
-        title: "Guía Definitiva: Vender con Shopify en Chile (2025)",
+        title: "Guía Definitiva: Vender con Shopify en Chile (2026)",
         content: `
             <p class="lead text-xl text-slate-300">Si estás buscando lanzar tu tienda online en Chile, probablemente ya sabes que <strong>Shopify</strong> es una de las opciones más robustas del mundo. Pero, ¿cómo funciona en el mercado chileno? ¿Qué pasarelas de pago usar? ¿Cómo conectar boleta electrónica?</p>
             
@@ -59,184 +59,168 @@ const articles = [
         `,
         createdAt: "2026-01-25T00:00:00Z",
         category: "Guía Completa",
-        slug: "guia-shopify-chile",
+        slug: "guia-shopify-chile-2026",
         imageUrl: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop",
-        excerpt: "Todo lo que necesitas saber sobre impuestos, envíos y pagos para montar tu tienda online legal y operativa."
+        excerpt: "Todo lo que necesitas saber sobre impuestos, envíos y pagos para montar tu tienda online legal y operativa en Chile este 2026.",
+        keywords: "shopify chile, vender en chile, boleta electrónica shopify, medios de pago chile, ecommerce chile, transbank, mercadopago"
     },
     {
-        title: "Mejores Pasarelas de Pago y Couriers para Shopify en Chile",
+        title: "Pasarelas de Pago Shopify Chile: MercadoPago vs Transbank vs Fintoc",
         content: `
-            <p class="lead text-xl text-slate-300">Una tienda bonita no sirve de nada si no puedes cobrar ni entregar. En Chile, la "última milla" y el checkout son los puntos donde más ventas se caen.</p>
+            <p class="lead text-xl text-slate-300">Una tienda bonita no sirve de nada si no puedes cobrar. En 2026, las opciones de pago en Chile se han diversificado. Comparamos las mejores.</p>
             
-            <h2>Pasarelas de Pago: La Batalla de las Comisiones</h2>
-            <p>Al 2025, las opciones se han consolidado. Aquí el desglose:</p>
-            
-            <h3>1. MercadoPago (El Líder Actual)</h3>
-            <p>Es la opción más fácil de integrar. No requiere contratos complejos ni validaciones técnicas.</p>
+            <h2>1. MercadoPago (El Líder)</h2>
+            <p>Es la opción más robusta y fácil de integrar. No requiere contratos complejos ni validaciones técnicas.</p>
             <ul>
-                <li><strong>Comisión:</strong> Aprox 2.79% + IVA (Liberación en 14 días) o 2.99% + IVA (Al instante).</li>
-                <li><strong>Ventaja:</strong> UX increíble, guarda tarjetas, alta tasa de aprobación.</li>
+                <li><strong>Comisión:</strong> Aprox 2.79% + IVA (14 días) o 2.99% + IVA (Instantáneo).</li>
+                <li><strong>Ventaja:</strong> UX fluida, Checkout Pro (dentro del sitio), guarda tarjetas.</li>
+                <li><strong>Desventaja:</strong> Atención al cliente a veces lenta.</li>
             </ul>
 
-            <h3>2. Webpay Plus (Vía Integradores)</h3>
-            <p>Directo con Transbank suele ser engorroso tecnológicamente para Shopify. Lo ideal es usar integradores como <strong>Pago Fácil</strong> o la nueva app nativa si está disponible.</p>
+            <h2>2. Webpay Plus (Transbank)</h2>
+            <p>El estándar histórico. Genera confianza en compradores mayores.</p>
             <ul>
-                <li><strong>Ventaja:</strong> "Es Webpay", la marca genera confianza inmediata en el comprador chileno mayor de 40 años.</li>
+                <li><strong>Integración:</strong> Ahora existe integración oficial, pero muchos prefieren usar agregadores como Pago Fácil para evitar burocracia.</li>
+                <li><strong>Ventaja:</strong> Confianza del consumidor.</li>
+                <li><strong>Desventaja:</strong> UX de redirección a veces corta la conversión.</li>
             </ul>
 
-            <h3>3. Fintoc (Pagos con Transferencia)</h3>
-            <p>La revolución de las transferencias simplificadas. Te ahorras la comisión de tarjeta de crédito.</p>
+            <h2>3. Fintoc (Transferencias Bancarias Simplificadas)</h2>
+            <p>La revolución de las transferencias. Permite pagar directo desde la cuenta bancaria sin tarjetas.</p>
             <ul>
-                <li><strong>Comisión:</strong> Mucho más baja (a veces tarifa fija por transacción).</li>
-                <li><strong>Ideal para:</strong> Tickets altos donde la comisión porcentual duele.</li>
+                <li><strong>Comisión:</strong> Fija o % muy bajo comparado a tarjetas.</li>
+                <li><strong>Ventaja:</strong> Sin riesgo de contracargos. Ideal para tickets altos.</li>
+                <li><strong>Desventaja:</strong> No permite cuotas (crédito).</li>
             </ul>
 
-            <h2>Logística: ¿Cómo envío a Arica y Punta Arenas?</h2>
-            
-            <h3>La "Vieja Escuela": Contrato directo</h3>
-            <p>Tener cuenta en Chilexpress o Starken. Te dan mejores tarifas si tienes volumen, pero integrarlos a la web para que calculen el precio al cliente es difícil.</p>
-
-            <h3>La Solución Moderna: Multi-Couriers (Aggregators)</h3>
-            <p>Apps como <strong>Envíame</strong> o <strong>Shipit</strong> son el estándar.</p>
-            <ul>
-                <li>Se conectan a tu Shopify.</li>
-                <li>En el checkout, el cliente pone su dirección y la app le muestra: "Starken: $4.000, BlueExpress: $3.500".</li>
-                <li>Tú imprimes la etiqueta desde un panel único.</li>
-            </ul>
-
-            <p class="bg-slate-900 p-4 border-l-4 border-purple-500 my-6"><strong>Consejo Pro:</strong> Usa <strong>BlueExpress</strong> para cobertura nacional económica y <strong>99Minutos</strong> o apps de última milla para "Same Day Delivery" en Santiago.</p>
+            <h3>Veredicto</h3>
+            <p>Recomendamos usar <strong>MercadoPago</strong> como principal y <strong>Fintoc</strong> como secundario para ahorrar comisiones.</p>
         `,
         createdAt: "2026-01-24T00:00:00Z",
         category: "Pagos y Logística",
-        slug: "pagos-logistica-shopify-chile",
+        slug: "pasarelas-pago-shopify-chile",
         imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop",
-        excerpt: "Comparativa de Webpay, MercadoPago, Starken y BlueExpress. Comisiones, tiempos de abono y cobertura."
+        excerpt: "Comparativa actualizada 2026 de comisiones y experiencia de usuario entre Webpay, MercadoPago y Fintoc para Shopify.",
+        keywords: "pasarelas de pago, mercadopago chile, webpay shopify, fintoc, comisiones transbank, medios de pago ecommerce"
     },
     {
-        title: "Shopify vs Jumpseller vs WooCommerce: Análisis 2026",
+        title: "Migrar de WooCommerce a Shopify en Chile: ¿Vale la pena?",
         content: `
-            <p class="lead text-xl text-slate-300">La eterna pregunta del emprendedor chileno. ¿Apoyo al software local (Jumpseller), me voy por la libertad total (WooCommerce) o elijo al gigante global (Shopify)?</p>
+            <p class="lead text-xl text-slate-300">Muchos emprendedores inician en WooCommerce (WordPress) porque es 'gratis'. Pero cuando crecen, los problemas técnicos empiezan. Analizamos si migrar es tu solución.</p>
 
-            <h2>1. Jumpseller (La Opción Local)</h2>
-            <p>Una plataforma chilena/portuguesa muy popular.</p>
+            <h2>El "Costo Oculto" de WooCommerce</h2>
+            <p>WordPress es excelente, pero mantener una tienda segura y rápida requiere:</p>
             <ul>
-                <li><strong>Pros:</strong> Integraciones locales nativas impecables (Facturación, couriers). Soporte en español real. Precios en pesos chilenos y accesibles.</li>
-                <li><strong>Contras:</strong> El editor de diseño es más limitado. Menos apps externas. Si quieres crecer globalmente, se queda corto.</li>
+                <li>Hosting VPS dedicado ($20k-$50k CLP/mes).</li>
+                <li>Plugin de seguridad (Wordfence Pro).</li>
+                <li>Actualizaciones semanales de plugins que pueden romper el sitio.</li>
             </ul>
 
-            <h2>2. WooCommerce (Wordpress)</h2>
-            <p>El rey del "hazlo tú mismo". Software libre.</p>
-            <ul>
-                <li><strong>Pros:</strong> "Gratis" (solo pagas hosting). Control total del código.</li>
-                <li><strong>Contras:</strong> <strong>Falso gratis</strong>. Tienes que pagar buen hosting, plugins de seguridad, actualizaciones manuales. Es muy fácil que el sitio se caiga o se infecte si no tienes mantenimiento técnico.</li>
-            </ul>
+            <h2>Shopify: La tranquilidad cuesta (pero paga)</h2>
+            <p>Con Shopify, pagas desde $19 USD/mes, pero te olvidas de servidores, parches de seguridad y caídas en CyberDays.</p>
 
-            <h2>3. Shopify (El Estándar Global)</h2>
-            <p>Software as a Service (SaaS). Pagas arriendo por tecnología de punta.</p>
-            <ul>
-                <li><strong>Pros:</strong> No se cae nunca. Checkout optimizado para vender (el mejor del mundo). Miles de apps.</li>
-                <li><strong>Contras:</strong> Costo mensual en dólares. Comisiones por transacción si no usas su pasarela propia.</li>
-            </ul>
+            <h2>Proceso de Migración</h2>
+            <p>Migrar no significa perder tu SEO ni tus clientes. En <strong>DesarrolloShopify.cl</strong> realizamos migraciones integrales:</p>
+            <ol>
+                <li><strong>Productos:</strong> Importamos catálogo completo con SKUs.</li>
+                <li><strong>Clientes:</strong> Historial de compradores.</li>
+                <li><strong>Redirecciones 301:</strong> Vital para no perder posicionamiento en Google.</li>
+            </ol>
 
-            <h2>Veredicto Final</h2>
-            <p>Si eres un negocio pequeño con presupuesto ajustado y foco 100% Chile: <strong>Jumpseller</strong> es un excelente inicio.</p>
-            <p>Si eres una marca que busca escalar, invertir en marketing y quiere delegar la parte técnica para enfocarse en vender: <strong>Shopify</strong> es el camino indiscutido.</p>
-            <p>Evita <strong>WooCommerce</strong> a menos que tengas un equipo de TI dedicado.</p>
+            <p class="my-6">¿Tu WooCommerce carga lento? Es hora de profesionalizar tu infraestructura. <a href="/contacto">Cotiza tu migración hoy</a>.</p>
         `,
         createdAt: "2026-01-22T00:00:00Z",
         category: "Comparativa",
-        slug: "shopify-vs-woocommerce-jumpseller",
+        slug: "migrar-woocommerce-a-shopify-chile",
         imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-        excerpt: "Análisis honesto de pros y contras para emprendedores chilenos. ¿Cuál te conviene más?"
+        excerpt: "Análisis honesto sobre cuándo es el momento correcto para dejar WooCommerce y pasar a una plataforma SaaS como Shopify.",
+        keywords: "migracion shopify, woocommerce vs shopify, cambiar plataforma ecommerce, wordpress o shopify, agencia shopify chile"
     },
     {
-        title: "10 Trucos para mejorar la velocidad de tu tienda",
+        title: "Logística E-commerce en Chile: Integraciones Shopify 2026",
         content: `
-            <p class="lead text-xl text-slate-300">Amazon descubrió que por cada 100ms de retraso, las ventas caen un 1%. En Shopify, la velocidad es dinero.</p>
+            <p class="lead text-xl text-slate-300">Si vendes físico, la logística es tu ventaja competitiva. Configurar envíos automáticos en Shopify Chile es más fácil de lo que crees.</p>
 
-            <h2>1. Comprime tus Imágenes (Vital)</h2>
-            <p>El error #1. Subir fotos de producto de 4MB directas de la cámara. Shopify optimiza, pero no hace milagros.</p>
-            <p><strong>Solución:</strong> Pasa todo por TinyPNG o usa apps como <strong>Crush.pics</strong> antes de subir. Intenta que ningún banner pese más de 200KB.</p>
+            <h2>Apps de Logística Imprescindibles</h2>
+            
+            <h3>1. Envíame</h3>
+            <p>Un multi-courier que conecta tu tienda con Chilexpress, Starken, BlueExpress, 99Minutos y más.</p>
+            <ul>
+                <li><strong>Automatización:</strong> Imprime 100 etiquetas en 1 clic.</li>
+                <li><strong>Cotizador:</strong> Muestra el precio real al cliente en el checkout.</li>
+            </ul>
 
-            <h2>2. Cuidado con las Apps</h2>
-            <p>Cada app que instalas agrega código Javascript a tu tienda <!-- bloat -->. Esas apps de "ruleta de descuentos" o "lentejuelas cayendo" están matando tu velocidad.</p>
-            <p><strong>Acción:</strong> Audita tus apps y borra las que no uses. El código a veces queda "sucio" en los archivos del tema, requiere limpieza.</p>
+            <h3>2. Shipit</h3>
+            <p>Similar a Envíame, con excelente soporte para retiros a domicilio y gestión de incidencias.</p>
 
-            <h2>3. Usa un Tema 2.0 (Dawn)</h2>
-            <p>Los temas antiguos de Shopify eran lentos. La nueva arquitectura "Online Store 2.0" (como el tema Dawn gratuito) es extremadamente rápida y usa JSON templates.</p>
-
-            <h2>4. Lazy Loading</h2>
-            <p>Técnica donde las imágenes de abajo no cargan hasta que el usuario hace scroll. Los temas modernos lo traen por defecto. Asegúrate de que tu imagen principal (LCP) NO tenga lazy loading, esa debe cargar de inmediato.</p>
-
-            <h2>5. Videos: Siempre hosteados fuera</h2>
-            <p>Nunca subas un video MP4 pesado al banner. Usa la integración nativa de YouTube o Vimeo, o usa GIFs/WebM muy comprimidos de menos de 2MB.</p>
-
-            <p class="my-6"><strong>¿Tu tienda sigue lenta?</strong> A veces el problema es código residual. En <a href="/contacto" class="text-purple-400 font-bold">DesarrolloShopify.cl</a> hacemos auditorías de performance técnica.</p>
+            <h2>Estrategias de Envío</h2>
+            <ul>
+                <li><strong>Envío Gratis:</strong> Ofrécelo sobre un monto (ej: $50.000) para subir el ticket medio.</li>
+                <li><strong>Retiro en Tienda:</strong> Shopify lo trae nativo y es muy usado en Chile (Click & Collect).</li>
+                <li><strong>Same Day:</strong> Usa couriers express dentro de Santiago para entregar el mismo día.</li>
+            </ul>
         `,
         createdAt: "2026-01-20T00:00:00Z",
-        category: "Optimización",
-        slug: "velocidad-shopify-chile",
-        imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop",
-        excerpt: "Optimiza imágenes, scripts y apps para lograr un Core Web Vitals en verde y mejorar tu SEO."
+        category: "Pagos y Logística",
+        slug: "logistica-envios-shopify-chile",
+        imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop",
+        excerpt: "Cómo automatizar Starken, Chilexpress y BlueExpress en tu tienda Shopify. Apps recomendadas y estrategias de envío.",
+        keywords: "envios shopify, logistica ecommerce chile, enviame, shipit, starken shopify, chilexpress shopify"
     },
     {
-        title: "Caso de Éxito: Cómo EcoStore aumentó sus ventas un 300% migrando a Shopify",
+        title: "SEO para Shopify: Posiciona tu tienda en Google Chile",
         content: `
-            <p class="lead text-xl text-slate-300">De un WooCommerce lento y caído a una máquina de ventas automatizada. Analizamos la transición de uno de nuestros clientes.</p>
+            <p class="lead text-xl text-slate-300">Tener la tienda más linda no sirve si nadie la encuentra. El SEO en Shopify tiene sus trucos específicos.</p>
 
-            <h2>El Problema Inicial</h2>
-            <p>EcoStore (nombre ficticio por privacidad) tenía una tienda en WordPress que se caía cada vez que enviaban un correo masivo. Sus ventas estaban estancadas en $2M mensuales y pasaban 10 horas a la semana arreglando plugins.</p>
-            <ul>
-                <li><strong>Cargas lentas:</strong> 6 segundos en móvil.</li>
-                <li><strong>Checkout complejo:</strong> Tasa de abandono del 80%.</li>
-                <li><strong>Sin sincronización:</strong> Stock manual en Excel.</li>
-            </ul>
+            <h2>1. Estructura de URLs</h2>
+            <p>Shopify es rígido con las URLs (/products/, /pages/), pero muy limpio. Asegúrate de usar 'slugs' descriptivos.</p>
+            <p><em>Mal: /products/p-123</em><br><em>Bien: /products/zapatillas-running-nike-air</em></p>
 
-            <h2>La Solución: Migración a Shopify</h2>
-            <p>Realizamos una migración completa de datos (clientes, productos, pedidos) en 7 días hábiles. Implementamos un diseño personalizado enfocado en la conversión (CRO).</p>
+            <h2>2. Colecciones e Interlinkeo</h2>
+            <p>Las páginas de colección son poderosas. Agrega descripciones con texto rico en palabras clave al inicio o final de tus colecciones para que Google entienda de qué tratan.</p>
 
-            <h3>1. Simplificación del Checkout</h3>
-            <p>Implementamos el checkout nativo de Shopify. Resultado: Los clientes ahora compraban en 3 clics en lugar de 6 pasos.</p>
+            <h2>3. El Blog es tu aliado</h2>
+            <p>Google ama el contenido fresco. Escribe guías de uso de tus productos (como este mismo blog) para captar tráfico "top of funnel".</p>
 
-            <h3>2. Automatización de Marketing</h3>
-            <p>Configuramos <strong>Klaviyo</strong> para recuperar carritos abandonados. Esto solo, recuperó un 15% de las ventas perdidas en el primer mes.</p>
+            <h2>4. Velocidad Técnica</h2>
+            <p>Usa imágenes WebP (Shopify lo hace automático a veces) y evita apps innecesarias que inyecten JS pesado.</p>
 
-            <h3>3. Velocidad Móvil</h3>
-            <p>Optimizamos imágenes y usamos un tema 2.0. El tiempo de carga bajó a 1.2 segundos.</p>
-
-            <h2>Los Resultados (3 Meses Después)</h2>
-            <p>El cambio fue dramático. Al no tener que preocuparse del servidor, el equipo de EcoStore se dedicó 100% a vender.</p>
-            <ul>
-                <li><strong>Ventas:</strong> +300% (De $2M a $8M mensuales).</li>
-                <li><strong>Tasa de Conversión:</strong> Subió de 0.8% a 2.1%.</li>
-                <li><strong>Retorno de Inversión:</strong> Recuperaron el costo del desarrollo en 2 meses.</li>
-            </ul>
-
-            <p class="bg-slate-900 border-l-4 border-green-500 p-4 my-8">
-                <strong>¿Te sientes identificado?</strong> Si tu tienda actual es un freno en lugar de un motor, <a href="/contacto" class="text-green-400 font-bold">agenda una auditoría gratuita con nosotros</a>.
+            <p class="bg-slate-900 border-l-4 border-purple-500 p-4 my-8">
+                <strong>¿Necesitas auditoría SEO?</strong> Optimizamos tu tienda para que aparezca primero. <a href="/contacto">Contáctanos</a>.
             </p>
         `,
         createdAt: "2026-01-18T00:00:00Z",
-        category: "Caso de Éxito",
-        slug: "caso-exito-ecostore",
+        category: "Optimización",
+        slug: "seo-shopify-chile-guia",
         imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-        excerpt: "De 2 millones a 8 millones mensuales. Analizamos la estrategia de migración y optimización CRO."
+        excerpt: "Guía técnica para posicionar tu e-commerce en los primeros lugares de búsqueda en Chile. Tips on-page y técnicos.",
+        keywords: "seo shopify, posicionamiento web chile, ecommerce seo, optimizacion tecnica shopify, marketing digital"
     }
 ];
 
 async function main() {
     console.log("Seeding Database...");
     for (const article of articles) {
+        // Prepare data object, only adding keywords if the property exists in database schema
+        // We know we added keywords to schema, so we include it.
+        const data = {
+            title: article.title,
+            content: article.content,
+            category: article.category,
+            slug: article.slug,
+            imageUrl: article.imageUrl,
+            excerpt: article.excerpt,
+            published: true,
+            publishedAt: new Date(article.createdAt),
+            keywords: article.keywords || ""
+        };
+
         await prisma.blogArticle.upsert({
             where: { slug: article.slug },
-            update: {},
-            create: {
-                ...article,
-                published: true,
-                publishedAt: new Date(article.createdAt)
-            }
+            update: data, // Update content if exists to refresh dev data
+            create: data
         });
-        console.log(`Created: ${article.title}`);
+        console.log(`Created/Updated: ${article.title}`);
     }
     console.log("Done!");
 }
