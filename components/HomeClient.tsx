@@ -161,7 +161,7 @@ export default function HomeClient({ sections = [], latestArticles = [] }: { sec
                                         <LayoutTemplate className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-white font-bold mb-1">Secciones Exclusivas</h4>
+                                        <h3 className="text-white font-bold mb-1">Secciones Exclusivas</h3>
                                         <p className="text-sm text-slate-400">Creamos bloques y secciones modulares que se adaptan 100% a tu identidad de marca.</p>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@ export default function HomeClient({ sections = [], latestArticles = [] }: { sec
                                         <Rocket className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-white font-bold mb-1">Optimización de Velocidad</h4>
+                                        <h3 className="text-white font-bold mb-1">Optimización de Velocidad</h3>
                                         <p className="text-sm text-slate-400">Limpiamos código innecesario para lograr puntuaciones 90+ en Google PageSpeed.</p>
                                     </div>
                                 </div>

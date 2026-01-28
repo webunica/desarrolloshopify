@@ -32,6 +32,7 @@ export default function WhatsAppFloating() {
                         setShowTooltip(false);
                     }}
                     className="absolute -top-2 -right-2 bg-slate-200 hover:bg-slate-300 text-slate-500 rounded-full p-1"
+                    aria-label="Cerrar mensaje"
                 >
                     <X className="w-3 h-3" />
                 </button>
@@ -48,6 +49,7 @@ export default function WhatsAppFloating() {
                 rel="noopener noreferrer"
                 className="relative group flex items-center justify-center w-16 h-16 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:rotate-3"
                 onMouseEnter={() => setShowTooltip(true)}
+                aria-label="Chat de WhatsApp"
             >
                 {/* WhatsApp Icon SVG */}
                 <svg
