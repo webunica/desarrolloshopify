@@ -5,7 +5,7 @@ import slugify from "slugify";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { title, content, category, imageUrl, published, excerpt, slug } = body;
+        const { title, content, category, imageUrl, published, excerpt, slug, keywords } = body;
 
         // Generate slug if not provided
         let finalSlug = slug;
@@ -25,6 +25,7 @@ export async function POST(req: Request) {
                 imageUrl,
                 published,
                 excerpt,
+                keywords,
                 publishedAt: published ? new Date() : null,
             },
         });

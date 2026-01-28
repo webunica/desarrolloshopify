@@ -10,7 +10,7 @@ export async function PUT(req: Request, { params }: Props) {
     try {
         const { id } = await params;
         const body = await req.json();
-        const { title, slug, content, category, imageUrl, published, excerpt } = body;
+        const { title, slug, content, category, imageUrl, published, excerpt, keywords } = body;
 
         const updatedArticle = await prisma.blogArticle.update({
             where: { id },
@@ -22,6 +22,7 @@ export async function PUT(req: Request, { params }: Props) {
                 imageUrl,
                 published,
                 excerpt,
+                keywords,
                 publishedAt: published ? new Date() : null, // Update published date if publishing
             },
         });

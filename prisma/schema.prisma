@@ -111,6 +111,7 @@ model BlogArticle {
   excerpt     String?
   content     String
   category    String
+  keywords    String?   @default("")
   imageUrl    String?
   author      String?   @default("DesarrolloShopify.cl")
   published   Boolean   @default(false)

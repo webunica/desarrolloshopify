@@ -22,6 +22,7 @@ export default function BlogForm({ initialData, isEditing = false }: BlogFormPro
         category: initialData?.category || "Guía Completa",
         imageUrl: initialData?.imageUrl || "",
         published: initialData?.published || false,
+        keywords: initialData?.keywords || "",
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -125,6 +126,19 @@ export default function BlogForm({ initialData, isEditing = false }: BlogFormPro
                                 required
                             />
                         </div>
+                    </div>
+
+                    <div className="bg-neutral-900 border border-white/10 p-6 rounded-xl">
+                        <label className="block text-sm font-medium text-gray-400 mb-1">Palabras Clave (Keywords)</label>
+                        <input
+                            type="text"
+                            name="keywords"
+                            value={formData.keywords}
+                            onChange={handleChange}
+                            className="w-full bg-black border border-white/10 rounded-lg p-3 text-white text-sm focus:ring-2 focus:ring-purple-500 outline-none"
+                            placeholder="shopify, ecommerce, chile, transbank (separadas por coma)"
+                        />
+                        <p className="text-xs text-slate-500 mt-2">Usadas para recomendar artículos relacionados.</p>
                     </div>
 
                     <div className="bg-neutral-900 border border-white/10 p-6 rounded-xl">

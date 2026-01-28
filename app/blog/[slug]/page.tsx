@@ -42,6 +42,30 @@ export default async function BlogPost({ params }: Props) {
         notFound();
     }
 
+    // Related Articles Logic
+    const candidates = await prisma.blogArticle.findMany({
+        where: {
+            published: true,
+            slug: { not: slug }
+        },
+        orderBy: { publishedAt: "desc" },
+        take: 20
+    });
+
+    const currentKeywords = (article.keywords || "").toLowerCase().split(",").map(k => k.trim()).filter(Boolean);
+
+    const related = candidates.map(c => {
+        let score = 0;
+        if (c.category === article.category) score += 2;
+
+        const cKeywords = (c.keywords || "").toLowerCase().split(",").map(k => k.trim()).filter(Boolean);
+        const overlap = currentKeywords.filter(k => cKeywords.includes(k));
+        score += overlap.length;
+
+        return { ...c, score };
+    }).sort((a, b) => b.score - a.score).slice(0, 3);
+
+
     return (
         <main className="bg-slate-950 min-h-screen text-slate-200 font-sans selection:bg-purple-900 selection:text-white">
             <script
@@ -60,7 +84,6 @@ export default async function BlogPost({ params }: Props) {
                             "@type": "Organization",
                             "name": "DesarrolloShopify.cl",
                             "logo": {
-                                "@type": "ImageObject",
                                 "url": "https://desarrolloweb.cl/og-image.png"
                             }
                         }
@@ -102,6 +125,46 @@ export default async function BlogPost({ params }: Props) {
                     </div>
                 </div>
             </article>
+
+            {related.length > 0 && (
+                <section className="py-20 bg-slate-900 border-t border-white/5">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <h2 className="text-3xl font-bold text-white mb-10 text-center">Artículos Relacionados</h2>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {related.map((post) => (
+                                <Link href={`/blog/${post.slug}`} key={post.id} className="group">
+                                    <article className="bg-slate-950 border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all h-full flex flex-col">
+                                        <div className="aspect-video relative overflow-hidden">
+                                            <img
+                                                src={post.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"}
+                                                alt={post.title}
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            />
+                                            <div className="absolute top-3 left-3 bg-slate-950/80 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm border border-white/10">
+                                                {post.category}
+                                            </div>
+                                        </div>
+                                        <div className="p-6 flex-1 flex flex-col">
+                                            <div className="flex items-center gap-2 text-slate-500 text-xs mb-3">
+                                                <span>{new Date(post.publishedAt || post.createdAt).toLocaleDateString("es-CL", { day: "numeric", month: "short", year: "numeric" })}</span>
+                                            </div>
+                                            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors line-clamp-2">
+                                                {post.title}
+                                            </h3>
+                                            <p className="text-slate-400 text-sm line-clamp-3 mb-4 flex-1">
+                                                {post.excerpt}
+                                            </p>
+                                            <div className="text-purple-400 text-sm font-medium flex items-center mt-auto">
+                                                Leer más <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
+                                            </div>
+                                        </div>
+                                    </article>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             <Footer />
         </main>
