@@ -282,22 +282,22 @@ export default function PreciosClient() {
                                     <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4">
                                         <TrendingUp className="w-6 h-6 text-purple-400" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">ROI Comprobado</h3>
-                                    <p className="text-slate-400">Recupera tu inversión en promedio en 2-3 meses</p>
+                                    <h3 className="text-xl font-bold text-white mb-2">Pagos Flexibles</h3>
+                                    <p className="text-slate-400">Paga hasta en 6 cuotas sin interés con tarjeta de crédito.</p>
                                 </div>
                                 <div>
                                     <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4">
                                         <Clock className="w-6 h-6 text-purple-400" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Entrega Garantizada</h3>
-                                    <p className="text-slate-400">Cumplimos los tiempos o te devolvemos tu dinero</p>
+                                    <h3 className="text-xl font-bold text-white mb-2">Garantía de Funcionamiento</h3>
+                                    <p className="text-slate-400">3 meses de garantía de funcionamiento post-entrega (según plan).</p>
                                 </div>
                                 <div>
                                     <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4">
                                         <Shield className="w-6 h-6 text-purple-400" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Garantía Total</h3>
-                                    <p className="text-slate-400">14 días de garantía de satisfacción o devolvemos tu dinero</p>
+                                    <h3 className="text-xl font-bold text-white mb-2">Soporte y Capacitación</h3>
+                                    <p className="text-slate-400">Soporte continuo e instrucción vía videollamada grabada. Cursos pronto disponibles.</p>
                                 </div>
                             </div>
                         </div>
