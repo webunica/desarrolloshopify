@@ -6,12 +6,12 @@ import { motion } from 'framer-motion';
 const CodeParticle = ({ x, duration, delay, fontSize, char }: { x: number; duration: number; delay: number; fontSize: number; char: string }) => {
     return (
         <motion.div
-            className="absolute font-mono font-bold text-emerald-500/50 select-none whitespace-nowrap"
+            className="absolute font-mono font-bold text-[#95bf47]/50 select-none whitespace-nowrap"
             style={{
                 left: `${x}%`,
                 fontSize: fontSize,
                 top: -fontSize * 2,
-                textShadow: "0 0 8px rgba(16, 185, 129, 0.4)"
+                textShadow: "0 0 8px rgba(149, 191, 71, 0.4)"
             }}
             animate={{
                 y: [0, 1000], // Fall down

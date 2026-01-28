@@ -19,7 +19,7 @@ export function TechMarquee({ className }: TechMarqueeProps) {
     ];
 
     return (
-        <div className={cn("w-full bg-[#ccff00] border-y-2 border-slate-900 overflow-hidden py-3", className)}>
+        <div className={cn("w-full bg-[#95bf47] border-y-2 border-slate-900 overflow-hidden py-3", className)}>
             <div className="relative w-full flex overflow-x-hidden">
                 <div className="flex animate-marquee whitespace-nowrap">
                     {/* Primera tira de marcas */}
