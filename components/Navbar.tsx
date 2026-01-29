@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Menu, X } from "lucide-react";
 import { ContactModal } from "@/components/ContactModal";
@@ -28,7 +29,8 @@ export function Navbar() {
             <nav className="fixed top-0 w-full z-50 glass-panel border-b border-white/10">
                 <div className="container mx-auto px-6 h-16 flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="text-xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity z-50">
+                    <Link href="/" className="text-xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity z-50 flex items-center gap-2">
+                        <Image src="/logo-header.png" alt="DesarrolloShopify.cl Logo" width={32} height={32} className="w-8 h-8 object-contain" />
                         DesarrolloShopify.cl
                     </Link>
 
