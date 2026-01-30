@@ -41,7 +41,7 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="hover:text-secondary dark:hover:text-primary transition-colors"
+                                className="hover:text-[#95bf47] transition-colors"
                             >
                                 {link.label}
                             </Link>
@@ -85,7 +85,7 @@ export function Navbar() {
                                     <Link
                                         key={link.href}
                                         href={link.href}
-                                        className="text-lg font-medium text-muted-foreground hover:text-secondary dark:hover:text-primary hover:pl-2 transition-all"
+                                        className="text-lg font-medium text-muted-foreground hover:text-primary hover:pl-2 transition-all"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.label}
