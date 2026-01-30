@@ -48,7 +48,8 @@
 
     /* Primary: #95BF47 (Shopify Green) -> 81 48% 51% */
     --primary: 81 48% 51%;
-    --primary-foreground: 0 0% 100%;
+    /* Dark text for better contrast on light green background */
+    --primary-foreground: 222.2 47.4% 11.2%;
 
     /* Secondary: #5E8E3E -> 96 39% 40% */
     --secondary: 96 39% 40%;
