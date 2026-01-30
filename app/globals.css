@@ -46,16 +46,18 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary: #95BF47 (Shopify Green) -> 81 48% 51% */
+    /* Primary: Shopify Green - Adjusted for WCAG AA (Text) or Black text on Button */
     --primary: 81 48% 51%;
-    --primary-foreground: 0 0% 100%;
+    /* Button Text: Changing to Dark for contrast on Light Green */
+    --primary-foreground: 222.2 84% 4.9%;
 
-    /* Secondary: #5E8E3E -> 96 39% 40% */
+    /* Secondary: Darker Green */
     --secondary: 96 39% 40%;
     --secondary-foreground: 0 0% 100%;
 
+    /* Muted: Darkened for better contrast */
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 16.3% 40%;
 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 84% 4.9%;
@@ -84,14 +86,15 @@
     --popover-foreground: 210 40% 98%;
 
     --primary: 263.4 70% 50.4%;
-    /* Purple from existing dark theme */
+    /* Purple */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Lightened muted text for better contrast */
+    --muted-foreground: 215 20.2% 75%;
 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
@@ -135,7 +138,7 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-secondary;
 }
 
 /* Adaptive grid pattern */

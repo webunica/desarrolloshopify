@@ -234,7 +234,7 @@ export default function HomeClient({ sections = [], latestArticles = [] }: { sec
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-indigo-900/20 to-transparent pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="mb-16">
-                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso Colaborativo</span>
+                        <span className="text-secondary dark:text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nuestro Proceso Colaborativo</span>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Método de 3 Pasos</h2>
                         <p className="text-muted-foreground max-w-2xl text-lg">
                             Te involucramos en cada etapa. No somos una caja negra; co-creamos tu éxito digital contigo.
@@ -356,7 +356,7 @@ export default function HomeClient({ sections = [], latestArticles = [] }: { sec
                                         </p>
                                     </div>
 
-                                    <div className="flex items-center text-primary text-sm font-medium mt-auto group-hover:translate-x-1 transition-transform">
+                                    <div className="flex items-center text-secondary dark:text-primary text-sm font-medium mt-auto group-hover:translate-x-1 transition-transform">
                                         Leer artículo <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
                                 </article>

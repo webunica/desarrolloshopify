@@ -227,8 +227,8 @@ export default function PreciosClient() {
                                 transition={{ delay: 0.2 }}
                                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6"
                             >
-                                <Shield className="w-4 h-4 text-primary" />
-                                <span className="text-sm text-primary">Precios transparentes, sin sorpresas</span>
+                                <Shield className="w-4 h-4 text-secondary dark:text-primary" />
+                                <span className="text-sm text-secondary dark:text-primary">Precios transparentes, sin sorpresas</span>
                             </motion.div>
 
                             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -452,7 +452,7 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                         <span className="text-4xl md:text-5xl font-bold gradient-text">{plan.price}</span>
                         <span className="text-muted-foreground">+ IVA</span>
                     </div>
-                    <p className="text-sm text-primary mt-2">💳 Paga en 6 cuotas sin interés</p>
+                    <p className="text-sm text-secondary dark:text-primary mt-2">💳 Paga en 6 cuotas sin interés</p>
                 </div>
 
                 {/* Description */}
@@ -472,7 +472,7 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                     </button>
                     <button
                         onClick={() => onContactClick(`Consulta ${plan.name}`)}
-                        className="w-full px-6 py-3 bg-transparent text-primary hover:text-primary/80 font-medium transition-colors"
+                        className="w-full px-6 py-3 bg-transparent text-secondary dark:text-primary hover:text-primary/80 font-medium transition-colors"
                     >
                         Cotizar sin costo
                     </button>
@@ -505,7 +505,7 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                     {plan.features.length > 8 && (
                         <button
                             onClick={() => setShowAllFeatures(!showAllFeatures)}
-                            className="text-sm text-primary hover:text-primary/80 font-medium flex items-center gap-1"
+                            className="text-sm text-secondary dark:text-primary hover:text-primary/80 font-medium flex items-center gap-1"
                         >
                             {showAllFeatures ? 'Ver menos' : `Ver todas las features (+${plan.features.length - 8})`}
                             <ChevronDown className={`w-4 h-4 transition-transform ${showAllFeatures ? 'rotate-180' : ''}`} />
