@@ -68,13 +68,13 @@ export default function ContactoClient() {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative">
+            <div className="min-h-screen bg-background bg-gradient-to-br from-background via-secondary/20 to-background relative">
                 {/* Animación de fondo de código */}
                 <CodeLeftRain />
 
                 {/* Hero Section */}
                 <section className="relative pt-32 pb-20 overflow-hidden">
-                    <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+                    <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-20" />
 
                     <div className="container mx-auto px-4 relative z-10">
                         <motion.div
@@ -86,7 +86,7 @@ export default function ContactoClient() {
                             <h1 className="text-5xl md:text-6xl font-bold mb-6">
                                 <span className="gradient-text">Hablemos de tu proyecto</span>
                             </h1>
-                            <p className="text-xl text-slate-300 leading-relaxed">
+                            <p className="text-xl text-muted-foreground leading-relaxed">
                                 Estamos aquí para ayudarte a llevar tu tienda Shopify al siguiente nivel.
                                 Cuéntanos sobre tu proyecto y te responderemos pronto.
                             </p>
@@ -126,25 +126,25 @@ export default function ContactoClient() {
                                 />
 
                                 {/* Extra Info */}
-                                <div className="glass-panel rounded-2xl p-6 border border-purple-500/20">
+                                <div className="glass-panel rounded-2xl p-6 border border-border bg-card/50">
                                     <h3 className="text-lg font-semibold mb-3 gradient-text">
                                         ¿Por qué elegirnos?
                                     </h3>
-                                    <ul className="space-y-2 text-sm text-slate-300">
+                                    <ul className="space-y-2 text-sm text-muted-foreground">
                                         <li className="flex items-start gap-2">
-                                            <CheckCircle2 className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                                             <span>Expertos certificados en Shopify</span>
                                         </li>
                                         <li className="flex items-start gap-2">
-                                            <CheckCircle2 className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                                             <span>Diseños modernos y conversivos</span>
                                         </li>
                                         <li className="flex items-start gap-2">
-                                            <CheckCircle2 className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                                             <span>Soporte continuo post-lanzamiento</span>
                                         </li>
                                         <li className="flex items-start gap-2">
-                                            <CheckCircle2 className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                                             <span>Optimización SEO incluida</span>
                                         </li>
                                     </ul>
@@ -158,7 +158,7 @@ export default function ContactoClient() {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="lg:col-span-2"
                             >
-                                <div className="glass-panel rounded-2xl p-8 border border-purple-500/20">
+                                <div className="glass-panel rounded-2xl p-8 border border-border bg-card/50">
                                     <h2 className="text-2xl font-bold mb-6 gradient-text">
                                         Envíanos un mensaje
                                     </h2>
@@ -177,7 +177,7 @@ export default function ContactoClient() {
                                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div>
-                                                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                                                <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">
                                                     Nombre completo *
                                                 </label>
                                                 <input
@@ -190,16 +190,16 @@ export default function ContactoClient() {
                                                             message: 'El nombre debe tener al menos 2 caracteres',
                                                         },
                                                     })}
-                                                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                                    className="w-full px-4 py-3 bg-secondary/50 border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                                     placeholder="Juan Pérez"
                                                 />
                                                 {errors.name && (
-                                                    <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500 dark:text-red-400">{errors.name.message}</p>
                                                 )}
                                             </div>
 
                                             <div>
-                                                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                                                <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">
                                                     Email *
                                                 </label>
                                                 <input
@@ -212,45 +212,45 @@ export default function ContactoClient() {
                                                             message: 'Email inválido',
                                                         },
                                                     })}
-                                                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                                    className="w-full px-4 py-3 bg-secondary/50 border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                                     placeholder="juan@ejemplo.com"
                                                 />
                                                 {errors.email && (
-                                                    <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
+                                                    <p className="mt-1 text-sm text-red-500 dark:text-red-400">{errors.email.message}</p>
                                                 )}
                                             </div>
                                         </div>
 
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div>
-                                                <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                                                <label htmlFor="phone" className="block text-sm font-medium text-muted-foreground mb-2">
                                                     Teléfono
                                                 </label>
                                                 <input
                                                     id="phone"
                                                     type="tel"
                                                     {...register('phone')}
-                                                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                                    className="w-full px-4 py-3 bg-secondary/50 border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                                     placeholder="+56 9 6619 8752"
                                                 />
                                             </div>
 
                                             <div>
-                                                <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
+                                                <label htmlFor="company" className="block text-sm font-medium text-muted-foreground mb-2">
                                                     Empresa
                                                 </label>
                                                 <input
                                                     id="company"
                                                     type="text"
                                                     {...register('company')}
-                                                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                                    className="w-full px-4 py-3 bg-secondary/50 border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                                     placeholder="Tu Empresa S.A."
                                                 />
                                             </div>
                                         </div>
 
                                         <div>
-                                            <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                                            <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">
                                                 Mensaje *
                                             </label>
                                             <textarea
@@ -263,18 +263,18 @@ export default function ContactoClient() {
                                                         message: 'El mensaje debe tener al menos 10 caracteres',
                                                     },
                                                 })}
-                                                className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
+                                                className="w-full px-4 py-3 bg-secondary/50 border border-input rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                                                 placeholder="Cuéntanos sobre tu proyecto, necesidades y objetivos..."
                                             />
                                             {errors.message && (
-                                                <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
+                                                <p className="mt-1 text-sm text-red-500 dark:text-red-400">{errors.message.message}</p>
                                             )}
                                         </div>
 
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2 group"
+                                            className="w-full md:w-auto px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2 group"
                                         >
                                             {isSubmitting ? (
                                                 <>
@@ -289,7 +289,7 @@ export default function ContactoClient() {
                                             )}
                                         </button>
 
-                                        <p className="text-sm text-slate-400">
+                                        <p className="text-sm text-muted-foreground">
                                             * Campos requeridos
                                         </p>
                                     </form>
@@ -318,14 +318,14 @@ interface ContactInfoCardProps {
 
 function ContactInfoCard({ icon, title, content, href }: ContactInfoCardProps) {
     const CardContent = (
-        <div className="glass-panel rounded-2xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group cursor-pointer">
+        <div className="glass-panel rounded-2xl p-6 border border-border bg-card/50 hover:border-primary/40 transition-all duration-300 group cursor-pointer">
             <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg text-purple-400 group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
                     {icon}
                 </div>
                 <div className="flex-1">
-                    <h3 className="text-sm font-medium text-slate-400 mb-1">{title}</h3>
-                    <p className="text-white font-medium group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-sm font-medium text-muted-foreground mb-1">{title}</h3>
+                    <p className="text-foreground font-medium group-hover:text-primary transition-colors">
                         {content}
                     </p>
                 </div>

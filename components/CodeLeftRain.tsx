@@ -50,7 +50,7 @@ export const CodeLeftRain = () => {
 
     return (
         <div className="absolute inset-y-0 left-0 w-1/2 pointer-events-none z-0 overflow-hidden mask-image-linear-to-b">
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-transparent" />
             {particles.map((p) => (
                 <CodeParticle
                     key={p.id}

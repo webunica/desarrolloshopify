@@ -10,20 +10,17 @@ export async function PUT(req: Request, { params }: Props) {
     try {
         const { id } = await params;
         const body = await req.json();
-        const { title, slug, content, category, imageUrl, published, excerpt, keywords } = body;
+        const { title, slug, content, category, imageUrl, excerpt } = body;
 
-        const updatedArticle = await prisma.blogArticle.update({
-            where: { id },
+        const updatedArticle = await prisma.article.update({
+            where: { id: parseInt(id) },
             data: {
                 title,
                 slug,
                 content,
                 category,
                 imageUrl,
-                published,
                 excerpt,
-                keywords,
-                publishedAt: published ? new Date() : null, // Update published date if publishing
             },
         });
 
@@ -37,8 +34,8 @@ export async function PUT(req: Request, { params }: Props) {
 export async function DELETE(req: Request, { params }: Props) {
     try {
         const { id } = await params;
-        await prisma.blogArticle.delete({
-            where: { id },
+        await prisma.article.delete({
+            where: { id: parseInt(id) },
         });
         return NextResponse.json({ success: true });
     } catch (error) {

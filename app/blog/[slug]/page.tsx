@@ -14,7 +14,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const article = await prisma.blogArticle.findUnique({
+    const article = await prisma.article.findUnique({
         where: { slug }
     });
 
@@ -34,36 +34,22 @@ export default async function BlogPost({ params }: Props) {
     const { slug } = await params;
 
     // Fetch from DB
-    const article = await prisma.blogArticle.findUnique({
-        where: { slug, published: true }
+    const article = await prisma.article.findUnique({
+        where: { slug }
     });
 
     if (!article) {
         notFound();
     }
 
-    // Related Articles Logic
-    const candidates = await prisma.blogArticle.findMany({
+    // Related Articles Logic (Simplified)
+    const related = await prisma.article.findMany({
         where: {
-            published: true,
             slug: { not: slug }
         },
         orderBy: { publishedAt: "desc" },
-        take: 20
+        take: 3
     });
-
-    const currentKeywords = (article.keywords || "").toLowerCase().split(",").map(k => k.trim()).filter(Boolean);
-
-    const related = candidates.map(c => {
-        let score = 0;
-        if (c.category === article.category) score += 2;
-
-        const cKeywords = (c.keywords || "").toLowerCase().split(",").map(k => k.trim()).filter(Boolean);
-        const overlap = currentKeywords.filter(k => cKeywords.includes(k));
-        score += overlap.length;
-
-        return { ...c, score };
-    }).sort((a, b) => b.score - a.score).slice(0, 3);
 
 
     return (

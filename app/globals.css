@@ -34,38 +34,74 @@
 
 @layer base {
   :root {
-    /* DARK THEME FORCE - Slate 950 Base */
-    --background: hsl(222.2 84% 4.9%);
-    /* Slate 950 */
-    --foreground: hsl(210 40% 98%);
+    /* Light Mode - Default */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 222.2 84% 4.9%;
+    /* Slate 950 (Dark Text) */
 
-    --card: hsl(222.2 84% 4.9%);
-    --card-foreground: hsl(210 40% 98%);
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: hsl(222.2 84% 4.9%);
-    --popover-foreground: hsl(210 40% 98%);
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary: Bright Electric Purple/Blue */
-    --primary: hsl(263.4 70% 50.4%);
-    --primary-foreground: hsl(210 40% 98%);
+    /* Primary: #95BF47 (Shopify Green) -> 81 48% 51% */
+    --primary: 81 48% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: hsl(217.2 32.6% 17.5%);
-    --secondary-foreground: hsl(210 40% 98%);
+    /* Secondary: #5E8E3E -> 96 39% 40% */
+    --secondary: 96 39% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: hsl(217.2 32.6% 17.5%);
-    --muted-foreground: hsl(215 20.2% 65.1%);
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: hsl(217.2 32.6% 17.5%);
-    --accent-foreground: hsl(210 40% 98%);
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 84% 4.9%;
 
-    --destructive: hsl(0 62.8% 30.6%);
-    --destructive-foreground: hsl(210 40% 98%);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: hsl(217.2 32.6% 17.5%);
-    --input: hsl(217.2 32.6% 17.5%);
-    --ring: hsl(263.4 70% 50.4%);
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 81 48% 51%;
 
     --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 222.2 84% 4.9%;
+    /* Slate 950 */
+    --foreground: 210 40% 98%;
+    /* White-ish */
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263.4 70% 50.4%;
+    /* Purple from existing dark theme */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 263.4 70% 50.4%;
   }
 }
 
@@ -76,6 +112,11 @@
 
   body {
     @apply bg-background text-foreground antialiased selection:bg-purple-500/30 selection:text-purple-200;
+    font-family: var(--font-sans);
+    background: radial-gradient(1200px 700px at 20% -10%, hsl(var(--foreground) / 0.03), transparent 60%),
+      radial-gradient(1200px 700px at 90% 10%, hsl(var(--foreground) / 0.03), transparent 55%),
+      hsl(var(--background));
+    transition: background 0.5s ease, color 0.5s ease;
   }
 
   h1,
@@ -84,24 +125,25 @@
   h4,
   h5,
   h6 {
-    @apply tracking-tight text-white;
+    @apply tracking-tight;
+    /* Removed text-white to allow inheritance */
   }
 }
 
 .glass-panel {
-  @apply bg-slate-950/70 border-b border-white/10 backdrop-blur-xl shadow-lg;
+  @apply bg-background/80 border-b border-border backdrop-blur-xl shadow-lg transition-colors duration-300;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#95bf47] via-[#5e8e3e] to-[#95bf47];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary;
 }
 
-/* Dark grid pattern */
+/* Adaptive grid pattern */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, hsl(var(--foreground) / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--foreground) / 0.05) 1px, transparent 1px);
 }
 
 /* Marquee Animation */

@@ -17,8 +17,7 @@ import { es } from "date-fns/locale";
 export const dynamic = "force-dynamic"; // Ensure we get fresh data
 
 export default async function BlogPage() {
-    const articles = await prisma.blogArticle.findMany({
-        where: { published: true },
+    const articles = await prisma.article.findMany({
         orderBy: { publishedAt: "desc" },
     });
     return (

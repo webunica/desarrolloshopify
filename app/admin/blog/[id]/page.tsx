@@ -11,8 +11,8 @@ interface Props {
 export default async function EditBlogPage({ params }: Props) {
     const { id } = await params;
 
-    const article = await prisma.blogArticle.findUnique({
-        where: { id },
+    const article = await prisma.article.findUnique({
+        where: { id: parseInt(id) },
     });
 
     if (!article) {

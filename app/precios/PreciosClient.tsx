@@ -209,7 +209,7 @@ export default function PreciosClient() {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950">
+            <div className="min-h-screen bg-background bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary/20 via-background to-background">
                 {/* Hero Section */}
                 <section className="relative pt-32 pb-20 overflow-hidden">
                     <div className="absolute inset-0 bg-grid-pattern opacity-20" />
@@ -225,31 +225,31 @@ export default function PreciosClient() {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.2 }}
-                                className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6"
+                                className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6"
                             >
-                                <Shield className="w-4 h-4 text-purple-400" />
-                                <span className="text-sm text-purple-300">Precios transparentes, sin sorpresas</span>
+                                <Shield className="w-4 h-4 text-primary" />
+                                <span className="text-sm text-primary">Precios transparentes, sin sorpresas</span>
                             </motion.div>
 
                             <h1 className="text-5xl md:text-6xl font-bold mb-6">
                                 <span className="gradient-text">Planes diseñados para tu éxito</span>
                             </h1>
 
-                            <p className="text-xl text-slate-300 leading-relaxed mb-8">
-                                Elige el plan perfecto para tu negocio. Todos incluyen pago en <strong className="text-white">6 cuotas sin interés</strong> y soporte técnico garantizado.
+                            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                                Elige el plan perfecto para tu negocio. Todos incluyen pago en <strong className="text-foreground">6 cuotas sin interés</strong> y soporte técnico garantizado.
                             </p>
 
-                            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+                            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
                                 <div className="flex items-center gap-2">
-                                    <Check className="w-4 h-4 text-green-400" />
+                                    <Check className="w-4 h-4 text-primary" />
                                     <span>100+ proyectos completados</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Check className="w-4 h-4 text-green-400" />
+                                    <Check className="w-4 h-4 text-primary" />
                                     <span>Shopify Partners certificados</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Check className="w-4 h-4 text-green-400" />
+                                    <Check className="w-4 h-4 text-primary" />
                                     <span>Valoración 4.9/5</span>
                                 </div>
                             </div>
@@ -276,28 +276,28 @@ export default function PreciosClient() {
                 {/* Value Proposition */}
                 <section className="pb-20 relative z-10">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12 border border-purple-500/20">
+                        <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12 border border-border bg-card/50">
                             <div className="grid md:grid-cols-3 gap-8 text-center">
                                 <div>
-                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4">
-                                        <TrendingUp className="w-6 h-6 text-purple-400" />
+                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                                        <TrendingUp className="w-6 h-6 text-primary" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Pagos Flexibles</h3>
-                                    <p className="text-slate-400">Paga hasta en 6 cuotas sin interés con tarjeta de crédito.</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Pagos Flexibles</h3>
+                                    <p className="text-muted-foreground">Paga hasta en 6 cuotas sin interés con tarjeta de crédito.</p>
                                 </div>
                                 <div>
-                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4">
-                                        <Clock className="w-6 h-6 text-purple-400" />
+                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                                        <Clock className="w-6 h-6 text-primary" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Garantía de Funcionamiento</h3>
-                                    <p className="text-slate-400">3 meses de garantía de funcionamiento post-entrega (según plan).</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Garantía de Funcionamiento</h3>
+                                    <p className="text-muted-foreground">3 meses de garantía de funcionamiento post-entrega (según plan).</p>
                                 </div>
                                 <div>
-                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4">
-                                        <Shield className="w-6 h-6 text-purple-400" />
+                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                                        <Shield className="w-6 h-6 text-primary" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Soporte y Capacitación</h3>
-                                    <p className="text-slate-400">Soporte continuo e instrucción vía videollamada grabada. Cursos pronto disponibles.</p>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">Soporte y Capacitación</h3>
+                                    <p className="text-muted-foreground">Soporte continuo e instrucción vía videollamada grabada. Cursos pronto disponibles.</p>
                                 </div>
                             </div>
                         </div>
@@ -317,7 +317,7 @@ export default function PreciosClient() {
                                 <h2 className="text-4xl font-bold mb-4">
                                     <span className="gradient-text">Preguntas Frecuentes</span>
                                 </h2>
-                                <p className="text-slate-300">
+                                <p className="text-muted-foreground">
                                     Resolvemos tus dudas sobre precios y planes
                                 </p>
                             </motion.div>
@@ -331,16 +331,16 @@ export default function PreciosClient() {
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
                                     >
-                                        <button
+                                        <div
                                             onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                                            className="w-full glass-panel rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all text-left group"
+                                            className="w-full glass-panel rounded-xl p-6 border border-border bg-card/30 hover:bg-card/50 hover:border-primary/40 transition-all text-left group cursor-pointer"
                                         >
                                             <div className="flex items-center justify-between">
-                                                <h3 className="text-lg font-semibold text-white pr-8">
+                                                <h3 className="text-lg font-semibold text-foreground pr-8">
                                                     {faq.question}
                                                 </h3>
                                                 <ChevronDown
-                                                    className={`w-5 h-5 text-purple-400 transition-transform flex-shrink-0 ${expandedFaq === index ? 'rotate-180' : ''
+                                                    className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ${expandedFaq === index ? 'rotate-180' : ''
                                                         }`}
                                                 />
                                             </div>
@@ -349,12 +349,12 @@ export default function PreciosClient() {
                                                     initial={{ opacity: 0, height: 0 }}
                                                     animate={{ opacity: 1, height: 'auto' }}
                                                     exit={{ opacity: 0, height: 0 }}
-                                                    className="mt-4 text-slate-300 leading-relaxed"
+                                                    className="mt-4 text-muted-foreground leading-relaxed"
                                                 >
                                                     {faq.answer}
                                                 </motion.p>
                                             )}
-                                        </button>
+                                        </div>
                                     </motion.div>
                                 ))}
                             </div>
@@ -369,12 +369,12 @@ export default function PreciosClient() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="max-w-4xl mx-auto glass-panel rounded-2xl p-12 border border-purple-500/20 text-center"
+                            className="max-w-4xl mx-auto glass-panel rounded-2xl p-12 border border-primary/20 bg-card/50 text-center"
                         >
                             <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
                                 ¿No estás seguro cuál plan elegir?
                             </h2>
-                            <p className="text-xl text-slate-300 mb-8">
+                            <p className="text-xl text-muted-foreground mb-8">
                                 Agenda una consultoría gratuita y te ayudamos a encontrar la mejor solución para tu negocio
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -387,7 +387,7 @@ export default function PreciosClient() {
                                 </button>
                                 <a
                                     href="/contacto"
-                                    className="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 border border-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+                                    className="px-8 py-4 bg-secondary/30 text-foreground font-semibold rounded-lg hover:bg-secondary/50 border border-border transition-all duration-300 flex items-center justify-center gap-2"
                                 >
                                     <Calendar className="w-5 h-5" />
                                     Ver todos nuestros servicios
@@ -426,9 +426,9 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className={`relative ${plan.highlight ? 'lg:-mt-4 lg:mb-4' : ''}`}
         >
-            <div className={`glass-panel rounded-2xl p-8 border h-full flex flex-col ${plan.highlight
-                ? 'border-purple-500/40 shadow-2xl shadow-purple-500/20'
-                : 'border-purple-500/20'
+            <div className={`glass-panel rounded-2xl p-8 border h-full flex flex-col bg-card ${plan.highlight
+                ? 'border-primary/50 shadow-2xl shadow-primary/10'
+                : 'border-border'
                 }`}>
                 {/* Badge */}
                 {plan.badge && (
@@ -443,21 +443,21 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                     <div className={`p-3 bg-gradient-to-br ${plan.badgeColor} rounded-lg`}>
                         <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-foreground">{plan.name}</h3>
                 </div>
 
                 {/* Price */}
                 <div className="mb-4">
                     <div className="flex items-baseline gap-2">
                         <span className="text-4xl md:text-5xl font-bold gradient-text">{plan.price}</span>
-                        <span className="text-slate-400">+ IVA</span>
+                        <span className="text-muted-foreground">+ IVA</span>
                     </div>
-                    <p className="text-sm text-purple-400 mt-2">💳 Paga en 6 cuotas sin interés</p>
+                    <p className="text-sm text-primary mt-2">💳 Paga en 6 cuotas sin interés</p>
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-300 mb-2">{plan.description}</p>
-                <p className="text-sm text-slate-400 mb-6">{plan.ideal}</p>
+                <p className="text-muted-foreground mb-2">{plan.description}</p>
+                <p className="text-sm text-muted-foreground/80 mb-6">{plan.ideal}</p>
 
                 {/* CTAs */}
                 <div className="space-y-3 mb-6">
@@ -465,38 +465,38 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                         onClick={() => onContactClick(plan.name)}
                         className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${plan.highlight
                             ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg'
-                            : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                            : 'bg-secondary text-foreground hover:bg-secondary/80 border border-border'
                             }`}
                     >
                         Comenzar ahora
                     </button>
                     <button
                         onClick={() => onContactClick(`Consulta ${plan.name}`)}
-                        className="w-full px-6 py-3 bg-transparent text-purple-400 hover:text-purple-300 font-medium transition-colors"
+                        className="w-full px-6 py-3 bg-transparent text-primary hover:text-primary/80 font-medium transition-colors"
                     >
                         Cotizar sin costo
                     </button>
                 </div>
 
                 {/* Quick Info */}
-                <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-white/5 rounded-lg">
+                <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-secondary/30 rounded-lg">
                     <div>
-                        <p className="text-xs text-slate-500 mb-1">Capacidad</p>
-                        <p className="text-sm font-semibold text-white">{plan.productCapacity}</p>
+                        <p className="text-xs text-muted-foreground mb-1">Capacidad</p>
+                        <p className="text-sm font-semibold text-foreground">{plan.productCapacity}</p>
                     </div>
                     <div>
-                        <p className="text-xs text-slate-500 mb-1">Entrega</p>
-                        <p className="text-sm font-semibold text-white">{plan.deliveryTime}</p>
+                        <p className="text-xs text-muted-foreground mb-1">Entrega</p>
+                        <p className="text-sm font-semibold text-foreground">{plan.deliveryTime}</p>
                     </div>
                 </div>
 
                 {/* Features */}
                 <div className="flex-1">
-                    <h4 className="text-sm font-semibold text-slate-400 mb-3">Incluye:</h4>
+                    <h4 className="text-sm font-semibold text-muted-foreground mb-3">Incluye:</h4>
                     <ul className="space-y-2 mb-4">
                         {visibleFeatures.map((feature, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-sm text-slate-300">
-                                <Check className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                            <li key={idx} className="flex items-start gap-2 text-sm text-foreground/80">
+                                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                                 <span>{feature}</span>
                             </li>
                         ))}
@@ -505,7 +505,7 @@ function PricingCard({ plan, index, onContactClick }: PricingCardProps) {
                     {plan.features.length > 8 && (
                         <button
                             onClick={() => setShowAllFeatures(!showAllFeatures)}
-                            className="text-sm text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1"
+                            className="text-sm text-primary hover:text-primary/80 font-medium flex items-center gap-1"
                         >
                             {showAllFeatures ? 'Ver menos' : `Ver todas las features (+${plan.features.length - 8})`}
                             <ChevronDown className={`w-4 h-4 transition-transform ${showAllFeatures ? 'rotate-180' : ''}`} />

@@ -9,7 +9,7 @@ import { Pencil, Plus, Trash2, Eye } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 export default async function AdminBlogList() {
-    const articles = await prisma.blogArticle.findMany({
+    const articles = await prisma.article.findMany({
         orderBy: { createdAt: "desc" },
     });
 
@@ -60,17 +60,10 @@ export default async function AdminBlogList() {
                                         </span>
                                     </td>
                                     <td className="p-4">
-                                        {article.published ? (
-                                            <span className="flex items-center gap-2 text-green-400 text-xs font-bold">
-                                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                                Publicado
-                                            </span>
-                                        ) : (
-                                            <span className="flex items-center gap-2 text-yellow-400 text-xs font-bold">
-                                                <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                                                Borrador
-                                            </span>
-                                        )}
+                                        <span className="flex items-center gap-2 text-green-400 text-xs font-bold">
+                                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                            Publicado
+                                        </span>
                                     </td>
                                     <td className="p-4 text-gray-400 text-xs">
                                         {format(article.updatedAt, "d MMM yyyy", { locale: es })}

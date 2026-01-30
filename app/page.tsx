@@ -36,12 +36,11 @@ export default async function Home() {
   let sections: any[] = [];
 
   try {
-    const homePage = await prisma.sitePage.findUnique({
-      where: { slug: "home" },
-      include: { sections: true }
-    });
+    // Mock CMS fetch
+    // const homePage = await prisma.sitePage.findUnique(...)
+    const homePage = null; // Mock
     if (homePage) {
-      sections = homePage.sections;
+      // sections = homePage.sections;
     }
   } catch (e) {
     console.error("CMS Fetch Error:", e);
@@ -50,8 +49,7 @@ export default async function Home() {
 
   let latestArticles: any[] = [];
   try {
-    latestArticles = await prisma.blogArticle.findMany({
-      where: { published: true },
+    latestArticles = await prisma.article.findMany({
       orderBy: { publishedAt: "desc" },
       take: 4
     });

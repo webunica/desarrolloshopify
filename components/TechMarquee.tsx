@@ -19,17 +19,17 @@ export function TechMarquee({ className }: TechMarqueeProps) {
     ];
 
     return (
-        <div className={cn("w-full bg-[#95bf47] border-y-2 border-slate-900 overflow-hidden py-3", className)}>
+        <div className={cn("w-full bg-primary border-y-2 border-border overflow-hidden py-3", className)}>
             <div className="relative w-full flex overflow-x-hidden">
                 <div className="flex animate-marquee whitespace-nowrap">
                     {/* Primera tira de marcas */}
                     <div className="flex items-center mx-4">
                         {brands.map((brand, index) => (
                             <div key={index} className="flex items-center">
-                                <span className="text-slate-900 font-extrabold text-xl md:text-2xl uppercase tracking-tight mx-6 md:mx-10 whitespace-nowrap">
+                                <span className="text-primary-foreground font-extrabold text-xl md:text-2xl uppercase tracking-tight mx-6 md:mx-10 whitespace-nowrap">
                                     {brand}
                                 </span>
-                                <span className="text-slate-900 text-2xl font-black opacity-50">*</span>
+                                <span className="text-primary-foreground text-2xl font-black opacity-50">*</span>
                             </div>
                         ))}
                     </div>
@@ -37,10 +37,10 @@ export function TechMarquee({ className }: TechMarqueeProps) {
                     <div className="flex items-center mx-4">
                         {brands.map((brand, index) => (
                             <div key={`dup-${index}`} className="flex items-center">
-                                <span className="text-slate-900 font-extrabold text-xl md:text-2xl uppercase tracking-tight mx-6 md:mx-10 whitespace-nowrap">
+                                <span className="text-primary-foreground font-extrabold text-xl md:text-2xl uppercase tracking-tight mx-6 md:mx-10 whitespace-nowrap">
                                     {brand}
                                 </span>
-                                <span className="text-slate-900 text-2xl font-black opacity-50">*</span>
+                                <span className="text-primary-foreground text-2xl font-black opacity-50">*</span>
                             </div>
                         ))}
                     </div>
