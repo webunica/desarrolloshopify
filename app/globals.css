@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Faktum';
+  src: url('/fonts/Faktum-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -127,7 +135,7 @@
   h5,
   h6 {
     @apply tracking-tight;
-    /* Removed text-white to allow inheritance */
+    font-family: 'Faktum', var(--font-sans), sans-serif;
   }
 }
 
